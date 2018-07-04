@@ -1,6 +1,6 @@
 main:
-  - title: "About"
-    url: /content/about
+  - title: "Core"
+    url: /core/
 
 core:
   - title: Introduction
