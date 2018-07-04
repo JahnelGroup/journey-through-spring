@@ -266,7 +266,7 @@ defaults:
       path: ""
       type: docs
   - scope
-      path: "core"
+      path: "/core"
       type: docs
     values:
       sidebar:
