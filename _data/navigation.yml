@@ -1,0 +1,21 @@
+main:
+  - title: "About"
+    url: /content/about
+
+core:
+  - title: Introduction
+    children: 
+      - title: Spring and Spring Boot
+        url: /core/what-is-spring
+      - title: Kotlin
+        url: /core/kotlin
+      - title: References
+        url: /core/references
+  - title: Getting Started
+    children:
+      - title: Understaing the "magic" of Spring
+        url: /core/magic
+      - title: Starters and Extreme Programming
+        url: /core/starters
+      - title: Debugging a Spring App
+        url: /core/debug
