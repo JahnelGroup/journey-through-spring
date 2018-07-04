@@ -1,5 +1,4 @@
-Journey Through Spring 
-======
+# Journey Through Spring 
 ![spring](https://user-images.githubusercontent.com/26745523/37191895-099bbea8-2328-11e8-8b88-657c49317c2d.png)
 
 #### A pragmatic approach to learning the Spring Framework. 
