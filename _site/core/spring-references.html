@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Journey Through Spring</title>
+<!-- begin _includes/seo.html --><title>References - Journey Through Spring</title>
 <meta name="description" content="A pragmatic approach to learning the Spring Framework.">
 
 
@@ -17,8 +17,8 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Journey Through Spring">
-<meta property="og:title" content="Journey Through Spring">
-<meta property="og:url" content="http://localhost:4000/_pages/spring-extreme/">
+<meta property="og:title" content="References">
+<meta property="og:url" content="http://localhost:4000/core/spring-references">
 
 
 
@@ -36,7 +36,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/_pages/spring-extreme/">
+<link rel="canonical" href="http://localhost:4000/core/spring-references">
 
 
 
@@ -101,7 +101,7 @@
 
   </head>
 
-  <body class="layout--single">
+  <body class="layout--archive">
 
     <!--[if lt IE 9]>
 <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
@@ -169,7 +169,7 @@
             
             
 
-            <li><a href="/core/what-is-spring" class="">Spring and Spring Boot</a></li>
+            <li><a href="/core/what-is-spring" class="">What is Spring?</a></li>
           
             
             
@@ -177,7 +177,7 @@
             
             
 
-            <li><a href="/core/kotlin" class="">Kotlin</a></li>
+            <li><a href="/core/spring-kotlin" class="">Spring and Kotlin</a></li>
           
             
             
@@ -185,7 +185,7 @@
             
             
 
-            <li><a href="/core/references" class="">References</a></li>
+            <li><a href="/core/spring-references" class="active">References</a></li>
           
         </ul>
         
@@ -205,7 +205,7 @@
             
             
 
-            <li><a href="/core/magic" class="">Understaing the "magic" of Spring</a></li>
+            <li><a href="/core/spring-magic" class="">Understaing the "Magic" of Spring</a></li>
           
             
             
@@ -213,7 +213,7 @@
             
             
 
-            <li><a href="/core/starters" class="">Starters and Extreme Programming</a></li>
+            <li><a href="/core/spring-starters" class="">Spring Boot Starters</a></li>
           
             
             
@@ -221,7 +221,7 @@
             
             
 
-            <li><a href="/core/debug" class="">Debugging a Spring App</a></li>
+            <li><a href="/core/spring-debugging" class="">Debugging a Spring Application</a></li>
           
         </ul>
         
@@ -234,66 +234,42 @@
   </div>
 
 
-  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+  <div class="archive">
     
+      <h1 id="page-title" class="page__title">References</h1>
     
-    
-    
+    <p>The Spring Framework ecosystem is large and overwhelming at a first glance. Before we dive into some of the interesting and challenging parts of Spring it’s important to have a high-level map of important resources.</p>
 
-    <div class="page__inner-wrap">
-      
-        <header>
-          
-          
-        </header>
-      
+<h3 id="high-level">High-Level</h3>
+<p>| Link                       | Description                                                 |
+| ————————– | ———————————————————– |
+| https://spring.io          | Primary website for Spring                                  |
+| https://spring.io/projects | All major Spring Projects                                   |
+| https://spring.io/guides   | Excellent list of getting started guides provided by Spring |</p>
 
-      <section class="page__content" itemprop="text">
-        
-        <table><tr><td><a href="https://github.com/JahnelGroup/journey-through-spring">Table of Contents</a></td></tr></table>
+<h3 id="staying-up-to-date">Staying Up-To-Date</h3>
+<p>| Link                       | Description                                               |
+| ————————– | ——————————————————— |
+| https://spring.io/blog     | Primary Spring Blog                                       |
+| <a href="https://twitter.com/springframework">@springframework</a> | Primary Spring Twitter       |
+| <a href="https://twitter.com/springboot">@springboot</a>           | Primary Spring Boot Twitter  |</p>
 
-<h1 id="spring-boot-is-extreme-programming">Spring Boot is Extreme Programming</h1>
-<p>We cannot deny that Spring has a learning curve but once you’re over the hump it is all about making the developer more efficient. It is designed to give a developer the ability to deliver software rapidly.</p>
+<h3 id="primary-reference-documentation">Primary Reference Documentation</h3>
+<p>| Link                       | Description                                               |
+| ————————– | ——————————————————— |
+| <a href="https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/index.html">Spring Framework Reference</a>     | Primary reference material for Spring                                      |
+| <a href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/">Spring Boot Reference</a> | Primary reference material for Spring Boot       |
+| <a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/">Spring Data JPA Reference</a>           | Primary reference material for Spring Data JPA  |</p>
 
-<h2 id="spring-boot-starters">Spring Boot Starters</h2>
-<p>Spring Boot developers have created “starters” that are a slightly different concept from “seed projects”. A seed-project consists of a codebase that has been either generated or hand-coded to be the base of your application. They usually come in the form a github repository that you fork and start from. Spring Starters however are just like regular dependencies that you’d pull into your application and are kind of hidden from the rest of your program. These starters are built upon the auto-configuration feature discussed above in the Understanding the “Magic” of Spring section. Their code is ran when the application starts up and they will create Beans, start Web Servlets, establish connection pooling to a database, and do many more things.</p>
+<h3 id="source-code--sample-code">Source Code &amp; Sample Code</h3>
+<p>| Link                       | Description                                               |
+| ————————– | ——————————————————— |
+| https://start.spring.io    | Spring Initializr  |
+| https://github.com/spring-projects | Spring Github Project Page |
+| <a href="https://github.com/spring-projects/spring-boot/tree/master/spring-boot-samples">GitHub: Spring Boot Samples</a> | Found in the Spring Boot repo are excellent samples |
+| <a href="https://github.com/JahnelGroup/spring-boot-samples">Jahnel Group: spring-boot-samples</a>           | Jahnel Group has created their own version of Spring Boot samples |</p>
 
-<ul>
-  <li><strong>Read:</strong> <a href="https://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#using-boot-starter"><strong>spring.io:</strong> Spring Starters</a></li>
-  <li><strong>Read:</strong> <a href="http://www.baeldung.com/spring-boot-starters"><strong>baeldung.com:</strong> Intro to Spring Boot Starters</a></li>
-</ul>
-
-<h2 id="spring-boot-executable-fat-jar">Spring Boot Executable “fat Jar”</h2>
-<p>A “fat Jar” or “Uber Jar” is a single Jar file that contains everything needed to run an application. The most powerful thing to realize here is that you can actually run a Spring Boot jar file and it will start up a Web Container from within the Jar file. You would normally have to deploy your application into a separate Webserver but with Spring Boot the Webserver is actually running within the Jar file!</p>
-
-<p>This concept extends to other components like H2, Elasticsearch, Redis, etc. This is great for rapid development but eventually when a product matures we will change the architecture to be more production-like with external services. It’s all about getting up and running as fast as possible in the beginning.</p>
-
-<ul>
-  <li><strong>Read:</strong> <a href="https://stackoverflow.com/questions/19150811/what-is-a-fat-jar"><strong>stackoverflow.com:</strong> What is a fat Jar?</a></li>
-  <li><strong>Read:</strong> <a href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#getting-started-first-application-executable-jar"><strong>spring.io:</strong> Creating an Executable Jar</a></li>
-</ul>
-
-        
-      </section>
-
-      <footer class="page__meta">
-        
-        
-
-
-        
-      </footer>
-
-      
-
-      
-    </div>
-
-    
-  </article>
-
-  
-  
+  </div>
 </div>
     </div>
 

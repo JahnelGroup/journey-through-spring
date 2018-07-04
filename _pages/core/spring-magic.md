@@ -1,7 +1,8 @@
-<table><tr><td><a href="https://github.com/JahnelGroup/journey-through-spring">Table of Contents</a></td></tr></table>
+---
+title:  "Understanding the “Magic” of Spring"
+permalink: /core/spring-magic
+---
 
-Understanding the “Magic” of Spring
-======
 You’ll often hear people refer to Spring as being complicated or difficult to learn. Spring is referred to as “magic” because its abilities at times seem impossible - until you look behind the curtain and understand what’s going on! Here are a few of the major features that Spring takes advantage of for it’s so-called magic.
 
 ## Auto-configuration: Classloader and Resource Management

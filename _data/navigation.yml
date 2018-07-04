@@ -5,17 +5,17 @@ main:
 core:
   - title: Introduction
     children: 
-      - title: Spring and Spring Boot
+      - title: What is Spring?
         url: /core/what-is-spring
-      - title: Kotlin
-        url: /core/kotlin
+      - title: Spring and Kotlin
+        url: /core/spring-kotlin
       - title: References
-        url: /core/references
+        url: /core/spring-references
   - title: Getting Started
     children:
-      - title: Understaing the "magic" of Spring
-        url: /core/magic
-      - title: Starters and Extreme Programming
-        url: /core/starters
-      - title: Debugging a Spring App
-        url: /core/debug
+      - title: Understaing the "Magic" of Spring
+        url: /core/spring-magic
+      - title: Spring Boot Starters
+        url: /core/spring-starters
+      - title: Debugging a Spring Application
+        url: /core/spring-debugging

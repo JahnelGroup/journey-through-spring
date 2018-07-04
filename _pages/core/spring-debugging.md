@@ -1,7 +1,8 @@
-<table><tr><td><a href="https://github.com/JahnelGroup/journey-through-spring">Table of Contents</a></td></tr></table>
+---
+title:  "Debugging"
+permalink: /core/spring-debugging
+---
 
-Debugging
-======
 You just wrote an awesome program, fired it up and ugh-o...it doesn't work like you expect! Writing code is *easy* figuring out what's wrong with broken code is *really hard*. You have a couple of options.
 
 ## Print Statements (DO NOT DO THIS)

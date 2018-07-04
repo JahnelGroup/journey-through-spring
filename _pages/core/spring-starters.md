@@ -1,7 +1,8 @@
-<table><tr><td><a href="https://github.com/JahnelGroup/journey-through-spring">Table of Contents</a></td></tr></table>
+---
+title:  "Spring Boot Starters"
+permalink: /core/spring-magic
+---
 
-Spring Boot is Extreme Programming
-======
 We cannot deny that Spring has a learning curve but once you’re over the hump it is all about making the developer more efficient. It is designed to give a developer the ability to deliver software rapidly. 
 
 ## Spring Boot Starters

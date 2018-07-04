@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Journey Through Spring</title>
+<!-- begin _includes/seo.html --><title>Debugging - Journey Through Spring</title>
 <meta name="description" content="A pragmatic approach to learning the Spring Framework.">
 
 
@@ -17,8 +17,8 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Journey Through Spring">
-<meta property="og:title" content="Journey Through Spring">
-<meta property="og:url" content="http://localhost:4000/_pages/debug-spring/README/">
+<meta property="og:title" content="Debugging">
+<meta property="og:url" content="http://localhost:4000/core/spring-debugging">
 
 
 
@@ -36,7 +36,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/_pages/debug-spring/README/">
+<link rel="canonical" href="http://localhost:4000/core/spring-debugging">
 
 
 
@@ -101,7 +101,7 @@
 
   </head>
 
-  <body class="layout--single">
+  <body class="layout--archive">
 
     <!--[if lt IE 9]>
 <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
@@ -169,7 +169,7 @@
             
             
 
-            <li><a href="/core/what-is-spring" class="">Spring and Spring Boot</a></li>
+            <li><a href="/core/what-is-spring" class="">What is Spring?</a></li>
           
             
             
@@ -177,7 +177,7 @@
             
             
 
-            <li><a href="/core/kotlin" class="">Kotlin</a></li>
+            <li><a href="/core/spring-kotlin" class="">Spring and Kotlin</a></li>
           
             
             
@@ -185,7 +185,7 @@
             
             
 
-            <li><a href="/core/references" class="">References</a></li>
+            <li><a href="/core/spring-references" class="">References</a></li>
           
         </ul>
         
@@ -205,7 +205,7 @@
             
             
 
-            <li><a href="/core/magic" class="">Understaing the "magic" of Spring</a></li>
+            <li><a href="/core/spring-magic" class="">Understaing the "Magic" of Spring</a></li>
           
             
             
@@ -213,7 +213,7 @@
             
             
 
-            <li><a href="/core/starters" class="">Starters and Extreme Programming</a></li>
+            <li><a href="/core/spring-starters" class="">Spring Boot Starters</a></li>
           
             
             
@@ -221,7 +221,7 @@
             
             
 
-            <li><a href="/core/debug" class="">Debugging a Spring App</a></li>
+            <li><a href="/core/spring-debugging" class="active">Debugging a Spring Application</a></li>
           
         </ul>
         
@@ -234,26 +234,11 @@
   </div>
 
 
-  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+  <div class="archive">
     
+      <h1 id="page-title" class="page__title">Debugging</h1>
     
-    
-    
-
-    <div class="page__inner-wrap">
-      
-        <header>
-          
-          
-        </header>
-      
-
-      <section class="page__content" itemprop="text">
-        
-        <table><tr><td><a href="https://github.com/JahnelGroup/journey-through-spring">Table of Contents</a></td></tr></table>
-
-<h1 id="debugging">Debugging</h1>
-<p>You just wrote an awesome program, fired it up and ugh-o…it doesn’t work like you expect! Writing code is <em>easy</em> figuring out what’s wrong with broken code is <em>really hard</em>. You have a couple of options.</p>
+    <p>You just wrote an awesome program, fired it up and ugh-o…it doesn’t work like you expect! Writing code is <em>easy</em> figuring out what’s wrong with broken code is <em>really hard</em>. You have a couple of options.</p>
 
 <h2 id="print-statements-do-not-do-this">Print Statements (DO NOT DO THIS)</h2>
 <p>Yeah that’s right, the good old print statement. It’s the worst way to debug a problem but it sure is a technique and we’ve all been there so why not cover it. Doing this has so many problems but the main reason I feel is that you’re actually editing source-code for debugging and you’ll likely end up just leaving it there to flood the logs in prod.</p>
@@ -377,27 +362,7 @@ Listening <span class="k">for </span>transport dt_socket at address: 5005
 <h2 id="difficulty-with-spring-proxies">Difficulty with Spring Proxies</h2>
 <p>The hardest part about debugging a Spring Application are the Proxies. You’ll sometimes find yourself jumping through a lot of Spring code just trying to find where it calls your code. If you find this happening then try to make an educated guess as to where your code is being hit and set a lot of break points to find it. You may resort to enabling a debug or trace logging level to get more visibility on what’s happening.</p>
 
-        
-      </section>
-
-      <footer class="page__meta">
-        
-        
-
-
-        
-      </footer>
-
-      
-
-      
-    </div>
-
-    
-  </article>
-
-  
-  
+  </div>
 </div>
     </div>
 

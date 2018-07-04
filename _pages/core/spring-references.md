@@ -1,7 +1,7 @@
-<table><tr><td><a href="https://github.com/JahnelGroup/journey-through-spring">Table of Contents</a></td></tr></table>
-
-Reference Material
-======
+---
+title:  "References"
+permalink: /core/spring-references
+---
 
 The Spring Framework ecosystem is large and overwhelming at a first glance. Before we dive into some of the interesting and challenging parts of Spring it’s important to have a high-level map of important resources. 
 
