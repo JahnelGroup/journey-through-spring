@@ -15,7 +15,7 @@ plugins:
 
 remote_theme: "mmistakes/minimal-mistakes"
 
-minimal_mistakes_skin    : "air" # "default", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "dark" # "default", "aqua", "contrast", "air", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
@@ -24,7 +24,7 @@ title_separator          : "-"
 name                     : "Steven Zgaljic"
 description              : "A pragmatic approach to learning the Spring Framework."
 url                      : https://jahnelgroup.github.io/journey-through-spring/
-baseurl                  : /content
+baseurl                  : # /content
 repository               : JahnelGroup/journey-through-spring 
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
@@ -261,14 +261,13 @@ compress_html:
 
 # Defaults
 defaults:
-  # _posts
+  # _docs
   - scope:
       path: ""
-      type: posts
+      type: docs
+  - scope
+      path: "core"
+      type: docs
     values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: # true
-      share: true
-      related: true
+      sidebar:
+        nav: "core"
