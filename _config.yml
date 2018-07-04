@@ -265,9 +265,3 @@ defaults:
   - scope:
       path: ""
       type: docs
-  - scope:
-      path: "/core"
-      type: docs
-    values:
-      sidebar:
-        nav: "core"
