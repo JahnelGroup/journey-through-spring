@@ -1,0 +1,362 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.12.0 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Journey Through Spring</title>
+<meta name="description" content="A pragmatic approach to learning the Spring Framework.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Journey Through Spring">
+<meta property="og:title" content="Journey Through Spring">
+<meta property="og:url" content="http://localhost:4000/_pages/spring-core/ioc-di/">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/_pages/spring-core/ioc-di/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Steven Zgaljic",
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Journey Through Spring Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Journey Through Spring</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/core/welcome-core" >Core</a>
+            </li>
+          
+        </ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Introduction</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/core/what-is-spring" class="">Spring and Spring Boot</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/core/kotlin" class="">Kotlin</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/core/references" class="">References</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Getting Started</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/core/magic" class="">Understaing the "magic" of Spring</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/core/starters" class="">Starters and Extreme Programming</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/core/debug" class="">Debugging a Spring App</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <table><tr><td><a href="https://github.com/JahnelGroup/journey-through-spring">Table of Contents</a></td></tr></table>
+
+<h1 id="spring-core">Spring Core</h1>
+<p>There are two main concepts fundamental to Spring - <a href="https://en.wikipedia.org/wiki/Inversion_of_control">Inversion of Control</a> and <a href="https://en.wikipedia.org/wiki/Dependency_injection">Dependency Injection</a>. Understanding the value of these concepts is critical to learning Spring.</p>
+
+<blockquote>
+  <p><em>IoC is also known as dependency injection (DI). It is a process whereby objects define their dependencies, that is, the other objects they work with, only through constructor arguments, arguments to a factory method, or properties that are set on the object instance after it is constructed or returned from a factory method. The container then injects those dependencies when it creates the bean. This process is fundamentally the inverse, hence the name Inversion of Control (IoC), of the bean itself controlling the instantiation or location of its dependencies by using direct construction of classes, or a mechanism such as the Service Locator pattern. - <a href="https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#beans-introduction">Spring Docs</a></em></p>
+</blockquote>
+
+<ul>
+  <li><strong>Read:</strong> <a href="http://www.baeldung.com/inversion-control-and-dependency-injection-in-spring"><strong>baeldung.com:</strong> Intro to Inversion of Control and Dependency Injection with Spring</a></li>
+</ul>
+
+<h2 id="inversion-of-control-ioc-container--application-context">Inversion of Control (IoC) Container / Application Context</h2>
+<p>At the center of a Spring application is the <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans">IoC Container</a> which is represented by the <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/ApplicationContext.html">ApplicationContext</a> Class. It is the orchestrator of your code and manager of your Objects. It is essentially the glue to your entire application and knows everything. You start the Application Context in your main function.</p>
+
+<ul>
+  <li><strong>Read:</strong> <a href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#getting-started-first-application-main-method"><strong>spring.io:</strong> The “main” Method</a></li>
+</ul>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="nn">com.example.demo</span>
+
+<span class="k">import</span> <span class="nn">org.springframework.boot.autoconfigure.SpringBootApplication</span>
+<span class="k">import</span> <span class="nn">org.springframework.boot.runApplication</span>
+
+<span class="n">@SpringBootApplication</span>
+<span class="kd">class</span> <span class="nc">DemoApplication</span>
+
+<span class="k">fun</span> <span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="p">:</span> <span class="n">Array</span><span class="p">&lt;</span><span class="n">String</span><span class="p">&gt;)</span> <span class="p">{</span>
+    <span class="n">runApplication</span><span class="p">&lt;</span><span class="n">DemoApplication</span><span class="p">&gt;(*</span><span class="n">args</span><span class="p">)</span> <span class="c1">// starts the IoC Container (i.e., ApplicationContext)
+</span><span class="p">}</span>
+</code></pre></div></div>
+
+<p>When you start the IoC Container it will scan your application from the current package down (i.e, com.example.demo*.*) to create beans, provide advice, establish database connection pools, any many more things. Your main function should do nothing other than start the Spring ApplicationContext - everything from this point is now driven by Spring constructs.</p>
+
+<ul>
+  <li><strong>Read:</strong> <a href="https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#context-introduction"><strong>spring.io:</strong> Additional Capabilities of the ApplicationContext</a></li>
+</ul>
+
+<h2 id="dependency-injection">Dependency Injection</h2>
+<p>Dependency Injection is a technique used to achieve Inversion of Control and sounds more sophisticated than it really is. If <em>Object A</em> depends on <em>Object B</em> then a reference will be provided (“injected”) from an external source (i.e., the ApplicationContext). If <em>Object A</em> creates <em>Object B</em> on it’s own then it is not Dependency Injection.</p>
+
+<p>In Spring we achieve this by creating <a href="../beans">Beans</a> and establishing their relationship in a few different ways. The two most common are through <a href="../beans#constructor-injection">Constructor Injection</a> or <a href="../beans#property-injection-with-autowired">Property Injection</a>.</p>
+
+<ul>
+  <li><strong>Watch:</strong> <a href="https://www.youtube.com/watch?v=xlWwMSu5I70"><strong>youtube.com:</strong> Understanding Spring Bean Factory</a></li>
+  <li><strong>Watch:</strong> <a href="https://www.youtube.com/watch?v=GB8k2-Egfv0&amp;t=493s"><strong>youtube.com:</strong> Understanding Dependency Injection</a></li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+    
+    
+    
+    
+    
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2018 Steven Zgaljic. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,386 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.12.0 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Journey Through Spring</title>
+<meta name="description" content="A pragmatic approach to learning the Spring Framework.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Journey Through Spring">
+<meta property="og:title" content="Journey Through Spring">
+<meta property="og:url" content="http://localhost:4000/_pages/getting-started/README/">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/_pages/getting-started/README/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Steven Zgaljic",
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Journey Through Spring Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Journey Through Spring</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/core/welcome-core" >Core</a>
+            </li>
+          
+        </ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Introduction</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/core/what-is-spring" class="">Spring and Spring Boot</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/core/kotlin" class="">Kotlin</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/core/references" class="">References</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Getting Started</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/core/magic" class="">Understaing the "magic" of Spring</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/core/starters" class="">Starters and Extreme Programming</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/core/debug" class="">Debugging a Spring App</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <table><tr><td><a href="https://github.com/JahnelGroup/journey-through-spring">Table of Contents</a></td></tr></table>
+
+<h1 id="getting-started">Getting Started</h1>
+
+<h2 id="linux-vs-mac-vs-windows">Linux v.s. Mac v.s. Windows</h2>
+<p>Professional software developers need to align themselves with the best tools available to get their job done. If you’re a .NET developer or work a lot with Microsoft products then Windows is an obvious choice. Everyone else should be on some kind of Linux distrubution or a Mac. The best software tools are just typically harder to access and work with on Windows. If you’re following this Journey I recommend you use Linux or Mac. I personally use <a href="https://getfedora.org/">Fedora</a> but there are plenty other great options available, <a href="https://www.ubuntu.com/">Ubuntu</a> is a great alternative.</p>
+
+<ul>
+  <li><strong>Read:</strong> <a href="https://www.lifewire.com/choose-best-linux-distro-for-needs-2201172"><strong>Lifewire:</strong> How To Choose The Best Linux Distro For Your Needs</a></li>
+  <li><strong>Read:</strong> <a href="https://www.digitalocean.com/community/tags/linux-basics?type=tutorials"><strong>Digital Ocean:</strong> Linux Basics</a></li>
+  <li><strong>Read:</strong> <a href="https://www.digitalocean.com/community/tutorials/an-introduction-to-linux-basics"><strong>Digital Ocean:</strong> An Introduction to Linux Basics</a></li>
+</ul>
+
+<h2 id="installing-tools-and-knowing-their-versions">Installing Tools and Knowing their Versions</h2>
+<p>As a software developer it’s important to know your tools. You should know exactly what tools are being used, where they are installed and what versions they are. It’s important that we install these tools in a uniform and systematic way.</p>
+
+<h3 id="install-sdkman">Install SDKMAN!</h3>
+<p>SDKMAN is a great tool for installing the software needed for developing our Spring applications. It allows you to install multiple versions (called candidates) of software at the same time and allows you to easily switch between them. SDKMAN will persist data in your home directory ~/.sdkman.</p>
+
+<ul>
+  <li><strong>Install:</strong> <a href="http://sdkman.io/install.html">SDKMAN</a></li>
+  <li><strong>Read:</strong> <a href="http://sdkman.io/usage.html">SDKMAN usage</a></li>
+</ul>
+
+<h3 id="install-java-and-kotlin">Install Java and Kotlin</h3>
+
+<p>We can build Spring with Java and Kotlin so install both using SDKMAN.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>sdk install java
+<span class="nv">$ </span>sdk install kotlin
+</code></pre></div></div>
+
+<h3 id="install-maven-and-gradle">Install Maven and Gradle</h3>
+<p>Spring developers depend on a number of different tools to deliver software. It all begins with a build and dependency management tool. The two biggest names in the community now are <a href="https://maven.apache.org/">Maven</a> and <a href="https://gradle.org/">Gradle</a>. Maven has been around longer with more example code and is really stable. Gradle is relatively new, adopted strongly by the Android community and is showing a lot more power than Maven as of late. Both will get the job done but the community is favoring Gradle.</p>
+
+<ul>
+  <li><strong>Read:</strong> <a href="https://zeroturnaround.com/rebellabs/java-build-tools-how-dependency-management-works-with-maven-gradle-and-ant-ivy/"><strong>zeroturnaround:</strong> Java Build Tools: How Dependency Management Works</a></li>
+</ul>
+
+<p>Install Maven and Gradle with SDKMAN.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>sdk install maven
+<span class="nv">$ </span>sdk install gradle
+</code></pre></div></div>
+
+<p>Follow these exercises and ignore the part about installing Maven or Gradle.</p>
+
+<ul>
+  <li><strong>Exercise:</strong> <a href="https://spring.io/guides/gs/maven/"><strong>spring.io:</strong> Building Java Projects with Maven</a></li>
+  <li><strong>Exercise:</strong> <a href="https://github.com/spring-guides/gs-gradle"><strong>spring-guides:</strong> Building Java Projects with Gradle</a></li>
+</ul>
+
+<h3 id="install-spring-boot-command-line-interface-spring-cli">Install Spring Boot Command Line Interface (Spring CLI)</h3>
+<p>The Spring Boot CLI is a tool that can help you rapidly prototype applications right from the terminal. It can be used to run Spring-Boot groovy scripts and init your application with the Spring Starter projects.</p>
+
+<p>Install Spring Boot CLI with SDKMAN.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>sdk install springboot
+</code></pre></div></div>
+
+<p>Follow this quick example to start a groovy web-app instantly from the command-line.</p>
+
+<ul>
+  <li><strong>Exercise:</strong> <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/cli-using-the-cli.html#cli-run"><strong>spring.io:</strong> Running Applications with the CLI</a></li>
+</ul>
+
+<h3 id="install-intellij">Install IntelliJ</h3>
+<p><a href="https://www.jetbrains.com/idea/"><strong>jetbrains:</strong> IntelliJ</a> has become the standard IDE used by most Java developers, <a href="https://www.eclipse.org/">Eclipse</a> being the other.</p>
+
+<ul>
+  <li><strong>Install:</strong> <a href="https://www.jetbrains.com/help/idea/install-and-set-up-intellij-idea.html"><strong>jetbrains:</strong> Install and set up IntelliJ IDEA</a></li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+    
+    
+    
+    
+    
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2018 Steven Zgaljic. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+
+
+
+
+
+
+
+
+  </body>
+</html>

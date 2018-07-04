@@ -1,0 +1,824 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.12.0 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Journey Through Spring</title>
+<meta name="description" content="A pragmatic approach to learning the Spring Framework.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Journey Through Spring">
+<meta property="og:title" content="Journey Through Spring">
+<meta property="og:url" content="http://localhost:4000/_pages/spring-core/beans/">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/_pages/spring-core/beans/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Steven Zgaljic",
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Journey Through Spring Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Journey Through Spring</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/core/welcome-core" >Core</a>
+            </li>
+          
+        </ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Introduction</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/core/what-is-spring" class="">Spring and Spring Boot</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/core/kotlin" class="">Kotlin</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/core/references" class="">References</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Getting Started</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/core/magic" class="">Understaing the "magic" of Spring</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/core/starters" class="">Starters and Extreme Programming</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/core/debug" class="">Debugging a Spring App</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <table><tr><td><a href="https://github.com/JahnelGroup/journey-through-spring">Table of Contents</a></td></tr></table>
+
+<h1 id="beans">Beans</h1>
+<p>Objects are the key element in Java programming and the Spring Framework handles them in a very special way. Unlike a regular Java Object that is created with the <strong>new</strong> operator and then used, a Spring Object must be registered with the ApplicationContext first. When an Object is registered with the ApplicationContext it is referred to as a <a href="https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#beans-definition">Bean</a> (or “Managed Bean” or “Component”). When Spring manages an Object as a Bean it is creating a Proxy around your object and can do very interesting things with it.</p>
+
+<h1 id="bean-configuration">Bean Configuration</h1>
+<p>Beans can be configured in three primary ways: XML, Java, or Annotations. We focus primarily on Annotation based configuration.</p>
+
+<ul>
+  <li><strong>Read:</strong> <a href="https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#beans-annotation-config"><strong>spring.io:</strong> Annotation-based container configuration</a></li>
+</ul>
+
+<p>Spring provides a few different annotations to drive the creation of beans. Ultimately Spring will use <strong>@Bean</strong> or <strong>@Component</strong> to create a Bean.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Annotation</th>
+      <th>Location</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>@Configuration</td>
+      <td>class</td>
+      <td>Indicates that this class defines @Bean’s to be</td>
+    </tr>
+    <tr>
+      <td>@Bean</td>
+      <td>method</td>
+      <td>Creates a Bean from the return value of the method</td>
+    </tr>
+    <tr>
+      <td>@Component</td>
+      <td>class</td>
+      <td>Instruct Spring to create a Bean out of the class</td>
+    </tr>
+    <tr>
+      <td>@Service</td>
+      <td>class</td>
+      <td>Is a @Component but Stereotyped as a Service</td>
+    </tr>
+    <tr>
+      <td>@Repository</td>
+      <td>class</td>
+      <td>Is a @Component but Stereotyped as a Repository</td>
+    </tr>
+    <tr>
+      <td>@Controller</td>
+      <td>class</td>
+      <td>Is a @Component but Stereotyped as a Controller</td>
+    </tr>
+    <tr>
+      <td>@RestController</td>
+      <td>class</td>
+      <td>Same as @Controller but meant REST end-points</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li><strong>Read:</strong> <a href="https://stackoverflow.com/questions/16051656/advantages-of-using-spring-stereotypes"><strong>stackoverflow.com:</strong> Advantages of using spring stereotypes?</a></li>
+  <li><strong>Read:</strong> <a href="https://stackoverflow.com/questions/6827752/whats-the-difference-between-component-repository-service-annotations-in"><strong>stackoverflow.com:</strong> What’s the difference between @Component, @Repository &amp; @Service annotations in Spring?</a></li>
+  <li><strong>Read:</strong> <a href="https://stackoverflow.com/questions/25242321/difference-between-spring-controller-and-restcontroller-annotation"><strong>stackoverflow.com:</strong> Difference between spring @Controller and @RestController annotation
+</a></li>
+  <li><strong>Read:</strong> <a href="https://www.genuitec.com/spring-frameworkrestcontroller-vs-controller/"><strong>genuitec.com:</strong> @RestController vs @Controller</a></li>
+</ul>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Declare a Singleton Bean - one instance for the entire application
+</span><span class="n">@Component</span>
+<span class="kd">class</span> <span class="nc">UserTransformer</span> <span class="p">{</span> <span class="p">}</span>
+
+<span class="c1">// Declare a Request Scope Bean - one instance per Web Request
+</span><span class="n">@Component</span>
+<span class="n">@Scope</span><span class="p">(</span><span class="s">"request"</span><span class="p">,</span> <span class="n">proxyMode</span> <span class="p">=</span> <span class="n">ScopedProxyMode</span><span class="p">.</span><span class="n">INTERFACES</span><span class="p">)</span>
+<span class="kd">class</span> <span class="nc">UserWebRequestContext</span> <span class="p">:</span> <span class="n">UserRequestContext</span> <span class="p">{</span> <span class="p">}</span>
+
+<span class="c1">// Declare a class that defines definition of Beans
+</span><span class="n">@Configuration</span>
+<span class="kd">class</span> <span class="nc">MyConfig</span> <span class="p">{</span>
+
+  <span class="c1">// Declare a Session Scope Bean - one instance per Web Session
+</span>  <span class="n">@Bean</span> 
+  <span class="n">@Scope</span><span class="p">(</span><span class="s">"session"</span><span class="p">)</span>
+  <span class="k">fun</span> <span class="nf">userSessionContext</span><span class="p">()</span> <span class="p">=</span> <span class="n">UserSessionContext</span><span class="p">()</span>
+
+<span class="p">}</span>
+
+<span class="c1">// Declares a Bean with the Service stereotype
+</span><span class="n">@Service</span>
+<span class="kd">class</span> <span class="nc">UserService</span> <span class="p">{</span> <span class="p">}</span>
+
+<span class="c1">// Declares a Bean with the Repository stereotype
+</span><span class="n">@Repository</span>
+<span class="kd">class</span> <span class="nc">UserRepository</span> <span class="p">{</span> <span class="p">}</span>
+
+<span class="n">@RestController</span>
+<span class="kd">class</span> <span class="nc">HelloController</span> <span class="p">{</span>
+  <span class="n">@RequestMapping</span><span class="p">(</span><span class="s">"/hello"</span><span class="p">)</span>
+  <span class="k">fun</span> <span class="nf">hello</span><span class="p">()</span> <span class="p">=</span> <span class="s">"Hello, World!"</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<h2 id="bean-scope">Bean Scope</h2>
+<p>The concept of <a href="https://en.wikipedia.org/wiki/Scope_(computer_science)">Scope</a> is fundamental to computer programming and it’s no surprise that its found in Spring as well. As you delegate the control over the creation of your Objects to Spring you have the ability to advise Spring on scope with @Scope.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Scope</th>
+      <th>Alias</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>singleton <strong>(default)</strong></td>
+      <td>None, default</td>
+      <td>A single instance is created</td>
+    </tr>
+    <tr>
+      <td>prototype</td>
+      <td>None</td>
+      <td>A new instance is created each time the bean is referenced</td>
+    </tr>
+    <tr>
+      <td>request        </td>
+      <td>@RequestScope</td>
+      <td>A new instance is created once per web request (web-aware)</td>
+    </tr>
+    <tr>
+      <td>session</td>
+      <td>@SessionScope</td>
+      <td>A new instance is created once per user web session (web-aware)</td>
+    </tr>
+    <tr>
+      <td>application</td>
+      <td>@ApplicationScope</td>
+      <td>A new instance is created once per ServletContext (web-aware)</td>
+    </tr>
+    <tr>
+      <td>websocket</td>
+      <td>None</td>
+      <td>A new instance is created once per WebSocket (web-aware)</td>
+    </tr>
+    <tr>
+      <td><em>&lt;custom&gt;</em></td>
+      <td>None</td>
+      <td>It is possible to define your own scope rules</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">@Component</span> 
+<span class="n">@Scope</span><span class="p">(</span><span class="s">"session"</span><span class="p">,</span> <span class="n">proxyMode</span> <span class="p">=</span> <span class="n">ScopedProxyMode</span><span class="p">.</span><span class="n">TARGET_CLASS</span><span class="p">)</span>
+<span class="kd">class</span> <span class="nc">UserSessionContext</span> <span class="p">{</span> <span class="p">}</span>
+
+<span class="c1">// or this is the same
+</span><span class="n">@Component</span> 
+<span class="n">@SessionScope</span>
+<span class="kd">class</span> <span class="nc">UserSessionContext</span> <span class="p">{</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li><strong>Read:</strong> <a href="https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#beans-factory-scopes"><strong>spring.io:</strong> Bean Scopes</a></li>
+  <li><strong>Read:</strong> <a href="http://www.baeldung.com/spring-bean-scopes"><strong>baeldung.com:</strong> Spring Bean Scopes</a></li>
+</ul>
+
+<h2 id="bean-proxy-mode">Bean Proxy Mode</h2>
+<p>There are two fundamental types of proxies <strong>JDK</strong> (by interface) and <strong>CGLIB</strong> (by class). It’s best practice that you inject by interface as opposed to class because it’s easier for Spring. If you inject by the target class then Spring needs to some extra work to accomplish it and is arguably a performance impact although there is great debate about that.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>ScopedProxyMode</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>DEFAULT</td>
+      <td>Typical NO unless configured differently elsewhere.</td>
+    </tr>
+    <tr>
+      <td>NO</td>
+      <td>Do not create a scoped proxy.</td>
+    </tr>
+    <tr>
+      <td>INTERFACES    </td>
+      <td>JDK Based Proxy</td>
+    </tr>
+    <tr>
+      <td>TARGET_CLASS</td>
+      <td>CGLIB Based Proxy</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li><strong>Read:</strong> <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-factory-scopes-other-injection"><strong>spring.io:</strong> Scoped beans as dependencies</a></li>
+</ul>
+
+<h2 id="bean-lifecycle">Bean Lifecycle</h2>
+<p>As Spring Beans are created they follow a Lifecycle where you can hook-in callback listeners to do interesting things when the Beans are first created and destroyed.</p>
+
+<ul>
+  <li><strong>Read:</strong> <a href="https://www.thejavaprogrammer.com/spring-bean-life-cycle/"><strong>thejavaprogrammer.com:</strong> Spring Bean Life Cycle</a></li>
+</ul>
+
+<p>A common use-case is to validate that certain properties are set on your Bean after it is created.</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">@Component</span>
+<span class="kd">class</span> <span class="nc">ConnectionManager</span><span class="p">(</span>
+    <span class="n">@Value</span><span class="p">(</span><span class="s">"\${connection.url}"</span><span class="p">)</span> <span class="kd">var</span> <span class="py">url</span><span class="p">:</span> <span class="n">String</span> <span class="p">=</span> <span class="s">""</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="n">@PostConstruct</span>
+    <span class="k">fun</span> <span class="nf">init</span><span class="p">(){</span>
+        <span class="n">Assert</span><span class="p">.</span><span class="n">isTrue</span><span class="p">(!</span><span class="n">url</span><span class="p">.</span><span class="n">isNullOrBlank</span><span class="p">(),</span> <span class="s">"url must be set"</span><span class="p">)</span>
+        <span class="n">Assert</span><span class="p">.</span><span class="n">isTrue</span><span class="p">(</span><span class="n">url</span><span class="p">.</span><span class="n">startsWith</span><span class="p">(</span><span class="s">"http://"</span><span class="p">),</span> <span class="s">"http is the only support protocol"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="accessing-beans-with-dependency-injection">Accessing Beans with Dependency Injection</h1>
+<p>Once your Beans are registered with the ApplicationContext you need a way to retrieve them and this is done through Dependency Injection. Spring provides several ways to accomplish this but we tend to use one of these techniques: constructor, property, or directly from the ApplicationContext.</p>
+
+<blockquote>
+  <p><strong>Important:</strong> Dependency Injection is completely Spring managed, that is you <em>get Beans from other Beans</em>. The whole concept is that you retrieve a Bean from the Spring ApplicationContext and it’s the containers job to construct and wire the dependencies into your Bean before giving it back to you. If you’re creating a component via the <strong>new</strong> operator then it is “unmanaged” and Spring is unaware of it so any Spring constructs defined in your class will not work at all.</p>
+</blockquote>
+
+<h2 id="1-injection-via-constructor">1. Injection via Constructor</h2>
+<p>The best way to wire you dependencies together are by defining them in your constructor. The reason this is favored is because it’s very obvious what your dependencies are. Additionally it makes it easy to Unit Test your code because you have the ability to inject Mocks into the constructor.</p>
+
+<ul>
+  <li><strong>Read:</strong> <a href="https://stackoverflow.com/questions/21218868/explain-why-constructor-inject-is-better-than-other-options"><strong>stackoverflow.com:</strong> Explain why constructor inject is better than other options</a></li>
+</ul>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">@Service</span>
+<span class="kd">class</span> <span class="nc">UserService</span> <span class="p">{</span> <span class="cm">/* some code */</span> <span class="p">}</span>
+
+<span class="cm">/** 
+  * Spring will create a UserController Bean for you and all the dependencies
+  * needed as well (i.e., userService)
+  */</span> 
+<span class="n">@RestController</span>
+<span class="kd">class</span> <span class="nc">UserController</span><span class="p">(</span>
+
+    <span class="cm">/** 
+      * Spring will automatically detect that a reference to another Bean 
+      * called userService is required and inject it here for you. 
+      */</span> 
+    <span class="kd">var</span> <span class="py">userService</span><span class="p">:</span> <span class="n">UserService</span>
+  
+<span class="p">){</span>
+    <span class="n">@RequestMapping</span><span class="p">(</span><span class="s">"/user/{id}"</span><span class="p">)</span>
+    <span class="k">fun</span> <span class="nf">findUserById</span><span class="p">(</span><span class="n">@RequestParam</span> <span class="n">id</span><span class="p">:</span> <span class="n">Long</span><span class="p">)</span> <span class="p">=</span> <span class="n">userService</span><span class="p">.</span><span class="n">findById</span><span class="p">(</span><span class="n">id</span><span class="p">)</span> <span class="c1">// now you can use it in your class
+</span><span class="p">}</span>
+</code></pre></div></div>
+
+<p>Now to test the UserController you could easily Mock out the UserService.</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">org.junit.Before</span>
+<span class="k">import</span> <span class="nn">org.junit.Test</span>
+<span class="k">import</span> <span class="nn">org.junit.runner.RunWith</span>
+<span class="k">import</span> <span class="nn">org.mockito.Mockito</span>
+<span class="k">import</span> <span class="nn">org.springframework.boot.test.context.SpringBootTest</span>
+<span class="k">import</span> <span class="nn">org.springframework.test.context.junit4.SpringRunner</span>
+
+<span class="n">@RunWith</span><span class="p">(</span><span class="n">SpringRunner</span><span class="o">::</span><span class="k">class</span><span class="p">)</span>
+<span class="n">@SpringBootTest</span>
+<span class="kd">class</span> <span class="nc">UserControllerTest</span><span class="p">{</span>
+
+    <span class="k">lateinit</span> <span class="kd">var</span> <span class="py">userController</span>
+    <span class="k">lateinit</span> <span class="kd">var</span> <span class="py">userService</span>
+
+    <span class="n">@Before</span> <span class="k">fun</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+      <span class="c1">// easily inject a fake mock of the UserService
+</span>      <span class="n">userService</span> <span class="p">=</span> <span class="n">Mockito</span><span class="p">.</span><span class="n">mock</span><span class="p">(</span><span class="n">UserService</span><span class="o">::</span><span class="k">class</span><span class="p">.</span><span class="n">java</span><span class="p">)</span>
+      <span class="n">userController</span> <span class="p">=</span> <span class="n">UserController</span><span class="p">(</span><span class="n">userService</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="n">@Test</span>
+    <span class="k">fun</span> <span class="err">`</span><span class="nf">easy</span> <span class="n">test</span> <span class="n">because</span> <span class="n">of</span> <span class="k">constructor</span> <span class="n">injection</span><span class="err">`</span><span class="p">(){</span>
+        <span class="n">Mockito</span><span class="p">.</span><span class="n">`when`</span><span class="p">(</span><span class="n">userService</span><span class="p">.</span><span class="n">findById</span><span class="p">(</span><span class="n">Mockito</span><span class="p">.</span><span class="n">any</span><span class="p">(</span><span class="n">Long</span><span class="o">::</span><span class="k">class</span><span class="p">.</span><span class="n">java</span><span class="p">)))</span>
+          <span class="p">.</span><span class="n">thenReturn</span><span class="p">(</span><span class="n">User</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="s">"Fake User"</span><span class="p">))</span>
+        
+        <span class="c1">// continue with test
+</span>        <span class="kd">var</span> <span class="py">fakeUser</span><span class="p">:</span> <span class="n">User</span> <span class="p">=</span> <span class="n">userController</span><span class="p">.</span><span class="n">findUserById</span><span class="p">(</span><span class="m">1</span><span class="p">);</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="2-injection-via-property-with-autowired">2. Injection via Property with @Autowired</h2>
+<p>The favored alternative to constructor injection is property level injection. This approach illustrates a lot more of the Spring magic because it’s using reflection to discover properties of your class that need to be provided by Spring. Surprising to many people it can even inject <strong>private</strong> properties into your class.</p>
+
+<p>This approach is very convenient in our class but things change dramatically when you want to test it.</p>
+
+<ul>
+  <li><strong>Read:</strong> <a href="http://vojtechruzicka.com/field-dependency-injection-considered-harmful/"><strong>vojtechruzicka.com:</strong> Dangers of Field Injection</a></li>
+</ul>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">@Service</span>
+<span class="kd">class</span> <span class="nc">UserService</span> <span class="p">{</span> <span class="cm">/* some code */</span> <span class="p">}</span>
+
+<span class="cm">/* 
+ * Spring will create a UserController Bean for you and all the dependencies
+ * needed as well (i.e., userService)
+ */</span> 
+<span class="n">@RestController</span>
+<span class="kd">class</span> <span class="nc">UserController</span><span class="p">{</span>
+
+    <span class="cm">/* 
+     * Spring will use reflection to detect that this property is a reference to 
+     * another Bean called userService and inject it here for you directly after 
+     * the UserController is initialized by Spring. 
+     */</span> 
+    <span class="n">@Autowired</span>
+    <span class="k">lateinit</span> <span class="kd">var</span> <span class="py">userService</span><span class="p">:</span> <span class="n">UserService</span>
+
+    <span class="n">@RequestMapping</span><span class="p">(</span><span class="s">"/user/{id}"</span><span class="p">)</span>
+    <span class="k">fun</span> <span class="nf">findUserById</span><span class="p">(</span><span class="n">@RequestParam</span> <span class="n">id</span><span class="p">:</span> <span class="n">Long</span><span class="p">)</span> <span class="p">=</span> <span class="n">userService</span><span class="p">.</span><span class="n">findById</span><span class="p">(</span><span class="n">id</span><span class="p">)</span> <span class="c1">// now you can use it in your class
+</span><span class="p">}</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p><a href="https://kotlinlang.org/docs/reference/properties.html#late-initialized-properties-and-variables">lateinit</a> is a Kotlin construct and is confusing for those new using the language with Spring. This is required because Kotlin is very strict with null safety checking. There is a short period of time where the userService property will actually be null, refer back to the Spring Bean Lifecycle section to learn more. Spring will first create your Object and then use reflection immediately after to inject these properties, lateinit essentially tells Kotin to ignore the null safety checks for this reference.</p>
+</blockquote>
+
+<p>Testing code written this way is much harder because you really don’t have a good clean way to override the value with a Mock. There are two general approaches to this - define another bean as the @Primary and override it in the ApplicationContext, or using Mockito and the @InjectMocks annotation.</p>
+
+<h3 id="mocking-autowired-properties-with-primary">Mocking @Autowired Properties with @Primary</h3>
+<p>The <a href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/context/annotation/Primary.html">@Primary</a> annotation allows you to define multiple beans of the same and give Spring a hint at deciding which one to choice by default if no <a href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/beans/factory/annotation/Qualifier.html">@Qualifier</a> is used.</p>
+
+<p>This allows you to shadow a Bean in your application with a Mock. In order to do this you need to define a test configuration and load up another Bean of the exact same type and name.</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/**
+  * Since we're declaring a new Configuration file just for testing we have to make 
+  * the Spring test loader aware of it by refering to it in this annotation. Notice 
+  * that you have also include your main class because once your declare the classes
+  * attribute it overides the location of all configuration files!
+  */</span> 
+<span class="n">@SpringBootTest</span><span class="p">(</span><span class="n">classes</span> <span class="p">=</span> <span class="p">[</span><span class="n">DemoApplication</span><span class="o">::</span><span class="k">class</span><span class="p">,</span> <span class="n">MyTest</span><span class="p">.</span><span class="n">TestConfig</span><span class="o">::</span><span class="k">class</span><span class="p">])</span>
+<span class="n">@RunWith</span><span class="p">(</span><span class="n">SpringRunner</span><span class="o">::</span><span class="k">class</span><span class="p">)</span>
+<span class="kd">class</span> <span class="nc">MyTest</span><span class="p">{</span>
+
+    <span class="cm">/**
+      * This is now needed to define another Bean of the same type and mark it
+      * as @Primary which essentially shadows the original one. 
+      */</span>
+    <span class="kd">class</span> <span class="nc">TestConfig</span> <span class="p">{</span>
+      <span class="n">@Bean</span>
+      <span class="n">@Primary</span>
+      <span class="k">fun</span> <span class="nf">userService</span><span class="p">()</span> <span class="p">=</span> <span class="n">Mockito</span><span class="p">.</span><span class="n">mock</span><span class="p">(</span><span class="n">UserService</span><span class="o">::</span><span class="k">class</span><span class="p">.</span><span class="n">java</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**
+      * Now we have to rely on Spring to provide us references to test so we
+      * inject them here. This is a big step away from "unit" testing. 
+      */</span> 
+    <span class="n">@Autowired</span> <span class="k">lateinit</span> <span class="kd">var</span> <span class="py">userService</span><span class="p">:</span> <span class="n">UserService</span>
+    <span class="n">@Autowired</span> <span class="k">lateinit</span> <span class="kd">var</span> <span class="py">userController</span><span class="p">:</span> <span class="n">UserController</span>
+
+    <span class="n">@Test</span>
+    <span class="k">fun</span> <span class="err">`</span><span class="nf">test</span> <span class="n">with</span> <span class="n">mock</span> <span class="n">primary</span> <span class="n">bean</span><span class="err">`</span><span class="p">(){</span>
+        <span class="n">Mockito</span><span class="p">.</span><span class="n">`when`</span><span class="p">(</span><span class="n">userService</span><span class="p">.</span><span class="n">findById</span><span class="p">(</span><span class="n">Mockito</span><span class="p">.</span><span class="n">any</span><span class="p">(</span><span class="n">Long</span><span class="o">::</span><span class="k">class</span><span class="p">.</span><span class="n">java</span><span class="p">)))</span>
+          <span class="p">.</span><span class="n">thenReturn</span><span class="p">(</span><span class="n">User</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="s">"Fake User"</span><span class="p">))</span>
+
+        <span class="c1">// continue with test
+</span>        <span class="kd">var</span> <span class="py">fakeUser</span><span class="p">:</span> <span class="n">User</span> <span class="p">=</span> <span class="n">userController</span><span class="p">.</span><span class="n">findUserById</span><span class="p">(</span><span class="m">1</span><span class="p">);</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="mocking-autowired-properties-with-mockito-injectmocks">Mocking @Autowired Properties with Mockito @InjectMocks</h3>
+<p>Mockito can eliminate that nasty bit of TestConfig code using @Mock and @InjectMocks. The concept is same as with @Primary but instead of letting Spring inject the Beans into your test class you let Mockito do it.</p>
+
+<ul>
+  <li><strong>@Mock</strong> - Is just like Mockito.mock(..) but registers the Mock to be used with @InjectMocks</li>
+  <li><strong>@InjectMocks</strong> - Is just like @Autowired but Mockito will swap out any beans with their matching Mocks declared by @Mock</li>
+</ul>
+
+<p>Although powerful this approach can be a little dangerous.</p>
+
+<ul>
+  <li><strong>Read:</strong> <a href="http://www.baeldung.com/mockito-annotations"><strong>baeldung.com:</strong> Getting Started with Mockito @Mock, @Spy, @Captor and @InjectMocks</a></li>
+  <li><strong>Read:</strong> <a href="https://stackoverflow.com/questions/16467685/difference-between-mock-and-injectmocks"><strong>stackoverflow.com:</strong> @Mock and @InjectMocks</a></li>
+  <li><strong>Read:</strong> <a href="https://tedvinke.wordpress.com/2014/02/13/mockito-why-you-should-not-use-injectmocks-annotation-to-autowire-fields/"><strong>tedvinke.wordpress.com:</strong> Why You Should Not Use InjectMocks Annotation to Autowire Fields</a></li>
+</ul>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">@RunWith</span><span class="p">(</span><span class="n">SpringRunner</span><span class="o">::</span><span class="k">class</span><span class="p">)</span>
+<span class="n">@SpringBootTest</span>
+<span class="kd">class</span> <span class="nc">MyTest</span><span class="p">{</span>
+
+    <span class="n">@Mock</span>
+    <span class="k">lateinit</span> <span class="kd">var</span> <span class="py">userService</span><span class="p">:</span> <span class="n">UserService</span>
+
+    <span class="n">@InjectMocks</span>
+    <span class="k">lateinit</span> <span class="kd">var</span> <span class="py">userController</span><span class="p">:</span> <span class="n">UserController</span>
+
+    <span class="n">@Test</span>
+    <span class="k">fun</span> <span class="nf">`test`</span><span class="p">(){</span>
+        <span class="n">Mockito</span><span class="p">.</span><span class="n">`when`</span><span class="p">(</span><span class="n">userService</span><span class="p">.</span><span class="n">findById</span><span class="p">(</span><span class="n">Mockito</span><span class="p">.</span><span class="n">any</span><span class="p">(</span><span class="n">Long</span><span class="o">::</span><span class="k">class</span><span class="p">.</span><span class="n">java</span><span class="p">)))</span>
+          <span class="p">.</span><span class="n">thenReturn</span><span class="p">(</span><span class="n">User</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="s">"Fake User"</span><span class="p">))</span>
+          
+        <span class="c1">// continue with test
+</span>        <span class="kd">var</span> <span class="py">fakeUser</span><span class="p">:</span> <span class="n">User</span> <span class="p">=</span> <span class="n">userController</span><span class="p">.</span><span class="n">findUserById</span><span class="p">(</span><span class="m">1</span><span class="p">);</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="3-injection-via-applicationcontext">3. Injection via ApplicationContext</h2>
+<p>This approach is typically used when you are dynamically interacting with Beans during runtime, in other words you’re unsure of which Bean you need so you need to look it up. For example if you’re processing requests and need a corresponding transformer for different types of requests you wouldn’t want to inject a reference to every type of transformer.</p>
+
+<p>Let’s define a few types of tranformers:</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">BrowserTransformer</span><span class="p">{</span>
+    <span class="k">fun</span> <span class="nf">transform</span><span class="p">(</span><span class="n">inbound</span><span class="p">:</span> <span class="n">String</span><span class="p">):</span> <span class="n">String</span>
+<span class="p">}</span>
+
+<span class="n">@Component</span> <span class="kd">class</span> <span class="nc">ChromeTransformer</span> <span class="p">:</span> <span class="n">BrowserTransformer</span> <span class="p">{</span>
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">transform</span><span class="p">(</span><span class="n">inbound</span><span class="p">:</span> <span class="n">String</span><span class="p">):</span> <span class="n">String</span> <span class="p">=</span> <span class="s">"Chrome:"</span><span class="p">.</span><span class="n">plus</span><span class="p">(</span><span class="n">inbound</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">@Component</span> <span class="kd">class</span> <span class="nc">FirefoxTransformer</span> <span class="p">:</span> <span class="n">BrowserTransformer</span><span class="p">{</span>
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">transform</span><span class="p">(</span><span class="n">inbound</span><span class="p">:</span> <span class="n">String</span><span class="p">):</span> <span class="n">String</span> <span class="p">=</span> <span class="s">"Firefox:"</span><span class="p">.</span><span class="n">plus</span><span class="p">(</span><span class="n">inbound</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">@Component</span> <span class="kd">class</span> <span class="nc">IETransformer</span> <span class="p">:</span> <span class="n">BrowserTransformer</span><span class="p">{</span>
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">transform</span><span class="p">(</span><span class="n">inbound</span><span class="p">:</span> <span class="n">String</span><span class="p">):</span> <span class="n">String</span> <span class="p">=</span> <span class="s">"IE:"</span><span class="p">.</span><span class="n">plus</span><span class="p">(</span><span class="n">inbound</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Now you can retrieve them directly through the ApplicationContext:</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">@SpringBootApplication</span>
+<span class="kd">class</span> <span class="nc">DemoApplication</span><span class="p">(</span><span class="kd">var</span> <span class="py">appContext</span><span class="p">:</span> <span class="n">AbstractApplicationContext</span><span class="p">)</span> <span class="p">:</span> <span class="n">ApplicationRunner</span><span class="p">{</span>
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">run</span><span class="p">(</span><span class="n">args</span><span class="p">:</span> <span class="n">ApplicationArguments</span><span class="p">?)</span> <span class="p">{</span>
+
+        <span class="kd">var</span> <span class="py">xform</span> <span class="p">=</span> <span class="n">appContext</span><span class="p">.</span><span class="n">getBean</span><span class="p">(</span><span class="s">"firefoxTransformer"</span><span class="p">,</span> <span class="n">BrowserTransformer</span><span class="o">::</span><span class="k">class</span><span class="p">.</span><span class="n">java</span><span class="p">)</span>
+        <span class="n">println</span><span class="p">(</span><span class="n">xform</span><span class="p">.</span><span class="n">transform</span><span class="p">(</span><span class="s">"Hello"</span><span class="p">))</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+
+<span class="n">@RestController</span>
+<span class="kd">class</span> <span class="nc">EchoController</span><span class="p">(</span><span class="kd">var</span> <span class="py">appContext</span><span class="p">:</span> <span class="n">AbstractApplicationContext</span><span class="p">)</span> <span class="p">{</span>
+  
+  <span class="n">@RequestMapping</span><span class="p">(</span><span class="s">"/echo"</span><span class="p">)</span>
+  <span class="k">fun</span> <span class="nf">echo</span><span class="p">(</span><span class="n">str</span><span class="p">:</span> <span class="n">String</span><span class="p">){</span>
+    <span class="kd">var</span> <span class="py">userAgent</span> <span class="p">=</span> <span class="n">getUserAgent</span><span class="p">()</span>
+    
+    <span class="c1">// this will get the corresponding bean based on its name
+</span>    <span class="kd">var</span> <span class="py">xform</span> <span class="p">=</span> <span class="n">appContext</span><span class="p">.</span><span class="n">getBean</span><span class="p">(</span><span class="s">"${userAgent}Transformer"</span><span class="p">,</span> <span class="n">BrowserTransformer</span><span class="o">::</span><span class="k">class</span><span class="p">.</span><span class="n">java</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">xform</span><span class="p">.</span><span class="n">transform</span><span class="p">(</span><span class="n">str</span><span class="p">)</span>
+  <span class="p">}</span>
+  
+  <span class="k">fun</span> <span class="nf">getUserAgent</span><span class="p">():</span> <span class="n">String</span> <span class="p">{</span>
+    <span class="c1">// assume this code will return the String: "IE", "firefox", or "chrome"
+</span>  <span class="p">}</span>
+  
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<p>Testing code written this way can only be done by shadowing the original bean with @Primary in a TestConfig.</p>
+
+<h2 id="4-injection-via-objectfactory">4. Injection via ObjectFactory</h2>
+<p>Spring provides a class called <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/ObjectFactory.html">ObjectFactory</a> that can be used to dispense beans, this is perfect @scope(“prototype”) beans where you want a new instance each time. You simply inject a generic typed reference of ObjectFactory.</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">org.springframework.beans.factory.ObjectFactory</span>
+
+<span class="cm">/**
+  * Bean to represent a single XLS row, we want a new instance for each row. 
+  */</span>
+<span class="n">@Component</span> 
+<span class="n">@Scope</span><span class="p">(</span><span class="s">"prototype"</span><span class="p">)</span>
+<span class="kd">class</span> <span class="nc">XLSRow</span> <span class="p">{</span> <span class="cm">/*code*/</span> <span class="p">}</span>
+
+<span class="cm">/**
+  * Bean to iterate through each XLS row and process it.
+  */</span> 
+<span class="n">@Component</span>
+<span class="kd">class</span> <span class="nc">XLSProcessor</span><span class="p">(</span>
+    <span class="kd">var</span> <span class="py">xlsRowFactory</span> <span class="p">:</span> <span class="n">ObjectFactory</span><span class="p">&lt;</span><span class="n">XLSRow</span><span class="p">&gt;</span>
+<span class="p">)</span> <span class="p">{</span>
+  
+  <span class="k">fun</span> <span class="nf">processXls</span><span class="p">(</span><span class="n">xlsFile</span><span class="p">:</span> <span class="n">XLSFile</span><span class="p">){</span>
+     <span class="k">for</span><span class="p">(</span><span class="n">Row</span> <span class="n">r</span> <span class="p">:</span> <span class="n">xlsFile</span><span class="p">.</span><span class="n">getRows</span><span class="p">()){</span>
+        <span class="c1">// spring will dispense a new bean each time this is called.
+</span>        <span class="kd">var</span> <span class="py">xlsrow</span> <span class="p">=</span> <span class="n">xlsRowFactory</span><span class="p">.</span><span class="n">getObject</span><span class="p">()</span>
+     <span class="p">}</span>
+  <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><strong>Read:</strong> <a href="https://stackoverflow.com/questions/6136261/how-to-produce-prototype-objects-from-singleton-design-help-needed"><strong>stackoverflow.com:</strong> How to Produce prototype objects</a></p>
+
+<h1 id="exercises">Exercises</h1>
+<p>Try out this exercise to get a feel for the Application Context and declaring Beans.</p>
+
+<ul>
+  <li><strong>Exercise:</strong> <a href="https://github.com/JahnelGroup/journey-through-spring/tree/master/basic-beans"><strong>github.com:</strong> Journey Through Spring: basic-beans</a></li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+    
+    
+    
+    
+    
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2018 Steven Zgaljic. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+
+
+
+
+
+
+
+
+  </body>
+</html>

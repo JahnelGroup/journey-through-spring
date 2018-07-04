@@ -1,0 +1,406 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.12.0 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Journey Through Spring</title>
+<meta name="description" content="A pragmatic approach to learning the Spring Framework.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Journey Through Spring">
+<meta property="og:title" content="Journey Through Spring">
+<meta property="og:url" content="http://localhost:4000/_pages/core/spring-kotlin/">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/_pages/core/spring-kotlin/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Steven Zgaljic",
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Journey Through Spring Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Journey Through Spring</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/core/welcome-core" >Core</a>
+            </li>
+          
+        </ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Introduction</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/core/what-is-spring" class="">Spring and Spring Boot</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/core/kotlin" class="">Kotlin</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/core/references" class="">References</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Getting Started</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/core/magic" class="">Understaing the "magic" of Spring</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/core/starters" class="">Starters and Extreme Programming</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/core/debug" class="">Debugging a Spring App</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <table><tr><td><a href="https://github.com/JahnelGroup/journey-through-spring">Table of Contents</a></td></tr></table>
+
+<h1 id="what-is-kotlin">What is Kotlin?</h1>
+
+<p>Kotlin started with the Android community and solves many problems that exist in Java. It does an excellent job at inheriting the best features of various languages and eliminates a significant amount of the verbosity found in Java. It’s powerful features and 100% interoperability with Java make a very compelling argument as a language replacement.</p>
+
+<blockquote>
+  <p>*Kotlin is a general purpose, open source, statically typed “pragmatic” programming language for the JVM and Android that combines object-oriented and functional programming features. It is focused on interoperability, safety, clarity, and tooling support. Versions of Kotlin for JavaScript (ECMAScript 5.1) and native code (using LLVM) are in the works. - *<a href="https://www.infoworld.com/article/3224868/java/what-is-kotlin-the-java-alternative-explained.html"><strong>infoworld.com:</strong> What is Kotlin</a>**</p>
+</blockquote>
+
+<ul>
+  <li><strong>Read:</strong> <a href="https://www.infoworld.com/article/3224868/java/what-is-kotlin-the-java-alternative-explained.html"><strong>infoworld.com:</strong> What is Kotlin? The Java alternative explained</a></li>
+  <li><strong>Read:</strong> <a href="https://kotlinlang.org/docs/reference/server-overview.html"><strong>kotlinlang.org:</strong> Using Kotlin for Server-side Development</a></li>
+</ul>
+
+<p>This journey will focus primarily on Spring Boot and the example code will be written in Kotlin.</p>
+
+<ul>
+  <li><strong>Read:</strong> <a href="https://kotlinlang.org/docs/reference/comparison-to-java.html"><strong>kotlinlang.org:</strong> Comparison to Java Programming Language</a></li>
+  <li><strong>Read:</strong> <a href="https://spring.io/blog/2017/01/04/introducing-kotlin-support-in-spring-framework-5-0"><strong>spring.io:</strong> Introducing Kotlin support in Spring Framework 5.0</a></li>
+</ul>
+
+<h2 id="highlight-a-few-differences-from-java">Highlight a few differences from Java</h2>
+<p>If you’re new to Kotlin here are a few main differences from Java that will help you follow along in this Journey.</p>
+
+<h3 id="optional-semicolons">Optional Semicolons</h3>
+<p>Semicolons are optional.</p>
+
+<p><strong>Java</strong></p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Hello, World!"</span><span class="o">);</span>
+</code></pre></div></div>
+<p><strong>Kotlin</strong></p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">println</span><span class="p">(</span><span class="s">"Hello, World!"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="null-safety">Null Safety</h3>
+<p>The most infamous exception in Java is the <a href="https://stackoverflow.com/questions/218384/what-is-a-nullpointerexception-and-how-do-i-fix-it">NullPointerException</a>. It happens very often and the problem with Java is that it does almost nothing to help you avoid them. Kotlin has taken a very defensive approach to <strong>null</strong> and actually makes you declare if a reference can potentially be null.</p>
+
+<h3 id="type-inference">Type Inference</h3>
+<p>Both Java and Kotlin are considered strict static languages but Kotlin has type inference. This means if the compiler can determine the type of a reference without a doubt then you can omit it. Also the type is defined on the right side of the variable name instead of the left.</p>
+
+<ul>
+  <li><strong>Read:</strong> <a href="https://code.tutsplus.com/tutorials/kotlin-from-scratch-variables-basic-types-arrays-type-inference-and-comments--cms-29328"><strong>tutsplus.com:</strong> Kotlin From Scratch: Variables, Basic Types, and Arrays</a></li>
+</ul>
+
+<p><strong>Java</strong></p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Integer</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+<span class="n">String</span> <span class="n">str</span> <span class="o">=</span> <span class="s">"Hello"</span><span class="o">;</span>
+</code></pre></div></div>
+<p><strong>Kotlin</strong></p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="py">num</span> <span class="p">=</span> <span class="m">1</span>
+<span class="kd">var</span> <span class="py">str</span><span class="p">:</span> <span class="n">String</span> <span class="p">=</span> <span class="s">"Hello"</span>
+</code></pre></div></div>
+
+<h3 id="instantiating-objects">Instantiating Objects</h3>
+<p>In Java we use the <strong>new</strong> keyword to instantiate an Object, but that does not exist in Kotlin so we simply omit it.</p>
+
+<p><strong>Java</strong></p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">User</span> <span class="n">user</span> <span class="o">=</span> <span class="k">new</span> <span class="n">User</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="s">"Steven"</span><span class="o">);</span>
+</code></pre></div></div>
+<p><strong>Kotlin</strong></p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="py">user</span> <span class="p">=</span> <span class="n">User</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="s">"Steven"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="class-declaration">Class Declaration</h3>
+<p>The two things to be aware of are how you declare <em>inheritance</em> and <em>constructors</em>.</p>
+
+<ul>
+  <li><strong>Read:</strong> <a href="https://kotlinlang.org/docs/reference/classes.html"><strong>kotlinlang.org:</strong> Classes and Inheritance</a></li>
+</ul>
+
+<h4 id="inheritance">Inheritance</h4>
+<p>In Java we have the <strong>extends</strong> and <strong>implements</strong> keywords for class and interfaces respectively, but that does not exist in Kotlin so we use a colon <strong>:</strong> after the class name for both. Kotlin is still single inheritance so if you’re extending a class it must the first one in the list.</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// extends AbstractParentClass and implements MyInterface1, MyInterface2
+</span><span class="kd">class</span> <span class="nc">ChildClass</span> <span class="p">:</span> <span class="n">AbstractParentClass</span><span class="p">,</span> <span class="n">MyInterface1</span><span class="p">,</span> <span class="n">MyInterface2</span> <span class="p">{</span> <span class="p">}</span>
+
+<span class="c1">// implements MyInterface1
+</span><span class="kd">class</span> <span class="nc">ChildClass</span> <span class="p">:</span> <span class="n">MyInterface1</span> <span class="p">{</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<h4 id="constructors">Constructors</h4>
+<p>Kotlin can have one primary and one or more secondary constructors. The primary constructor comes directly after the name of the class.</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// single primary constructor
+</span><span class="kd">class</span> <span class="nc">User</span><span class="p">(</span><span class="n">firstName</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+
+<span class="c1">// primary constructor and one secondary constructor
+</span><span class="kd">class</span> <span class="nc">User</span><span class="p">(</span><span class="n">firstName</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">:</span> <span class="n">UserService</span> <span class="p">{</span>
+  <span class="k">constructor</span><span class="p">(</span><span class="n">firstName</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">lastName</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">:</span> <span class="k">this</span><span class="p">(</span><span class="n">firstName</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+    
+    
+    
+    
+    
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2018 Steven Zgaljic. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+
+
+
+
+
+
+
+
+  </body>
+</html>
