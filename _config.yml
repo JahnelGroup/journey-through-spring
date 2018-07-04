@@ -265,7 +265,7 @@ defaults:
   - scope:
       path: ""
       type: docs
-  - scope
+  - scope:
       path: "/core"
       type: docs
     values:
