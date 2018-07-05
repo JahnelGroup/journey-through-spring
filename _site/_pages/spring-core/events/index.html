@@ -101,7 +101,7 @@
 
   </head>
 
-  <body class="layout--archive">
+  <body class="layout--single wide">
 
     <!--[if lt IE 9]>
 <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
@@ -234,11 +234,50 @@
   </div>
 
 
-  <div class="archive">
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
     
-      <h1 id="page-title" class="page__title"></h1>
     
-    <table><tr><td><a href="https://github.com/JahnelGroup/journey-through-spring">Table of Contents</a></td></tr></table>
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Contents</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#applicationevent">ApplicationEvent</a>
+    <ul>
+      <li><a href="#what-are-good-events">What are good Events?</a></li>
+      <li><a href="#events-are-pojos">Events are POJO’s</a></li>
+    </ul>
+  </li>
+  <li><a href="#raising-events-with-applicationeventpublisher">Raising Events with ApplicationEventPublisher</a></li>
+  <li><a href="#listening-for-events">Listening for Events</a>
+    <ul>
+      <li><a href="#applicationlistener-interface">ApplicationListener Interface</a></li>
+      <li><a href="#eventlistener-annotation">@EventListener Annotation</a></li>
+    </ul>
+  </li>
+  <li><a href="#debugging-events">Debugging Events</a></li>
+  <li><a href="#async-events">Async Events</a></li>
+  <li><a href="#transactional-events">Transactional Events</a></li>
+  <li><a href="#ordering-of-event-listeners">Ordering of Event Listeners</a></li>
+  <li><a href="#spring-data---domain-events-with-domainevents-and-abstractaggregateroot">Spring Data - Domain Events with @DomainEvents and AbstractAggregateRoot</a></li>
+  <li><a href="#spring-integration---applicationeventlisteningmessageproducer">Spring Integration - ApplicationEventListeningMessageProducer</a></li>
+</ul>
+            </nav>
+          </aside>
+        
+        <table><tr><td><a href="https://github.com/JahnelGroup/journey-through-spring">Table of Contents</a></td></tr></table>
 
 <h1 id="events">Events</h1>
 <p>The concept of <a href="https://en.wikipedia.org/wiki/Event_(computing)">Events</a> is fundamental to computer programming and allows us to design components with loose coupling and high cohesion. Spring’s context is highly event driven and exposes this feature for you to listen and react to events as well as fire your own.</p>
@@ -482,7 +521,27 @@ class BidNotificationService {
 <span class="p">}</span>
 </code></pre></div></div>
 
-  </div>
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
 </div>
     </div>
 

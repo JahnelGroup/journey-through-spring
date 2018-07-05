@@ -101,7 +101,7 @@
 
   </head>
 
-  <body class="layout--archive">
+  <body class="layout--single wide">
 
     <!--[if lt IE 9]>
 <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
@@ -234,11 +234,46 @@
   </div>
 
 
-  <div class="archive">
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
     
-      <h1 id="page-title" class="page__title"></h1>
     
-    <table><tr><td><a href="https://github.com/JahnelGroup/journey-through-spring">Table of Contents</a></td></tr></table>
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Contents</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#the-trasherror-bag-pattern">The Trash/Error Bag Pattern</a></li>
+  <li><a href="#the-validator-interface">The Validator Interface</a></li>
+  <li><a href="#running-the-validator">Running the Validator</a></li>
+  <li><a href="#validation-with-annotations-jsr-303">Validation with Annotations (JSR-303)</a>
+    <ul>
+      <li><a href="#custom-jsr-303-annotation-validator">Custom JSR-303 Annotation Validator</a></li>
+    </ul>
+  </li>
+  <li><a href="#errorcode-messagesource-and-resourcebundle">ErrorCode, MessageSource and ResourceBundle</a>
+    <ul>
+      <li><a href="#hibernate-validationproperties">Hibernate Validation.properties</a></li>
+      <li><a href="#messagesproperties-convention">messages.properties convention</a></li>
+    </ul>
+  </li>
+  <li><a href="#api-error-framework">API Error Framework</a></li>
+</ul>
+            </nav>
+          </aside>
+        
+        <table><tr><td><a href="https://github.com/JahnelGroup/journey-through-spring">Table of Contents</a></td></tr></table>
 
 <h1 id="validation">Validation</h1>
 <p>Before using a piece of a data you typically want to <a href="https://en.wikipedia.org/wiki/Data_validation">validate</a> it first. Validation takes many forms and really depends on where the data is coming from and where the validation check is being done. If you’re passing data from one class to another via a function call then maybe some light validations are warranted (i.e., null checks) but if you’re receiving data from an external source you typically need to scrutinize it further.</p>
@@ -522,7 +557,27 @@
   <li><strong>Read:</strong> <a href="http://www.baeldung.com/global-error-handler-in-a-spring-rest-api"><strong>baeldung.com:</strong> Global Error Handler in Spring REST API</a></li>
 </ul>
 
-  </div>
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
 </div>
     </div>
 

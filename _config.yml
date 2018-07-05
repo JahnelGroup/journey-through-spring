@@ -15,7 +15,7 @@ plugins:
 
 remote_theme: "mmistakes/minimal-mistakes"
 
-minimal_mistakes_skin    : "air" # "default", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "dark" # "default", "aqua", "contrast", "air", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
@@ -266,6 +266,9 @@ defaults:
       path: ""
       type: pages
     values:
-      layout: archive
+      layout: single
+      toc: true
+      toc_label: "Contents"
+      classes: wide
       sidebar:
         nav: "core"
