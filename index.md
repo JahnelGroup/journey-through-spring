@@ -3,7 +3,7 @@ layout: splash
 permalink: /
 header:
   overlay_color: "#5e616c"
-  overlay_image: /assets/images/mm-home-page-feature.jpg
+  overlay_image: /assets/images/splash.jpg
   cta_label: "<i class='fas fa-angle-double-right'></i> Begin Journey"
   cta_url: "/core/welcome-core"
   caption:

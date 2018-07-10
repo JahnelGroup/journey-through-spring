@@ -15,11 +15,9 @@ As of 2017 the Spring community officially declared [support for Kotlin in Sprin
 
 <i class='fas fa-bookmark'></i> Read: [Using Kotlin for Server-side Development (kotlinlang.org)](https://kotlinlang.org/docs/reference/server-overview.html){:target="_blank"}
 
-## Kotlin Highlights
-
 Here are a few key differences from Java that will help you follow along in this Journey.
 
-### Optional Semicolons
+## Optional Semicolons
 
 Semicolons are optional.
 
@@ -33,7 +31,7 @@ System.out.println("Hello, World!");
 println("Hello, World!")
 ```
 
-### Type Inference
+## Type Inference
 
 Java and Kotlin are considered strict static languages but Kotlin has type inference. This means if the compiler can determine the type of a variable then you can omit it. The type is defined on the right side of the variable name instead of the left.
 
@@ -49,11 +47,13 @@ var num: Int = 1   // explictly setting the type
 var str = "Hello"  // type is inferred
 ```
 
-### Null Safety
+## Null Safety
 
 The most infamous exception in Java is the [NullPointerException](https://stackoverflow.com/questions/218384/what-is-a-nullpointerexception-and-how-do-i-fix-it){:target="_blank"}. It happens often and worse is that Java does almost nothing to help you avoid them. Kotlin has taken a very defensive approach to **null** and actually makes you declare if a reference can potentially be null.
 
 ```kotlin
+// Kotlin
+
 // will not compile: Null can not be a value of a non-null type String
 var str: String = null
 
@@ -61,7 +61,23 @@ var str: String = null
 var str: String? = null
 ```
 
-### Instantiating Objects
+### Spring Injection
+
+As you'll learn through this course, Spring provides something called dependency injection that introduces a problem with Kotlin's null safety checks. In order to get around this issue Kotlin provides a [lateinit](https://kotlinlang.org/docs/reference/properties.html#late-initialized-properties-and-variables) keyword that relaxes this check.
+
+```java
+// Java
+@Autowired
+UserService userService;
+```
+
+```kotlin
+// Kotlin
+@Autowired
+lateinit var userService: UserService
+```
+
+## Instantiating Objects
 
 In Java we use the **new** keyword to instantiate an Object but it does not exist in Kotlin so we simply omit it.
 
@@ -75,15 +91,17 @@ User user = new User(1, "Steven");
 var user = User(1, "Steven")
 ```
 
-### Class Declaration
+## Class Declaration
 
 Kotlin's syntax for [Class and Inheritance](https://kotlinlang.org/docs/reference/classes.html){:target="_blank"} are slightly different than Java.
 
-#### Inheritance
+### Inheritance
 
 In Java we have the **extends** and **implements** keywords for class and interfaces respectively, but that does not exist in Kotlin so we use a colon **:** after the class name for both. Kotlin retains the single inheritance principal from Java so if you're extending a class it must the first one in the list.
 
 ```kotlin
+// Kotlin
+
 // extends AbstractParentClass and implements MyInterface1, MyInterface2
 class ChildClass : AbstractParentClass, MyInterface1, MyInterface2 { }
 
@@ -91,11 +109,13 @@ class ChildClass : AbstractParentClass, MyInterface1, MyInterface2 { }
 class ChildClass : MyInterface1 { }
 ```
 
-#### Constructors
+### Constructors
 
 Kotlin can have one primary and multiple secondary constructors. The primary constructor comes directly after the name of the class.
 
 ```kotlin
+// Kotlin
+
 // single primary constructor
 class User(firstName: String) { }
 

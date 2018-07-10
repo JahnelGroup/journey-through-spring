@@ -262,6 +262,7 @@
         <p>You just wrote an awesome program, fired it up and ugh-o…it doesn’t work like you expect! Writing code is <em>easy</em> figuring out what’s wrong with broken code is <em>really hard</em>. You have a couple of options.</p>
 
 <h2 id="print-statements-do-not-do-this">Print Statements (DO NOT DO THIS)</h2>
+
 <p>Yeah that’s right, the good old print statement. It’s the worst way to debug a problem but it sure is a technique and we’ve all been there so why not cover it. Doing this has so many problems but the main reason I feel is that you’re actually editing source-code for debugging and you’ll likely end up just leaving it there to flood the logs in prod.</p>
 
 <p><strong>Do not do this.</strong></p>
@@ -275,31 +276,32 @@
 </code></pre></div></div>
 
 <h2 id="logger">Logger</h2>
-<p>Instead of print statements you should opt for using a <a href="https://en.wikipedia.org/wiki/Java_logging_framework">Logger</a>. It may seem the same but there are important differences.</p>
+
+<p>Instead of print statements you should opt for using a <a href="https://en.wikipedia.org/wiki/Java_logging_framework" target="_blank">Logger</a>. It may seem the same but there are important differences.</p>
 
 <ul>
   <li>It provides a standard output which includes the origin class name where the output came from</li>
   <li>You an enable/disable a logger based on a log level</li>
   <li>You can change the format output of log, plain text, json, csv, etc</li>
   <li>You can change the destination, a file, a database, a queue, etc</li>
-  <li>You can add meta information to a log file called a <a href="http://www.baeldung.com/mdc-in-log4j-2-logback">Mapped Diagnostic Context (MDC)</a></li>
+  <li>You can add meta information to a log file called a <a href="http://www.baeldung.com/mdc-in-log4j-2-logback" target="_blank">Mapped Diagnostic Context (MDC)</a></li>
 </ul>
 
 <p>The logger world is full of <em>specifications</em> and <em>implementations</em> There are several logging frameworks available but here are the popular ones:</p>
 
 <ul>
-  <li><a href="https://commons.apache.org/proper/commons-logging/">Apache Commons Logging</a> - Spring Framework Specification uses this specification.</li>
-  <li><a href="https://logback.qos.ch/">Logback</a> - <strong>(Default Implementation)</strong> Logback is intended as a successor log4j</li>
-  <li><a href="https://logging.apache.org/log4j/2.x/">Log4j</a> - Apache Log4j</li>
-  <li>
-    <p><a href="https://www.slf4j.org">SLF4J</a> - Abstract Layer over many loggers, you use this with an implementation like Log4j or Logback.</p>
-  </li>
-  <li><strong>Read:</strong> <a href="https://www.loggly.com/ultimate-guide/java-logging-basics/"><strong>loggly.com:</strong> Java Logging Basics</a></li>
-  <li><strong>Read:</strong> <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/howto-logging.html"><strong>spring.io:</strong> Spring Boot Doc: How to Logging</a></li>
-  <li><strong>Read:</strong> <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-logging.html"><strong>spring.io:</strong> Spring Boot Doc: Boot Logging Features</a></li>
+  <li><a href="https://commons.apache.org/proper/commons-logging/" target="_blank">Apache Commons Logging</a> - Spring Framework Specification uses this specification.</li>
+  <li><a href="https://logback.qos.ch/">Logback</a> - <strong>(Default Implementation){:target=”_blank”}</strong> Logback is intended as a successor log4j</li>
+  <li><a href="https://logging.apache.org/log4j/2.x/" target="_blank">Log4j</a> - Apache Log4j</li>
+  <li><a href="https://www.slf4j.org" target="_blank">SLF4J</a> - Abstract Layer over many loggers, you use this with an implementation like Log4j or Logback.</li>
 </ul>
 
+<p><i class="fas fa-bookmark"></i> Read: <a href="https://www.loggly.com/ultimate-guide/java-logging-basics/" target="_blank"><strong>loggly.com:</strong> Java Logging Basics</a>
+<i class="fas fa-bookmark"></i> Read: <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/howto-logging.html" target="_blank"><strong>spring.io:</strong> Spring Boot Doc: How to Logging</a>
+<i class="fas fa-bookmark"></i> Read: <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-logging.html" target="_blank"><strong>spring.io:</strong> Spring Boot Doc: Boot Logging Features</a></p>
+
 <h3 id="logging-level">Logging Level</h3>
+
 <p>To change the logging level you need to set the associated property, either in application.properties, command line or some other way. The property has a special format:</p>
 
 <blockquote>
@@ -319,6 +321,7 @@
 </code></pre></div></div>
 
 <h3 id="using-a-logger">Using a Logger</h3>
+
 <p>Whatever implementation you choose you’ll likely get a reference to a logger through a factory. Unless otherwise required you should code against the SLF4J abstract layer.</p>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">org.slf4j.Logger;</span>
@@ -351,18 +354,19 @@
 </code></pre></div></div>
 
 <h2 id="debugger">Debugger</h2>
-<p>If bug a is too difficult to resolve with just logging statements then you’ll need to resort to using <a href="https://en.wikipedia.org/wiki/Debugger">debugger</a>. These tools will help you suspend the execution of your program and manually step through it just like it normally would while running in isolation.</p>
+
+<p>If bug a is too difficult to resolve with just logging statements then you’ll need to resort to using <a href="https://en.wikipedia.org/wiki/Debugger" target="_blank">debugger</a>. These tools will help you suspend the execution of your program and manually step through it just like it normally would while running in isolation.</p>
 
 <h3 id="debugging-in-an-ide">Debugging in an IDE</h3>
+
 <p>Debugging in an IDE is very simple, instead of selecting to <strong>Run</strong> your application you choose <strong>Debug</strong>. Set some break-points and you’re done.</p>
 
-<ul>
-  <li><strong>Read:</strong> <a href="https://www.jetbrains.com/help/idea/debugging-your-first-java-application.html"><strong>jetbrains.com:</strong> IntelliJ: Debugging Your First Java Application</a></li>
-  <li><strong>Read:</strong> <a href="http://www.vogella.com/tutorials/EclipseDebugging/article.html"><strong>vogella.com:</strong> Eclipse: Java Debugging</a></li>
-  <li><strong>Watch:</strong> <a href="https://www.youtube.com/watch?v=VdBsUv4lnm4"><strong>youtube.com:</strong> Debugging in IntelliJ IDEA 2016.1</a></li>
-</ul>
+<p><i class="fas fa-bookmark"></i> Read: <a href="https://www.jetbrains.com/help/idea/debugging-your-first-java-application.html" target="_blank"><strong>jetbrains.com:</strong> IntelliJ: Debugging Your First Java Application</a>
+<i class="fas fa-bookmark"></i> Read: <a href="http://www.vogella.com/tutorials/EclipseDebugging/article.html" target="_blank"><strong>vogella.com:</strong> Eclipse: Java Debugging</a>
+<i class="fas fa-play"></i> Watch: <a href="https://www.youtube.com/watch?v=VdBsUv4lnm4" target="_blank"><strong>youtube.com:</strong> Debugging in IntelliJ IDEA 2016.1</a></p>
 
 <h3 id="remote-attaching-to-a-jvm">Remote Attaching to a JVM</h3>
+
 <p>Connecting to an external JVM outside the IDE takes a little more work. A remote debugger works by connecting to a special port exposed by the JVM. It’s not available by default so you must enable it with JVM arguments when it starts.</p>
 
 <blockquote>
@@ -375,12 +379,11 @@
 Listening <span class="k">for </span>transport dt_socket at address: 5005
 </code></pre></div></div>
 
-<ul>
-  <li><strong>Read:</strong> <a href="https://www.jetbrains.com/help/idea/run-debug-configuration-remote-debug.html"><strong>jetbrains.com:</strong> IntelliJ: Run/Debug Configuration: Remote Debug</a></li>
-  <li><strong>Read:</strong> <a href="https://medium.com/@metamje/setting-up-remote-debugging-for-a-java-application-in-eclipse-with-heroku-exec-22d0722371c2"><strong>medium.com:</strong> Eclipse: Remote Debugging for a Java</a></li>
-</ul>
+<p><i class="fas fa-bookmark"></i> Read: <a href="https://www.jetbrains.com/help/idea/run-debug-configuration-remote-debug.html" target="_blank"><strong>jetbrains.com:</strong> IntelliJ: Run/Debug Configuration: Remote Debug</a>
+<i class="fas fa-bookmark"></i> Read: <a href="https://medium.com/@metamje/setting-up-remote-debugging-for-a-java-application-in-eclipse-with-heroku-exec-22d0722371c2" target="_blank"><strong>medium.com:</strong> Eclipse: Remote Debugging for a Java</a></p>
 
 <h2 id="difficulty-with-spring-proxies">Difficulty with Spring Proxies</h2>
+
 <p>The hardest part about debugging a Spring Application are the Proxies. You’ll sometimes find yourself jumping through a lot of Spring code just trying to find where it calls your code. If you find this happening then try to make an educated guess as to where your code is being hit and set a lot of break points to find it. You may resort to enabling a debug or trace logging level to get more visibility on what’s happening.</p>
 
         

@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Spring Boot Starters - Journey Through Spring</title>
+<!-- begin _includes/seo.html --><title>Understanding the “Magic” of Spring - Journey Through Spring</title>
 <meta name="description" content="A pragmatic approach to learning the Spring Framework.">
 
 
@@ -17,7 +17,7 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Journey Through Spring">
-<meta property="og:title" content="Spring Boot Starters">
+<meta property="og:title" content="Understanding the “Magic” of Spring">
 <meta property="og:url" content="http://localhost:4000/core/spring-magic">
 
 
@@ -243,7 +243,7 @@
 
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Spring Boot Starters">
+    <meta itemprop="headline" content="Understanding the “Magic” of Spring">
     
     
     
@@ -251,7 +251,7 @@
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Spring Boot Starters
+          <h1 id="page-title" class="page__title" itemprop="headline">Understanding the “Magic” of Spring
 </h1>
           
         </header>
@@ -259,25 +259,56 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>We cannot deny that Spring has a learning curve but once you’re over the hump it is all about making the developer more efficient. It is designed to give a developer the ability to deliver software rapidly.</p>
+        <p>You’ll often hear people refer to Spring as being complicated or difficult to learn. Spring is referred to as “magic” because its abilities at times seem impossible - until you look behind the curtain and understand what’s going on! Here are a few of the major features that Spring takes advantage of for it’s so-called magic.</p>
 
-<h2 id="spring-boot-starters">Spring Boot Starters</h2>
-<p>Spring Boot developers have created “starters” that are a slightly different concept from “seed projects”. A seed-project consists of a codebase that has been either generated or hand-coded to be the base of your application. They usually come in the form a github repository that you fork and start from. Spring Starters however are just like regular dependencies that you’d pull into your application and are kind of hidden from the rest of your program. These starters are built upon the auto-configuration feature discussed above in the Understanding the “Magic” of Spring section. Their code is ran when the application starts up and they will create Beans, start Web Servlets, establish connection pooling to a database, and do many more things.</p>
+<h2 id="auto-configuration-classloader-and-resource-management">Auto-configuration: Classloader and Resource Management</h2>
+<p>Spring Boot introduced the concept of <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/using-boot-auto-configuration.html" target="_blank">Auto-configuration</a> which greatly reduced the learning curve of Spring. It leverages existing Java technology such as the Classloader and Resource Bundler to perform analysis on “what is present in the application” and make decisions based on it. For example if you have a MySQL Driver in your application then you’ll probably be connecting to a MySQL database so the auto-configuration will set that up for you. If you have Tomcat dependencies then you’ll probably be starting up a Tomcat container so the auto-configuration will do that for you.</p>
+
+<p>Auto-configuration is not just restricted to Spring developers, it is available for everyone to <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-developing-auto-configuration.html" target="_blank">create their own Auto-configuration libraries</a> to make their own “magic” happen automatically.</p>
+
+<h3 id="classloader">Classloader</h3>
+<p>A Java Classloader is the essential component that literally loads your classes into the JVM. Using this concept Spring can take advantage of knowing what’s present in your program (“on the classpath”) and make intelligent decisions about how and what to run.</p>
+
+<p><i class="fas fa-bookmark"></i> Read: <a href="https://en.wikipedia.org/wiki/Classpath_(Java)" target="_blank">Java Classpath (wikipedia.org)</a><br />
+<i class="fas fa-bookmark"></i> Read: <a href="https://en.wikipedia.org/wiki/Java_Classloader" target="_blank">Java Classloader (wikipedia.org)</a></p>
+
+<h3 id="resources">Resources</h3>
+<p>Spring will scan the resources (non-class files) on the classpath and make decisions on things. Two good examples of this are detecting the presence of properties and automatically loading them into your program, or detecting SQL files and automatically seeding your database for you. Features like this are constanting being added to make the development experience more efficient.</p>
+
+<p><i class="fas fa-bookmark"></i> Read: <a href="https://docs.spring.io/spring/docs/3.2.x/spring-framework-reference/html/resources.html#resources" target="_blank">Resources (spring.io)</a></p>
+
+<h2 id="reflection-and-annotations">Reflection and Annotations</h2>
+<p>Spring relies heavily on Reflection to do almost everything.</p>
+
+<p><i class="fas fa-bookmark"></i> Read: <a href="https://www.journaldev.com/1789/java-reflection-example-tutorial" target="_blank">Java Reflection Example Tutorial (journaldev.com)</a><br />
+<i class="fas fa-bookmark"></i> Read: <a href="http://www.baeldung.com/java-method-reflection" target="_blank">Call Methods at Runtime Using Java Reflection (baeldung.com)</a></p>
+
+<p><a href="https://en.wikipedia.org/wiki/Java_annotation" target="_blank">Annotations</a> have evolved to be the standard way we provide “advice” to our Java programs. Spring uses annotations in place of external configuration files to drive the wiring of components.</p>
+
+<p><i class="fas fa-bookmark"></i> Read: <a href="https://docs.oracle.com/javase/tutorial/java/annotations/" target="_blank">Lesson: Annotations (oracle.com)</a><br />
+<i class="fas fa-bookmark"></i> Read: <a href="https://springframework.guru/spring-framework-annotations/" target="_blank">Spring Framework Annotations (springframework.guru)</a></p>
+
+<h2 id="proxies">Proxies</h2>
+<p>A <a href="https://en.wikipedia.org/wiki/Proxy" target="_blank">Proxy</a> is the modeling of a relationship where one component is configured to act on-behalf-of another. For any given action the proxy will make a decision on what to do.</p>
 
 <ul>
-  <li><strong>Read:</strong> <a href="https://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#using-boot-starter"><strong>spring.io:</strong> Spring Starters</a></li>
-  <li><strong>Read:</strong> <a href="http://www.baeldung.com/spring-boot-starters"><strong>baeldung.com:</strong> Intro to Spring Boot Starters</a></li>
+  <li>Delegate the request as-is to the target</li>
+  <li>Augment the request before delegating to the target</li>
+  <li>Fulfill the request entirely by itself</li>
+  <li>Ignore the request</li>
 </ul>
 
-<h2 id="spring-boot-executable-fat-jar">Spring Boot Executable “fat Jar”</h2>
-<p>A “fat Jar” or “Uber Jar” is a single Jar file that contains everything needed to run an application. The most powerful thing to realize here is that you can actually run a Spring Boot jar file and it will start up a Web Container from within the Jar file. You would normally have to deploy your application into a separate Webserver but with Spring Boot the Webserver is actually running within the Jar file!</p>
+<p>You will learn how Spring manages your code as components called Beans (or “Managed Beans”). These Beans act as a Proxy to your code allowing Spring to make decisions on every action taken (i.e., function calls, auditing, transaction boundaries, error handling).</p>
 
-<p>This concept extends to other components like H2, Elasticsearch, Redis, etc. This is great for rapid development but eventually when a product matures we will change the architecture to be more production-like with external services. It’s all about getting up and running as fast as possible in the beginning.</p>
+<p>Spring Beans and the Proxy role they play in your application is the center stage in the Spring “magic show”.</p>
 
-<ul>
-  <li><strong>Read:</strong> <a href="https://stackoverflow.com/questions/19150811/what-is-a-fat-jar"><strong>stackoverflow.com:</strong> What is a fat Jar?</a></li>
-  <li><strong>Read:</strong> <a href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#getting-started-first-application-executable-jar"><strong>spring.io:</strong> Creating an Executable Jar</a></li>
-</ul>
+<blockquote>
+  <p>Side note that Spring won’t <em>always</em> create a Proxy for your objects. It is intelligent enough to understand when it needs to and when it doesn’t. If you’re not doing anything interesting with the object anywhere in your application then it will not bother creating the proxy.</p>
+</blockquote>
+
+<p><i class="fas fa-play"></i> Watch: <a href="https://www.youtube.com/watch?v=xlWwMSu5I70" target="_blank">Understanding Spring Bean Factory</a><br />
+<i class="fas fa-bookmark"></i> Read: <a href="https://spring.io/blog/2012/05/23/transactions-caching-and-aop-understanding-proxy-usage-in-spring" target="_blank">Understanding Proxy Usage In Spring (spring.io)</a><br />
+<i class="fas fa-bookmark"></i> Read: <a href="https://spring.io/blog/2007/07/19/debunking-myths-proxies-impact-performance/" target="_blank">Debunking Myths Proxies Impact Performance (spring.io)</a></p>
 
         
       </section>
