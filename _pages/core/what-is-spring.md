@@ -9,9 +9,9 @@ Think of Spring as an intelligent black box that is organized in a special way. 
 
 > The Spring Framework provides a comprehensive programming and configuration model for modern Java-based enterprise applications - on any kind of deployment platform. A key element of Spring is infrastructural support at the application level: Spring focuses on the "plumbing" of enterprise applications so that teams can focus on application-level business logic, without unnecessary ties to specific deployment environments. 
 >
-> &mdash; <cite>[spring-framework](https://projects.spring.io/spring-framework/)</cite>
+> &mdash; <cite>[spring-framework](https://projects.spring.io/spring-framework/){:target="_blank"}</cite>
 
-<i class='fas fa-bookmark'></i> Read: [Spring Framework Overview (spring.io)](https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/overview.html#overview)
+<i class='fas fa-bookmark'></i> Read: [Spring Framework Overview (spring.io)](https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/overview.html#overview){:target="_blank"}
 
 ## Spring Boot
 
@@ -19,8 +19,8 @@ Spring Boot unleashes the power of Spring. It takes the concept of convention ov
 
 > Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that you can "just run". We take an opinionated view of the Spring platform and third-party libraries so you can get started with minimum fuss. Most Spring Boot applications need very little Spring configuration.
 >
-> &mdash; <cite>[spring-framework](https://projects.spring.io/spring-boot/)</cite>
+> &mdash; <cite>[spring-framework](https://projects.spring.io/spring-boot/){:target="_blank"}</cite>
 
-<i class='fas fa-play'></i> Watch: [Build a Hello World REST Service](https://www.youtube.com/watch?v=47xNBNd-LLI)
+<i class='fas fa-play'></i> Watch: [Build a Hello World REST Service](https://www.youtube.com/watch?v=47xNBNd-LLI){:target="_blank"}
 
-<i class='fas fa-bookmark'></i> Read: [Spring Boot 2.0 goes GA (spring.io)](https://spring.io/blog/2018/03/01/spring-boot-2-0-goes-ga)
+<i class='fas fa-bookmark'></i> Read: [Spring Boot 2.0 goes GA (spring.io)](https://spring.io/blog/2018/03/01/spring-boot-2-0-goes-ga){:target="_blank"}

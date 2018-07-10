@@ -3,71 +3,85 @@ title:  "Spring and Kotlin"
 permalink: /core/spring-kotlin
 ---
 
-Kotlin was originally built by JetBrains and quickkly adopted by the Android community because it solves many problems that exist in Java. It does an excellent job at inheriting the best features of various languages and eliminates a significant amount of the verbosity found in Java. It’s powerful features and 100% interoperability with Java make a very compelling argument as a language replacement.
+[Kotlin](https://kotlinlang.org/){:target="_blank"} was created by [JetBrains](https://www.jetbrains.com/){:target="_blank"} and quickly adopted by the Android community. It's attractive for many reasons and is frequently compared against [Scala](https://www.scala-lang.org/){:target="_blank"}, [Clojure](https://clojure.org/){:target="_blank"} and [Groovy](http://groovy-lang.org/){:target="_blank"}. All of these languages are excellent alternatives and complementary to Java, each with their strengths and weaknesses. Understanding the differences between these languages are out-of-scope for this course and I encourage you to [read more](https://www.google.com/search?ei=Wd5AW6fADM7IsAW5_YzoAQ&q=scala+vs+groovy+vs+kotlin&oq=scala+vs+groovy+vs+kotlin&gs_l=psy-ab.3..0i67k1j0i22i30k1.2591.11747.0.12308.20.13.7.0.0.0.119.871.12j1.13.0....0...1c.1.64.psy-ab..0.20.895...33i160k1j33i22i29i30k1.0._ufRtvCb30U){:target="_blank"} on your own.
 
-> *Kotlin is a general purpose, open source, statically typed “pragmatic” programming language for the JVM and Android that combines object-oriented and functional programming features. It is focused on interoperability, safety, clarity, and tooling support. Versions of Kotlin for JavaScript (ECMAScript 5.1) and native code (using LLVM) are in the works. - *[**infoworld.com:** What is Kotlin](https://www.infoworld.com/article/3224868/java/what-is-kotlin-the-java-alternative-explained.html)**
+As of 2017 the Spring community officially declared [support for Kotlin in Spring Framework 5.0](https://spring.io/blog/2017/01/04/introducing-kotlin-support-in-spring-framework-5-0){:target="_blank"} with the others being Java and Groovy. I personally prefer Kotlin over Groovy so this course will features examples written in Kotlin. It does an excellent job at inheriting the best features of various languages and eliminates a significant amount of the verbosity found in Java. It’s powerful features and 100% interoperability with Java make a very compelling argument as a language replacement.
 
-* **Read:** [**infoworld.com:** What is Kotlin? The Java alternative explained](https://www.infoworld.com/article/3224868/java/what-is-kotlin-the-java-alternative-explained.html)
-* **Read:** [**kotlinlang.org:** Using Kotlin for Server-side Development](https://kotlinlang.org/docs/reference/server-overview.html)
+> Kotlin is a general purpose, open source, statically typed “pragmatic” programming language for the JVM and Android that combines object-oriented and functional programming features. It is focused on interoperability, safety, clarity, and tooling support. Versions of Kotlin for JavaScript (ECMAScript 5.1) and native code (using LLVM) are in the works.
+>
+> &mdash; <cite>[infoworld.com](https://www.infoworld.com/article/3224868/java/what-is-kotlin-the-java-alternative-explained.html){:target="_blank"}</cite>
 
-This journey will focus primarily on Spring Boot and the example code will be written in Kotlin.
+<i class='fas fa-bookmark'></i> Read: [Comparison to Java Programming Language (kotlinlang.org)](https://kotlinlang.org/docs/reference/comparison-to-java.html){:target="_blank"}
 
-* **Read:** [**kotlinlang.org:** Comparison to Java Programming Language](https://kotlinlang.org/docs/reference/comparison-to-java.html)
-* **Read:** [**spring.io:** Introducing Kotlin support in Spring Framework 5.0](https://spring.io/blog/2017/01/04/introducing-kotlin-support-in-spring-framework-5-0)
+<i class='fas fa-bookmark'></i> Read: [Using Kotlin for Server-side Development (kotlinlang.org)](https://kotlinlang.org/docs/reference/server-overview.html){:target="_blank"}
 
-## Highlight a few differences from Java
-If you're new to Kotlin here are a few main differences from Java that will help you follow along in this Journey.
+## Kotlin Highlights
+
+Here are a few key differences from Java that will help you follow along in this Journey.
 
 ### Optional Semicolons
+
 Semicolons are optional.
 
-**Java**
 ```java
+// Java
 System.out.println("Hello, World!");
-```    
-**Kotlin**
-```kotlin
-println("Hello, World!")
-``` 
+```
 
-### Null Safety
-The most infamous exception in Java is the [NullPointerException](https://stackoverflow.com/questions/218384/what-is-a-nullpointerexception-and-how-do-i-fix-it). It happens very often and the problem with Java is that it does almost nothing to help you avoid them. Kotlin has taken a very defensive approach to **null** and actually makes you declare if a reference can potentially be null. 
+```kotlin
+// Kotlin
+println("Hello, World!")
+```
 
 ### Type Inference
-Both Java and Kotlin are considered strict static languages but Kotlin has type inference. This means if the compiler can determine the type of a reference without a doubt then you can omit it. Also the type is defined on the right side of the variable name instead of the left.
 
-* **Read:** [**tutsplus.com:** Kotlin From Scratch: Variables, Basic Types, and Arrays](https://code.tutsplus.com/tutorials/kotlin-from-scratch-variables-basic-types-arrays-type-inference-and-comments--cms-29328)
+Java and Kotlin are considered strict static languages but Kotlin has type inference. This means if the compiler can determine the type of a variable then you can omit it. The type is defined on the right side of the variable name instead of the left.
 
-**Java**
 ```java
+// Java
 Integer num = 1;
 String str = "Hello";
-```    
-**Kotlin**
+```
+
 ```kotlin
-var num = 1
-var str: String = "Hello"
+// Kotlin
+var num: Int = 1   // explictly setting the type
+var str = "Hello"  // type is inferred
+```
+
+### Null Safety
+
+The most infamous exception in Java is the [NullPointerException](https://stackoverflow.com/questions/218384/what-is-a-nullpointerexception-and-how-do-i-fix-it){:target="_blank"}. It happens often and worse is that Java does almost nothing to help you avoid them. Kotlin has taken a very defensive approach to **null** and actually makes you declare if a reference can potentially be null.
+
+```kotlin
+// will not compile: Null can not be a value of a non-null type String
+var str: String = null
+
+// this is okay: it must be explictly declared a nullable type with the question mark
+var str: String? = null
 ```
 
 ### Instantiating Objects
-In Java we use the **new** keyword to instantiate an Object, but that does not exist in Kotlin so we simply omit it. 
 
-**Java**
+In Java we use the **new** keyword to instantiate an Object but it does not exist in Kotlin so we simply omit it.
+
 ```java
+// Java
 User user = new User(1, "Steven");
-```    
-**Kotlin**
+```
+
 ```kotlin
+// Kotlin
 var user = User(1, "Steven")
 ```
 
-### Class Declaration 
-The two things to be aware of are how you declare *inheritance* and *constructors*.
+### Class Declaration
 
-* **Read:** [**kotlinlang.org:** Classes and Inheritance](https://kotlinlang.org/docs/reference/classes.html)
+Kotlin's syntax for [Class and Inheritance](https://kotlinlang.org/docs/reference/classes.html){:target="_blank"} are slightly different than Java.
 
-#### Inheritance 
-In Java we have the **extends** and **implements** keywords for class and interfaces respectively, but that does not exist in Kotlin so we use a colon **:** after the class name for both. Kotlin is still single inheritance so if you're extending a class it must the first one in the list.
+#### Inheritance
+
+In Java we have the **extends** and **implements** keywords for class and interfaces respectively, but that does not exist in Kotlin so we use a colon **:** after the class name for both. Kotlin retains the single inheritance principal from Java so if you're extending a class it must the first one in the list.
 
 ```kotlin
 // extends AbstractParentClass and implements MyInterface1, MyInterface2
@@ -78,7 +92,8 @@ class ChildClass : MyInterface1 { }
 ```
 
 #### Constructors
-Kotlin can have one primary and one or more secondary constructors. The primary constructor comes directly after the name of the class.
+
+Kotlin can have one primary and multiple secondary constructors. The primary constructor comes directly after the name of the class.
 
 ```kotlin
 // single primary constructor

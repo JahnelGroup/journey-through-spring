@@ -5,6 +5,8 @@ main:
 core:
   - title: Introduction
     children: 
+      - title: Your Journey
+        url: /core/welcome-core
       - title: What is Spring?
         url: /core/what-is-spring
       - title: Spring and Kotlin
