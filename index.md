@@ -5,7 +5,7 @@ header:
   overlay_color: "#5e616c"
   overlay_image: /assets/images/splash.jpg
   cta_label: "<i class='fas fa-angle-double-right'></i> Begin Journey"
-  cta_url: "/core/welcome-core"
+  cta_url: "/core/intro-welcome"
   caption:
 excerpt: 'A pragmatic approach to learning the Spring Framework.<br /> <small><strong>100%</strong> free provided by <a href="https://www.jahnelgroup.com/">Jahnel Group</a>.</small><br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=JahnelGroup&repo=journey-through-spring&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>{:/nomarkdown}'
 feature_row:
