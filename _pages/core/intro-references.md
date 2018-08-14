@@ -1,6 +1,6 @@
 ---
 title:  "References"
-permalink: /core/spring-references
+permalink: /core/intro-references
 ---
 
 The Spring Framework ecosystem is large and overwhelming at a first glance. Before we dive into some of the interesting and challenging parts of Spring it’s important to have a high-level map of important resources. 

@@ -1,23 +1,49 @@
 main:
   - title: "Core"
-    url: /core/welcome-core
+    url: /core/intro-welcome
 
 core:
+
   - title: Introduction
     children: 
       - title: Your Journey
-        url: /core/welcome-core
+        url: /core/intro-welcome
       - title: What is Spring?
-        url: /core/what-is-spring
+        url: /core/intro-spring
       - title: Spring and Kotlin
-        url: /core/spring-kotlin
+        url: /core/intro-kotlin
       - title: References
-        url: /core/spring-references
+        url: /core/intro-references
+
   - title: Getting Started
     children:
+      - title: Tooling Up
+        url: /core/gettingstarted-tools
       - title: Understaing the "Magic" of Spring
-        url: /core/spring-magic
+        url: /core/gettingstarted-magic
       - title: Spring Boot Starters
-        url: /core/spring-starters
+        url: /core/gettingstarted-spring-starters
       - title: Debugging a Spring Application
-        url: /core/spring-debugging
+        url: /core/gettingstarted-debugging
+
+  - title: Spring Core
+    children:
+      - title: IoC and DI
+        url: /core/core-ioc-di
+      - title: Beans
+        url: /core/core-beans
+      - title: Properties, Profiles and Resources
+        url: /core/core-props
+      - title: Events
+        url: /core/core-events
+      - title: Validation
+        url: /core/core-validation
+      - title: Data Binding
+        url: /core/core-data-binding
+      - title: Type Conversion
+        url: /core/core-type-conversion 
+      - title: Spring Expression Language (SpEL)
+        url: /core/core-spel
+      - title: Aspect Oriented Programming (AOP)
+        url: /core/core-aop
+

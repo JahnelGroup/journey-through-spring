@@ -1,13 +1,13 @@
 ---
 title:  "Debugging"
-permalink: /core/spring-debugging
+permalink: /core/gettingstarted-debugging
 ---
 
 You just wrote an awesome program, fired it up and ugh-o...it doesn't work like you expect! Writing code is *easy* figuring out what's wrong with broken code is *really hard*. You have a couple of options.
 
-## Print Statements (DO NOT DO THIS)
+## Print Statements
 
-Yeah that's right, the good old print statement. It's the worst way to debug a problem but it sure is a technique and we've all been there so why not cover it. Doing this has so many problems but the main reason I feel is that you're actually editing source-code for debugging and you'll likely end up just leaving it there to flood the logs in prod. 
+Yeah that's right, the good old print statement. It's the worst way to debug a problem but it sure is a technique and we've all been there so why not cover it. Doing this has so many problems but the main reason I feel is that you're actually editing source-code for debugging and you'll likely end up just leaving it there to flood the logs in production. 
 
 **Do not do this.**
 
@@ -33,12 +33,12 @@ Instead of print statements you should opt for using a [Logger](https://en.wikip
 The logger world is full of *specifications* and *implementations* There are several logging frameworks available but here are the popular ones:
 
 * [Apache Commons Logging](https://commons.apache.org/proper/commons-logging/){:target="_blank"} - Spring Framework Specification uses this specification.
-* [Logback](https://logback.qos.ch/) - **(Default Implementation){:target="_blank"}** Logback is intended as a successor log4j
+* [Logback](https://logback.qos.ch/){:target="_blank"} - Logback is intended as a successor log4j
 * [Log4j](https://logging.apache.org/log4j/2.x/){:target="_blank"} - Apache Log4j
 * [SLF4J](https://www.slf4j.org){:target="_blank"} - Abstract Layer over many loggers, you use this with an implementation like Log4j or Logback.
 
-<i class='fas fa-bookmark'></i> Read: [**loggly.com:** Java Logging Basics](https://www.loggly.com/ultimate-guide/java-logging-basics/){:target="_blank"}
-<i class='fas fa-bookmark'></i> Read: [**spring.io:** Spring Boot Doc: How to Logging](https://docs.spring.io/spring-boot/docs/current/reference/html/howto-logging.html){:target="_blank"}
+<i class='fas fa-bookmark'></i> Read: [**loggly.com:** Java Logging Basics](https://www.loggly.com/ultimate-guide/java-logging-basics/){:target="_blank"}<br/>
+<i class='fas fa-bookmark'></i> Read: [**spring.io:** Spring Boot Doc: How to Logging](https://docs.spring.io/spring-boot/docs/current/reference/html/howto-logging.html){:target="_blank"}<br/>
 <i class='fas fa-bookmark'></i> Read: [**spring.io:** Spring Boot Doc: Boot Logging Features](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-logging.html){:target="_blank"}
 
 ### Logging Level
@@ -102,8 +102,8 @@ If bug a is too difficult to resolve with just logging statements then you'll ne
 
 Debugging in an IDE is very simple, instead of selecting to **Run** your application you choose **Debug**. Set some break-points and you're done. 
 
-<i class='fas fa-bookmark'></i> Read: [**jetbrains.com:** IntelliJ: Debugging Your First Java Application](https://www.jetbrains.com/help/idea/debugging-your-first-java-application.html){:target="_blank"}
-<i class='fas fa-bookmark'></i> Read: [**vogella.com:** Eclipse: Java Debugging](http://www.vogella.com/tutorials/EclipseDebugging/article.html){:target="_blank"}
+<i class='fas fa-bookmark'></i> Read: [**jetbrains.com:** IntelliJ: Debugging Your First Java Application](https://www.jetbrains.com/help/idea/debugging-your-first-java-application.html){:target="_blank"}<br/>
+<i class='fas fa-bookmark'></i> Read: [**vogella.com:** Eclipse: Java Debugging](http://www.vogella.com/tutorials/EclipseDebugging/article.html){:target="_blank"}<br/>
 <i class='fas fa-play'></i> Watch: [**youtube.com:** Debugging in IntelliJ IDEA 2016.1](https://www.youtube.com/watch?v=VdBsUv4lnm4){:target="_blank"}
 
 ### Remote Attaching to a JVM

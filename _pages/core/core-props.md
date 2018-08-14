@@ -1,4 +1,7 @@
-<table><tr><td><a href="https://github.com/JahnelGroup/journey-through-spring">Table of Contents</a></td></tr></table>
+---
+title:  "Properties, Profiles and Resources"
+permalink: /core/core-props
+---
 
 Properties, Profiles and Resources
 ======

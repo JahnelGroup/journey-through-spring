@@ -1,6 +1,6 @@
 ---
 title:  "Your Journey"
-permalink: /core/welcome-core
+permalink: /core/intro-welcome
 toc: false
 ---
 

@@ -1,6 +1,6 @@
 ---
 title:  "Understanding the “Magic” of Spring"
-permalink: /core/spring-magic
+permalink: /core/gettingstarted-magic
 ---
 
 You’ll often hear people refer to Spring as being complicated or difficult to learn. Spring is referred to as “magic” because its abilities at times seem impossible - until you look behind the curtain and understand what’s going on! Here are a few of the major features that Spring takes advantage of for it’s so-called magic.

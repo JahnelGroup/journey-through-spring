@@ -1,6 +1,6 @@
 ---
 title:  "What is Spring?"
-permalink: /core/what-is-spring
+permalink: /core/intro-spring
 ---
 
 ## Spring Framework
