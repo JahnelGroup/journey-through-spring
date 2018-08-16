@@ -42,7 +42,7 @@ $ sdk install maven
 $ sdk install gradle
 ```
 
-Follow these exercises and ignore the part about installing Maven or Gradle. 
+Follow these exercises and ignore the part about installing Maven or Gradle because you've already obtained it with SDKMAN!.
 
 * **Exercise:** [**spring.io:** Building Java Projects with Maven](https://spring.io/guides/gs/maven/){:target="_blank"}
 * **Exercise:** [**spring-guides:** Building Java Projects with Gradle](https://github.com/spring-guides/gs-gradle){:target="_blank"}

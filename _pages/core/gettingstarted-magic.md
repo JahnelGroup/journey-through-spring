@@ -6,7 +6,7 @@ permalink: /core/gettingstarted-magic
 You’ll often hear people refer to Spring as being complicated or difficult to learn. Spring is referred to as “magic” because its abilities at times seem impossible - until you look behind the curtain and understand what’s going on! Here are a few of the major features that Spring takes advantage of for it’s so-called magic.
 
 ## Auto-configuration: Classloader and Resource Management
-Spring Boot introduced the concept of [Auto-configuration](https://docs.spring.io/spring-boot/docs/current/reference/html/using-boot-auto-configuration.html){:target="_blank"} which greatly reduced the learning curve of Spring. It leverages existing Java technology such as the Classloader and Resource Bundler to perform analysis on “what is present in the application” and make decisions based on it. For example if you have a MySQL Driver in your application then you’ll probably be connecting to a MySQL database so the auto-configuration will set that up for you. If you have Tomcat dependencies then you’ll probably be starting up a Tomcat container so the auto-configuration will do that for you. 
+Spring Boot introduced the concept of [Auto-configuration](https://docs.spring.io/spring-boot/docs/current/reference/html/using-boot-auto-configuration.html){:target="_blank"} which greatly reduced the learning curve of Spring. It leverages existing Java technology such as the Classloader and Resource Bundler to perform analysis on *what is present* and make decisions based on it. For example if you have a MySQL Driver in your application then you’ll probably be connecting to a MySQL database so the auto-configuration will set that up for you. If you have Tomcat dependencies then you’ll probably be starting up a Tomcat container so the auto-configuration will do that for you. 
 
 Auto-configuration is not just restricted to Spring developers, it is available for everyone to [create their own Auto-configuration libraries](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-developing-auto-configuration.html){:target="_blank"} to make their own “magic” happen automatically. 
 
@@ -19,7 +19,7 @@ A Java Classloader is the essential component that literally loads your classes 
 ### Resources
 Spring will scan the resources (non-class files) on the classpath and make decisions on things. Two good examples of this are detecting the presence of properties and automatically loading them into your program, or detecting SQL files and automatically seeding your database for you. Features like this are constanting being added to make the development experience more efficient.
 
-<i class='fas fa-bookmark'></i> Read: [Resources (spring.io)](https://docs.spring.io/spring/docs/3.2.x/spring-framework-reference/html/resources.html#resources){:target="_blank"}
+<i class='fas fa-bookmark'></i> Read: [Resources (spring.io)](https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#resources){:target="_blank"}
 
 ## Reflection and Annotations
 Spring relies heavily on Reflection to do almost everything.
