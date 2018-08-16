@@ -7,7 +7,7 @@ Think of Spring as an intelligent black box that is organized in a special way. 
 
 > The Spring Framework provides a comprehensive programming and configuration model for modern Java-based enterprise applications - on any kind of deployment platform. A key element of Spring is infrastructural support at the application level: Spring focuses on the "plumbing" of enterprise applications so that teams can focus on application-level business logic, without unnecessary ties to specific deployment environments. 
 >
-> &mdash; <cite>[spring-framework](https://projects.spring.io/spring-framework/){:target="_blank"}</cite>
+> &mdash; <cite>[spring-framework](http://spring.io/projects/spring-framework){:target="_blank"}</cite>
 
 <i class='fas fa-bookmark'></i> Read: [Spring Framework Overview (spring.io)](https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/overview.html#overview){:target="_blank"}
 

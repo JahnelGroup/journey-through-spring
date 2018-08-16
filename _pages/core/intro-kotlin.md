@@ -63,7 +63,7 @@ var str: String? = null
 
 ### Spring Injection
 
-As you'll learn through this course, Spring provides something called dependency injection that introduces a problem with Kotlin's null safety checks. In order to get around this issue Kotlin provides a [lateinit](https://kotlinlang.org/docs/reference/properties.html#late-initialized-properties-and-variables) keyword that relaxes this check.
+As you'll learn through this course, Spring provides something called dependency injection that introduces a problem with Kotlin's null safety checks. In order to get around this issue Kotlin provides a [lateinit](https://kotlinlang.org/docs/reference/properties.html#late-initialized-properties-and-variables){:target="_blank"} keyword that relaxes this check.
 
 ```java
 // Java
