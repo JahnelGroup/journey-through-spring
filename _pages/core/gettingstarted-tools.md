@@ -3,8 +3,7 @@ title:  "Tooling Up"
 permalink: /core/gettingstarted-tools
 ---
 
-Tooling Up
-======
+It all begins with the right tools. Take the time to set yourself up for success from the start and it will make all the difference down the road. 
 
 ## Linux v.s. Mac v.s. Windows
 Professional software developers need to align themselves with the best tools available to get their job done. If you're a .NET developer or work a lot with Microsoft products then Windows is an obvious choice. Everyone else should be on some kind of Linux distrubution or a Mac. The best software tools are just typically harder to access and work with on Windows. If you're following this Journey I recommend you use Linux or Mac. I personally use [Fedora](https://getfedora.org/) but there are plenty other great options available, [Ubuntu](https://www.ubuntu.com/) is a great alternative.

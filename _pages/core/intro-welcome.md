@@ -4,7 +4,7 @@ permalink: /core/intro-welcome
 toc: false
 ---
 
-As much as I want to tell you Spring is easy and that taking this Journey will make you a master at the end, it simply isn't true. It's not the hardest thing to learn but it does have quite a few nuisances and pitfalls that everyone eventually falls into. Just look at [Stackoverflow](https://stackoverflow.com/questions/tagged/spring) and you'll see the pain and headaches people are going through.
+As much as I want to tell you Spring is easy and that taking this Journey will make you a master at the end, it simply isn't true. It's not the hardest thing to learn but it does have quite a few nuisances and pitfalls that everyone eventually falls into. Just look at [Stackoverflow](https://stackoverflow.com/questions/tagged/spring){:target="_blank"} and you'll see the pain and headaches people are going through.
 
 Fear not though! Trust in yourself and open your mind to learning this wonderful technology and you will be amazed at how much power is just around the corner. Spring is a world-class piece of software that is trusted by the biggest (and smallest) companies in the world. Follow this journey, read the Spring Documentation, do the exercises, keep on studying and you will become a master.
 
