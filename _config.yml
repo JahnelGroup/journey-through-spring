@@ -15,7 +15,7 @@ plugins:
 
 remote_theme: "mmistakes/minimal-mistakes"
 
-minimal_mistakes_skin    : "air" # "default", "dark", "aqua", "contrast", "air", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "dark" # "default", "dark", "aqua", "contrast", "air", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
@@ -114,25 +114,25 @@ author:
   codepen          :
   dribbble         :
   flickr           :
-  facebook         :
+  facebook         : jahnelgroup
   foursquare       :
-  github           :
+  github           : szgaljic
   gitlab           :
   google_plus      :
   keybase          :
-  instagram        :
+  instagram        : jahnelgroup
   lastfm           :
-  linkedin         : https://www.linkedin.com/in/steven-zgaljic-92340770/ 
+  linkedin         : steven-zgaljic-92340770
   pinterest        :
   soundcloud       :
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
   steam            : # "steamId" (the last part of your profile url, e.g. https://steamcommunity.com/id/steamId/)
   tumblr           :
-  twitter          :
+  twitter          : JahnelGroup
   vine             :
   weibo            :
   xing             :
-  youtube          : # "https://youtube.com/c/MichaelRoseDesign"
+  youtube          : https://www.youtube.com/channel/UCl6mRYD4kFcDuPbR0FwR3GQ
 
 
 # Reading Files

@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Journey Through Spring - Journey Through Spring</title>
+<!-- begin _includes/seo.html --><title>IoC and DI - Journey Through Spring</title>
 <meta name="description" content="A pragmatic approach to learning the Spring Framework.">
 
 
@@ -17,8 +17,8 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Journey Through Spring">
-<meta property="og:title" content="Journey Through Spring">
-<meta property="og:url" content="http://localhost:4000/_pages/home/">
+<meta property="og:title" content="IoC and DI">
+<meta property="og:url" content="http://localhost:4000/core/core-ioc-di">
 
 
 
@@ -36,7 +36,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/_pages/home/">
+<link rel="canonical" href="http://localhost:4000/core/core-ioc-di">
 
 
 
@@ -253,7 +253,7 @@
             
             
 
-            <li><a href="/core/core-ioc-di" class="">IoC and DI</a></li>
+            <li><a href="/core/core-ioc-di" class="active">IoC and DI</a></li>
           
             
             
@@ -331,7 +331,7 @@
 
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Journey Through Spring">
+    <meta itemprop="headline" content="IoC and DI">
     
     
     
@@ -339,7 +339,7 @@
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Journey Through Spring
+          <h1 id="page-title" class="page__title" itemprop="headline">IoC and DI
 </h1>
           
         </header>
@@ -347,48 +347,50 @@
 
       <section class="page__content" itemprop="text">
         
-        <h1 id="journey-through-spring">Journey Through Spring</h1>
-<p><img src="https://user-images.githubusercontent.com/26745523/37191895-099bbea8-2328-11e8-8b88-657c49317c2d.png" alt="spring" /></p>
+        <p>The two main concepts fundamental to Spring are <a href="https://en.wikipedia.org/wiki/Inversion_of_control" target="_blank">Inversion of Control</a> and <a href="https://en.wikipedia.org/wiki/Dependency_injection" target="_blank">Dependency Injection</a>. Understanding the value of these concepts is critical to your success.</p>
 
-<h4 id="a-pragmatic-approach-to-learning-the-spring-framework">A pragmatic approach to learning the Spring Framework.</h4>
-
-<p>As much as I want to tell you Spring is easy and that taking this Journey will make you a master at the end, it simply isn’t true. It’s not the hardest thing to learn but it does have quite a few nuisances and pitfalls that everyone eventually falls into. Just look at <a href="https://stackoverflow.com/questions/tagged/spring">Stackoverflow</a> and you’ll see the pain and headaches people are going through.</p>
-
-<p>Fear not though! Trust in yourself and open your mind to learning this wonderful technology and you will be amazed at how much power is just around the corner. Spring is a world-class piece of software that is trusted by the biggest (and smallest) companies in the world. Follow this journey, read the Spring Documentation, do the exercises, keep on studying and you will become a master.</p>
-
-<p>This journey is lightweight on purpose with a lot of external references. It is not a comprehensive Spring course but tries to follow along with the main Spring documentation. Some harmless assumptions might be made and described approaches may be biased towards my preference but it is on you, the reader, to dig as deep as you want and learn everything there is to know about Spring!</p>
+<blockquote>
+  <p><em>IoC is also known as dependency injection (DI). It is a process whereby objects define their dependencies, that is, the other objects they work with, only through constructor arguments, arguments to a factory method, or properties that are set on the object instance after it is constructed or returned from a factory method. The container then injects those dependencies when it creates the bean. This process is fundamentally the inverse, hence the name Inversion of Control (IoC), of the bean itself controlling the instantiation or location of its dependencies by using direct construction of classes, or a mechanism such as the Service Locator pattern. - <a href="https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#beans-introduction" target="_blank">Spring Docs</a></em></p>
+</blockquote>
 
 <ul>
-  <li><a href="./docs/what-is-spring">What is Spring and Spring Boot</a></li>
-  <li><a href="./docs/spring-kotlin">Spring Boot and Kotlin</a></li>
-  <li><a href="./docs/references">Reference Material</a></li>
-  <li><a href="./docs/getting-started">Getting Started</a></li>
-  <li><a href="./docs/spring-magic">Understanding the “Magic” of Spring</a></li>
-  <li><a href="./docs/spring-extreme">Spring Boot Starters and Extreme Programming</a></li>
-  <li><a href="./docs/debug-spring">Debugging a Spring Application</a></li>
-  <li><a href="./docs/spring-core">Spring Core</a>
-    <ul>
-      <li><a href="./docs/spring-core/ioc-di">Inversion of Control (IOC) and Dependency Injection (DI)</a></li>
-      <li><a href="./docs/spring-core/beans">Beans</a></li>
-      <li><a href="./docs/spring-core/prop-profile-resources">Properties, Profiles and Resources</a></li>
-      <li><a href="./docs/spring-core/events">Events</a></li>
-      <li><a href="./docs/spring-core/validation">Validation</a></li>
-      <li><a href="./docs/spring-core/data-binding">Data Binding</a></li>
-      <li><a href="./docs/spring-core/validation">Type Conversion</a></li>
-      <li><a href="./docs/spring-core/spel">Spring Expression Language (SpEL)</a></li>
-      <li><a href="./docs/spring-core/aop">Aspect Oriented Programming (AOP)</a></li>
-    </ul>
-  </li>
-  <li>Testing with Spring</li>
-  <li>Accessing Data with Spring</li>
-  <li>Spring for the Web
-    <ul>
-      <li>Spring MVC</li>
-      <li>RESTful Spring</li>
-      <li>Handling Web Errors</li>
-    </ul>
-  </li>
-  <li>Async, Scheduling, Caching, Retry</li>
+  <li><strong>Read:</strong> <a href="http://www.baeldung.com/inversion-control-and-dependency-injection-in-spring" target="_blank"><strong>baeldung.com:</strong> Intro to Inversion of Control and Dependency Injection with Spring</a></li>
+</ul>
+
+<h2 id="inversion-of-control-ioc-container--application-context">Inversion of Control (IoC) Container / Application Context</h2>
+<p>At the center of a Spring application is the <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans" target="_blank">IoC Container</a> which is represented by the <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/ApplicationContext.html" target="_blank">ApplicationContext</a> Class. It is the orchestrator of your code and manager of your Objects. It is essentially the glue to your entire application and knows everything. You start the Application Context in your main function.</p>
+
+<ul>
+  <li><strong>Read:</strong> <a href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#getting-started-first-application-main-method" target="_blank"><strong>spring.io:</strong> The “main” Method</a></li>
+</ul>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="nn">com.example.demo</span>
+
+<span class="k">import</span> <span class="nn">org.springframework.boot.autoconfigure.SpringBootApplication</span>
+<span class="k">import</span> <span class="nn">org.springframework.boot.runApplication</span>
+
+<span class="n">@SpringBootApplication</span>
+<span class="kd">class</span> <span class="nc">DemoApplication</span>
+
+<span class="k">fun</span> <span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="p">:</span> <span class="n">Array</span><span class="p">&lt;</span><span class="n">String</span><span class="p">&gt;)</span> <span class="p">{</span>
+    <span class="n">runApplication</span><span class="p">&lt;</span><span class="n">DemoApplication</span><span class="p">&gt;(*</span><span class="n">args</span><span class="p">)</span> <span class="c1">// starts the IoC Container (i.e., ApplicationContext)
+</span><span class="p">}</span>
+</code></pre></div></div>
+
+<p>When you start the IoC Container it will scan your application from the current package down (i.e, com.example.demo*.*) to create beans, provide advice, establish database connection pools, any many more things. Your main function should do nothing other than start the Spring ApplicationContext - everything from this point is now driven by Spring constructs.</p>
+
+<ul>
+  <li><strong>Read:</strong> <a href="https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#context-introduction" target="_blank"><strong>spring.io:</strong> Additional Capabilities of the ApplicationContext</a></li>
+</ul>
+
+<h2 id="dependency-injection">Dependency Injection</h2>
+<p>Dependency Injection is a technique used to achieve Inversion of Control and sounds more sophisticated than it really is. If <em>Object A</em> depends on <em>Object B</em> then a reference will be provided (“injected”) from an external source (i.e., the ApplicationContext). If <em>Object A</em> creates <em>Object B</em> on it’s own then it is not Dependency Injection.</p>
+
+<p>In Spring we achieve this by creating <a href="./core-beans">Beans</a> and establishing their relationship in a few different ways. The two most common are through <strong>Constructor Injection</strong> or <strong>Property Injection</strong> both discussed in the next section.</p>
+
+<ul>
+  <li><strong>Watch:</strong> <a href="https://www.youtube.com/watch?v=xlWwMSu5I70" target="_blank"><strong>youtube.com:</strong> Understanding Spring Bean Factory</a></li>
+  <li><strong>Watch:</strong> <a href="https://www.youtube.com/watch?v=GB8k2-Egfv0&amp;t=493s" target="_blank"><strong>youtube.com:</strong> Understanding Dependency Injection</a></li>
 </ul>
 
         

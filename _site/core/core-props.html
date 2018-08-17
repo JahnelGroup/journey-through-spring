@@ -1,0 +1,555 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.12.1 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Properties, Profiles and Resources - Journey Through Spring</title>
+<meta name="description" content="A pragmatic approach to learning the Spring Framework.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Journey Through Spring">
+<meta property="og:title" content="Properties, Profiles and Resources">
+<meta property="og:url" content="http://localhost:4000/core/core-props">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/core/core-props">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Steven Zgaljic",
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Journey Through Spring Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single wide">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Journey Through Spring</a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/core/intro-welcome" >Core</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Introduction</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/core/intro-welcome" class="">Your Journey</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/core/intro-spring" class="">What is Spring?</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/core/intro-kotlin" class="">Spring and Kotlin</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/core/intro-references" class="">References</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Getting Started</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/core/gettingstarted-tools" class="">Tooling Up</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/core/gettingstarted-magic" class="">Understaing the "Magic" of Spring</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/core/gettingstarted-spring-starters" class="">Spring Boot Starters</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/core/gettingstarted-debugging" class="">Debugging a Spring Application</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Spring Core</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/core/core-ioc-di" class="">IoC and DI</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/core/core-beans" class="">Beans</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/core/core-props" class="active">Properties, Profiles and Resources</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/core/core-events" class="">Events</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/core/core-validation" class="">Validation</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/core/core-data-binding" class="">Data Binding</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/core/core-type-conversion" class="">Type Conversion</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/core/core-spel" class="">Spring Expression Language (SpEL)</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/core/core-aop" class="">Aspect Oriented Programming (AOP)</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Properties, Profiles and Resources">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Properties, Profiles and Resources
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <h1 id="properties-profiles-and-resources">Properties, Profiles and Resources</h1>
+
+<h2 id="properties">Properties</h2>
+<p>You’ll likely need to change the behavior of your application based on a number of things. Spring has a lot features around this called Externalized Configuration - the practice of placing configuration in property files as opposed to hard-coded in your program. Spring will respect a very specific hierarchical order of properties such that you can override properties when required.</p>
+
+<ul>
+  <li><strong>Read:</strong> <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-external-config.html"><strong>spring.io:</strong> Externalized Configuration</a></li>
+  <li><strong>Read:</strong> <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/howto-properties-and-configuration.html"><strong>spring.io:</strong> Properties and Configuration</a></li>
+  <li><strong>Read:</strong> <a href="http://www.baeldung.com/properties-with-spring"><strong>baeldung.com:</strong> Properties with Spring and Spring Boot</a></li>
+  <li><strong>Read:</strong> <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html"><strong>spring.io:</strong> Appendix A. Common application properties</a></li>
+</ul>
+
+<p>Property files are typically placed in <strong>src/main/resources</strong> as either <em>.properties</em> or <em>.yml</em> files. <strong>application.properties</strong> and <strong>application.yml</strong> are specially named properties that Spring will look for to load automatically when your application starts. There are profile-specific variants of these property files as well and are described below.</p>
+
+<h2 id="profiles">Profiles</h2>
+<p>Spring has the concept of a Profile which is basically a special type of property that you can use to <em>tag</em> your components to a specific environment. Let’s say you have a service that should send an EMail out when certain events happen in your system. This may only be relevant in an environment like UAT and PROD but not in DEV. You could define two types of MailService, one to actually send the EMail out and the other to just print it to the console.</p>
+
+<ul>
+  <li><strong>Read:</strong> <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-profiles.html"><strong>spring.io:</strong> Profiles</a></li>
+  <li><strong>Read:</strong> <a href="http://www.baeldung.com/spring-profiles"><strong>baeldung.com:</strong> Spring Profiles</a></li>
+</ul>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/** 
+  * Only one of the two Beans defined in this class will be loaded in any given environment. 
+  */</span> 
+<span class="n">@Configuration</span>
+<span class="kd">class</span> <span class="nc">MyConfig</span> <span class="p">{</span>
+
+  <span class="c1">// Use the real EMailService in UAT and PROD
+</span>  <span class="n">@Bean</span>
+  <span class="n">@Profile</span><span class="p">(</span><span class="err">“</span><span class="n">UAT</span><span class="err">”</span><span class="p">,</span> <span class="err">“</span><span class="n">PROD</span><span class="err">”</span><span class="p">)</span>
+  <span class="k">fun</span> <span class="nf">emailService</span><span class="p">():</span> <span class="n">MailService</span> <span class="p">=</span> <span class="n">EMailService</span><span class="p">()</span>
+
+  <span class="c1">// Use the console based service for DEV
+</span>  <span class="n">@Bean</span>
+  <span class="n">@Profile</span><span class="p">(</span><span class="err">“</span><span class="n">DEV</span><span class="err">”</span><span class="p">)</span>
+  <span class="k">fun</span> <span class="nf">consoleMailService</span><span class="p">():</span> <span class="n">MailService</span> <span class="p">=</span> <span class="n">ConsoleMailService</span><span class="p">()</span>
+
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>There are several ways to make a Profile “active”, one such way is to pass the <strong>spring.profiles.active</strong> JVM argument.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>java <span class="nt">-jar</span> <span class="nt">-Dspring</span>.profiles.active<span class="o">=</span>PROD app.jar
+</code></pre></div></div>
+
+<p>Profiles work very nicely with the properties mentioned earlier. Spring will load properties based on a naming scheme with the Profile name in the format application-{profile}.properties (i..e, application-PROD.properties). Profile specific properties will override the default properties.</p>
+
+<p>A common example of this is externalizing database connection property for each envirionment.</p>
+
+<ul>
+  <li>src/main/resources/application.properties
+    <ul>
+      <li>spring.datasource.url=jdbc:mysql://localhost:3306/mydb</li>
+    </ul>
+  </li>
+  <li>src/main/resources/application-DEV.properties
+    <ul>
+      <li>spring.datasource.url=jdbc:mysql://dev-database.app.com:3306/mydb</li>
+    </ul>
+  </li>
+  <li>src/main/resources/application-PROD.properties
+    <ul>
+      <li>spring.datasource.url=jdbc:mysql://prod-database.app.com:3306/mydb</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="resources">Resources</h2>
+<p>Resources are non source-code related files required by your application. The Properties described above are considered resources. SQL Files, CSV, XLS images, bundled HTML/CSS/JS and others would also be considered resources for a Spring application. Spring will make resources from your classpath available to you, and it will automatically make <strong>src/main/resources</strong> part of your classpath.</p>
+
+<h3 id="some-important-specially-named-resources">Some Important Specially Named Resources</h3>
+<p>All of these are located in src/main/resources.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>File</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>application.[properties|yml]</td>
+      <td>Described in the above Properties section.</td>
+    </tr>
+    <tr>
+      <td>schema.sql</td>
+      <td><a href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#howto-initialize-a-database-using-spring-jdbc">Initialize a Database</a> with simple DDL script.</td>
+    </tr>
+    <tr>
+      <td>data.sql</td>
+      <td><a href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#howto-initialize-a-database-using-spring-jdbc">Initialize a Database</a> with simple seed script.</td>
+    </tr>
+    <tr>
+      <td>db/migrations/V*.sql</td>
+      <td><a href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#howto-execute-flyway-database-migrations-on-startup">Execute Flyway Database Migrations on Startup</a></td>
+    </tr>
+    <tr>
+      <td>banner.txt</td>
+      <td><a href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-banner">Customize the Banner</a> that displays when Spring starts up.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="access-resources-in-your-code">Access Resources in your Code</h3>
+<p>Spring can inject Resources for you quite easily. Here is an example of printing a text file line-by-line.</p>
+
+<p><strong>src/main/resources/printMe.txt</strong></p>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Line 1
+Line 2
+etc...
+</code></pre></div></div>
+
+<p>This short piece of code is instructing Spring to inject a reference to the classpath resource and then using some neat Kotlin extension functions to iterate over it. The key point here is the @Value injection of a Resource to get a reference to the File.</p>
+
+<p><strong>src/main/kotlin/DemoApplication.kt</strong></p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">org.springframework.beans.factory.annotation.Value</span>
+<span class="k">import</span> <span class="nn">org.springframework.boot.autoconfigure.SpringBootApplication</span>
+<span class="k">import</span> <span class="nn">org.springframework.boot.runApplication</span>
+<span class="k">import</span> <span class="nn">org.springframework.core.io.Resource</span>
+<span class="k">import</span> <span class="nn">javax.annotation.PostConstruct</span>
+
+<span class="n">@SpringBootApplication</span>
+<span class="kd">class</span> <span class="nc">DemoApplication</span><span class="p">{</span>
+
+    <span class="cm">/**
+      * Spring is doing a couple of things here to make this magic happen. It detects
+      * the injection type to be a Resource so it knows its a file. The @Value annotation
+      * is a URI pointing to a file named printMe.txt located in the root of the classpath.
+      * You can then get a File reference from the Resource.      
+      */</span>
+    <span class="n">@Value</span><span class="p">(</span><span class="s">"\${classpath:printMe.txt}"</span><span class="p">)</span> <span class="kd">var</span> <span class="py">printMe</span><span class="p">:</span> <span class="n">Resource</span><span class="p">?</span> <span class="p">=</span> <span class="k">null</span>
+
+    <span class="c1">// Prints the File line by line
+</span>    <span class="n">@PostConstruct</span> <span class="k">fun</span> <span class="nf">init</span><span class="p">()</span> <span class="p">=</span> <span class="n">printMe</span><span class="o">!!</span><span class="p">.</span><span class="n">file</span><span class="p">.</span><span class="n">readLines</span><span class="p">().</span><span class="n">forEach</span> <span class="p">{</span> <span class="n">println</span><span class="p">(</span><span class="n">it</span><span class="p">)</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">fun</span> <span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="p">:</span> <span class="n">Array</span><span class="p">&lt;</span><span class="n">String</span><span class="p">&gt;)</span> <span class="p">{</span>
+    <span class="n">runApplication</span><span class="p">&lt;</span><span class="n">DemoApplication</span><span class="p">&gt;(*</span><span class="n">args</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+    
+    
+    
+      <li><a href="https://github.com/https://github.com/szgaljic"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2018 Steven Zgaljic. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+
+
+
+
+
+
+
+
+  </body>
+</html>
