@@ -347,17 +347,16 @@
 
       <section class="page__content" itemprop="text">
         
-        <h1 id="beans">Beans</h1>
-<p>Objects are the key element in Java programming and the Spring Framework handles them in a very special way. Unlike a regular Java Object that is created with the <strong>new</strong> operator and then used, a Spring Object must be registered with the ApplicationContext first. When an Object is registered with the ApplicationContext it is referred to as a <a href="https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#beans-definition">Bean</a> (or “Managed Bean” or “Component”). When Spring manages an Object as a Bean it is creating a Proxy around your object and can do very interesting things with it.</p>
+        <p>Objects are the key element in Java programming and the Spring Framework handles them in a very special way. Unlike a regular Java Object that is created with the <strong>new</strong> operator and then used, a Spring Object must be registered with the ApplicationContext first. When an Object is registered with the ApplicationContext it is referred to as a <a href="https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#beans-definition" target="_blank">Bean</a> (or “Managed Bean” or “Component”). When Spring manages an Object as a Bean it is creating a Proxy around your object and can do very interesting things with it.</p>
 
 <h1 id="bean-configuration">Bean Configuration</h1>
 <p>Beans can be configured in three primary ways: XML, Java, or Annotations. We focus primarily on Annotation based configuration.</p>
 
 <ul>
-  <li><strong>Read:</strong> <a href="https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#beans-annotation-config"><strong>spring.io:</strong> Annotation-based container configuration</a></li>
+  <li><strong>Read:</strong> <a href="https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#beans-annotation-config" target="_blank"><strong>spring.io:</strong> Annotation-based container configuration</a></li>
 </ul>
 
-<p>Spring provides a few different annotations to drive the creation of beans. Ultimately Spring will use <strong>@Bean</strong> or <strong>@Component</strong> to create a Bean.</p>
+<p>Spring provides a few different annotations to drive the creation of beans. Ultimately Spring will use <strong>@Bean</strong> or <strong>@Component</strong> to create a Bean. Here are the most common ways to define Beans.</p>
 
 <table>
   <thead>
@@ -407,11 +406,11 @@
 </table>
 
 <ul>
-  <li><strong>Read:</strong> <a href="https://stackoverflow.com/questions/16051656/advantages-of-using-spring-stereotypes"><strong>stackoverflow.com:</strong> Advantages of using spring stereotypes?</a></li>
-  <li><strong>Read:</strong> <a href="https://stackoverflow.com/questions/6827752/whats-the-difference-between-component-repository-service-annotations-in"><strong>stackoverflow.com:</strong> What’s the difference between @Component, @Repository &amp; @Service annotations in Spring?</a></li>
-  <li><strong>Read:</strong> <a href="https://stackoverflow.com/questions/25242321/difference-between-spring-controller-and-restcontroller-annotation"><strong>stackoverflow.com:</strong> Difference between spring @Controller and @RestController annotation
+  <li><strong>Read:</strong> <a href="https://stackoverflow.com/questions/16051656/advantages-of-using-spring-stereotypes" target="_blank"><strong>stackoverflow.com:</strong> Advantages of using spring stereotypes?</a></li>
+  <li><strong>Read:</strong> <a href="https://stackoverflow.com/questions/6827752/whats-the-difference-between-component-repository-service-annotations-in" target="_blank"><strong>stackoverflow.com:</strong> What’s the difference between @Component, @Repository &amp; @Service annotations in Spring?</a></li>
+  <li><strong>Read:</strong> <a href="https://stackoverflow.com/questions/25242321/difference-between-spring-controller-and-restcontroller-annotation" target="_blank"><strong>stackoverflow.com:</strong> Difference between spring @Controller and @RestController annotation
 </a></li>
-  <li><strong>Read:</strong> <a href="https://www.genuitec.com/spring-frameworkrestcontroller-vs-controller/"><strong>genuitec.com:</strong> @RestController vs @Controller</a></li>
+  <li><strong>Read:</strong> <a href="https://www.genuitec.com/spring-frameworkrestcontroller-vs-controller/" target="_blank"><strong>genuitec.com:</strong> @RestController vs @Controller</a></li>
 </ul>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Declare a Singleton Bean - one instance for the entire application
@@ -451,7 +450,7 @@
 </code></pre></div></div>
 
 <h2 id="bean-scope">Bean Scope</h2>
-<p>The concept of <a href="https://en.wikipedia.org/wiki/Scope_(computer_science)">Scope</a> is fundamental to computer programming and it’s no surprise that its found in Spring as well. As you delegate the control over the creation of your Objects to Spring you have the ability to advise Spring on scope with @Scope.</p>
+<p>The concept of <a href="https://en.wikipedia.org/wiki/Scope_(computer_science)" target="_blank">Scope</a> is fundamental to computer programming and it’s no surprise that its found in Spring as well. As you delegate the control over the creation of your Objects to Spring you have the ability to advise Spring on scope with @Scope.</p>
 
 <table>
   <thead>
@@ -511,12 +510,12 @@
 </code></pre></div></div>
 
 <ul>
-  <li><strong>Read:</strong> <a href="https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#beans-factory-scopes"><strong>spring.io:</strong> Bean Scopes</a></li>
-  <li><strong>Read:</strong> <a href="http://www.baeldung.com/spring-bean-scopes"><strong>baeldung.com:</strong> Spring Bean Scopes</a></li>
+  <li><strong>Read:</strong> <a href="https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#beans-factory-scopes" target="_blank"><strong>spring.io:</strong> Bean Scopes</a></li>
+  <li><strong>Read:</strong> <a href="http://www.baeldung.com/spring-bean-scopes" target="_blank"><strong>baeldung.com:</strong> Spring Bean Scopes</a></li>
 </ul>
 
 <h2 id="bean-proxy-mode">Bean Proxy Mode</h2>
-<p>There are two fundamental types of proxies <strong>JDK</strong> (by interface) and <strong>CGLIB</strong> (by class). It’s best practice that you inject by interface as opposed to class because it’s easier for Spring. If you inject by the target class then Spring needs to some extra work to accomplish it and is arguably a performance impact although there is great debate about that.</p>
+<p>There are two fundamental types of proxies <strong>JDK</strong> (by interface) and <strong>CGLIB</strong> (by class). It’s best practice that you inject by interface as opposed to class because it’s easier for Spring. If you inject by the target class then Spring needs to do some extra work to accomplish it and is arguably a performance impact although there is debate about that.</p>
 
 <table>
   <thead>
@@ -546,14 +545,14 @@
 </table>
 
 <ul>
-  <li><strong>Read:</strong> <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-factory-scopes-other-injection"><strong>spring.io:</strong> Scoped beans as dependencies</a></li>
+  <li><strong>Read:</strong> <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-factory-scopes-other-injection" target="_blank"><strong>spring.io:</strong> Scoped beans as dependencies</a></li>
 </ul>
 
 <h2 id="bean-lifecycle">Bean Lifecycle</h2>
 <p>As Spring Beans are created they follow a Lifecycle where you can hook-in callback listeners to do interesting things when the Beans are first created and destroyed.</p>
 
 <ul>
-  <li><strong>Read:</strong> <a href="https://www.thejavaprogrammer.com/spring-bean-life-cycle/"><strong>thejavaprogrammer.com:</strong> Spring Bean Life Cycle</a></li>
+  <li><strong>Read:</strong> <a href="https://www.thejavaprogrammer.com/spring-bean-life-cycle/" target="_blank"><strong>thejavaprogrammer.com:</strong> Spring Bean Life Cycle</a></li>
 </ul>
 
 <p>A common use-case is to validate that certain properties are set on your Bean after it is created.</p>
@@ -581,7 +580,7 @@
 <p>The best way to wire you dependencies together are by defining them in your constructor. The reason this is favored is because it’s very obvious what your dependencies are. Additionally it makes it easy to Unit Test your code because you have the ability to inject Mocks into the constructor.</p>
 
 <ul>
-  <li><strong>Read:</strong> <a href="https://stackoverflow.com/questions/21218868/explain-why-constructor-inject-is-better-than-other-options"><strong>stackoverflow.com:</strong> Explain why constructor inject is better than other options</a></li>
+  <li><strong>Read:</strong> <a href="https://stackoverflow.com/questions/21218868/explain-why-constructor-inject-is-better-than-other-options" target="_blank"><strong>stackoverflow.com:</strong> Explain why constructor inject is better than other options</a></li>
 </ul>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">@Service</span>
@@ -646,7 +645,7 @@
 <p>This approach is very convenient in our class but things change dramatically when you want to test it.</p>
 
 <ul>
-  <li><strong>Read:</strong> <a href="http://vojtechruzicka.com/field-dependency-injection-considered-harmful/"><strong>vojtechruzicka.com:</strong> Dangers of Field Injection</a></li>
+  <li><strong>Read:</strong> <a href="http://vojtechruzicka.com/field-dependency-injection-considered-harmful/" target="_blank"><strong>vojtechruzicka.com:</strong> Dangers of Field Injection</a></li>
 </ul>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">@Service</span>
@@ -673,13 +672,13 @@
 </code></pre></div></div>
 
 <blockquote>
-  <p><a href="https://kotlinlang.org/docs/reference/properties.html#late-initialized-properties-and-variables">lateinit</a> is a Kotlin construct and is confusing for those new using the language with Spring. This is required because Kotlin is very strict with null safety checking. There is a short period of time where the userService property will actually be null, refer back to the Spring Bean Lifecycle section to learn more. Spring will first create your Object and then use reflection immediately after to inject these properties, lateinit essentially tells Kotin to ignore the null safety checks for this reference.</p>
+  <p><a href="https://kotlinlang.org/docs/reference/properties.html#late-initialized-properties-and-variables" target="_blank">lateinit</a> is a Kotlin construct and is confusing for those new using the language with Spring. This is required because Kotlin is very strict with null safety checking. There is a short period of time where the userService property will actually be null, refer back to the Spring Bean Lifecycle section to learn more. Spring will first create your Object and then use reflection immediately after to inject these properties, lateinit essentially tells Kotin to ignore the null safety checks for this reference.</p>
 </blockquote>
 
 <p>Testing code written this way is much harder because you really don’t have a good clean way to override the value with a Mock. There are two general approaches to this - define another bean as the @Primary and override it in the ApplicationContext, or using Mockito and the @InjectMocks annotation.</p>
 
 <h3 id="mocking-autowired-properties-with-primary">Mocking @Autowired Properties with @Primary</h3>
-<p>The <a href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/context/annotation/Primary.html">@Primary</a> annotation allows you to define multiple beans of the same and give Spring a hint at deciding which one to choice by default if no <a href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/beans/factory/annotation/Qualifier.html">@Qualifier</a> is used.</p>
+<p>The <a href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/context/annotation/Primary.html" target="_blank">@Primary</a> annotation allows you to define multiple beans of the same and give Spring a hint at deciding which one to choice by default if no <a href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/beans/factory/annotation/Qualifier.html" target="_blank">@Qualifier</a> is used.</p>
 
 <p>This allows you to shadow a Bean in your application with a Mock. In order to do this you need to define a test configuration and load up another Bean of the exact same type and name.</p>
 
@@ -733,9 +732,9 @@
 <p>Although powerful this approach can be a little dangerous.</p>
 
 <ul>
-  <li><strong>Read:</strong> <a href="http://www.baeldung.com/mockito-annotations"><strong>baeldung.com:</strong> Getting Started with Mockito @Mock, @Spy, @Captor and @InjectMocks</a></li>
-  <li><strong>Read:</strong> <a href="https://stackoverflow.com/questions/16467685/difference-between-mock-and-injectmocks"><strong>stackoverflow.com:</strong> @Mock and @InjectMocks</a></li>
-  <li><strong>Read:</strong> <a href="https://tedvinke.wordpress.com/2014/02/13/mockito-why-you-should-not-use-injectmocks-annotation-to-autowire-fields/"><strong>tedvinke.wordpress.com:</strong> Why You Should Not Use InjectMocks Annotation to Autowire Fields</a></li>
+  <li><strong>Read:</strong> <a href="http://www.baeldung.com/mockito-annotations" target="_blank"><strong>baeldung.com:</strong> Getting Started with Mockito @Mock, @Spy, @Captor and @InjectMocks</a></li>
+  <li><strong>Read:</strong> <a href="https://stackoverflow.com/questions/16467685/difference-between-mock-and-injectmocks" target="_blank"><strong>stackoverflow.com:</strong> @Mock and @InjectMocks</a></li>
+  <li><strong>Read:</strong> <a href="https://tedvinke.wordpress.com/2014/02/13/mockito-why-you-should-not-use-injectmocks-annotation-to-autowire-fields/" target="_blank"><strong>tedvinke.wordpress.com:</strong> Why You Should Not Use InjectMocks Annotation to Autowire Fields</a></li>
 </ul>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">@RunWith</span><span class="p">(</span><span class="n">SpringRunner</span><span class="o">::</span><span class="k">class</span><span class="p">)</span>
@@ -818,7 +817,7 @@
 <p>Testing code written this way can only be done by shadowing the original bean with @Primary in a TestConfig.</p>
 
 <h2 id="4-injection-via-objectfactory">4. Injection via ObjectFactory</h2>
-<p>Spring provides a class called <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/ObjectFactory.html">ObjectFactory</a> that can be used to dispense beans, this is perfect @scope(“prototype”) beans where you want a new instance each time. You simply inject a generic typed reference of ObjectFactory.</p>
+<p>Spring provides a class called <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/ObjectFactory.html" target="_blank">ObjectFactory</a> that can be used to dispense beans, this is perfect @scope(“prototype”) beans where you want a new instance each time. You simply inject a generic typed reference of ObjectFactory.</p>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">org.springframework.beans.factory.ObjectFactory</span>
 
@@ -847,13 +846,13 @@
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p><strong>Read:</strong> <a href="https://stackoverflow.com/questions/6136261/how-to-produce-prototype-objects-from-singleton-design-help-needed"><strong>stackoverflow.com:</strong> How to Produce prototype objects</a></p>
+<p><strong>Read:</strong> <a href="https://stackoverflow.com/questions/6136261/how-to-produce-prototype-objects-from-singleton-design-help-needed" target="_blank"><strong>stackoverflow.com:</strong> How to Produce prototype objects</a></p>
 
 <h1 id="exercises">Exercises</h1>
 <p>Try out this exercise to get a feel for the Application Context and declaring Beans.</p>
 
 <ul>
-  <li><strong>Exercise:</strong> <a href="https://github.com/JahnelGroup/journey-through-spring/tree/master/basic-beans"><strong>github.com:</strong> Journey Through Spring: basic-beans</a></li>
+  <li><strong>Exercise:</strong> <a href="https://github.com/JahnelGroup/journey-through-spring/tree/master/src/basic-beans" target="_blank"><strong>github.com:</strong> Journey Through Spring: basic-beans</a></li>
 </ul>
 
         
@@ -893,7 +892,7 @@
     
     
     
-      <li><a href="https://github.com/https://github.com/szgaljic"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+      <li><a href="https://github.com/szgaljic"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
     
     
     

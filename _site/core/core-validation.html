@@ -347,25 +347,24 @@
 
       <section class="page__content" itemprop="text">
         
-        <h1 id="validation">Validation</h1>
-<p>Before using a piece of a data you typically want to <a href="https://en.wikipedia.org/wiki/Data_validation">validate</a> it first. Validation takes many forms and really depends on where the data is coming from and where the validation check is being done. If you’re passing data from one class to another via a function call then maybe some light validations are warranted (i.e., null checks) but if you’re receiving data from an external source you typically need to scrutinize it further.</p>
+        <p>Before using a piece of a data you typically want to <a href="https://en.wikipedia.org/wiki/Data_validation" target="_blank">validate</a> it first. Validation takes many forms and really depends on where the data is coming from and where the validation check is being done. If you’re passing data from one class to another via a function call then maybe some light validations are warranted (i.e., null checks) but if you’re receiving data from an external source you typically need to scrutinize it further.</p>
 
 <p>Spring provides a light specification around validating Beans with a lot of the implementation provided by Hibernate.</p>
 
 <ul>
-  <li><strong>Read:</strong> <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#validation"><strong>spring.io:</strong> Validation</a></li>
-  <li><strong>Read:</strong> <a href="http://hibernate.org/validator/"><strong>hibernate.org:</strong> Hibernate Validators</a></li>
-  <li><strong>Read:</strong> <a href="https://www.tutorialspoint.com/springmvc/springmvc_hibernate_validator.htm"><strong>tutorialspoint.com:</strong> Spring MVC - Hibernate Validator Example</a></li>
-  <li><strong>Read:</strong> <a href="https://www.mkyong.com/spring-mvc/combine-spring-validator-and-hibernate-validator/"><strong>mkyong.com:</strong> Combine Spring validator and Hibernate validator</a></li>
-  <li><strong>Exercise:</strong> <a href="https://github.com/JahnelGroup/journey-through-spring/tree/master/basic-web-validations"><strong>github.com:</strong> Journey Through Spring: Basic Web Validations</a></li>
+  <li><strong>Read:</strong> <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#validation" target="_blank"><strong>spring.io:</strong> Validation</a></li>
+  <li><strong>Read:</strong> <a href="http://hibernate.org/validator/" target="_blank"><strong>hibernate.org:</strong> Hibernate Validators</a></li>
+  <li><strong>Read:</strong> <a href="https://www.tutorialspoint.com/springmvc/springmvc_hibernate_validator.htm" target="_blank"><strong>tutorialspoint.com:</strong> Spring MVC - Hibernate Validator Example</a></li>
+  <li><strong>Read:</strong> <a href="https://www.mkyong.com/spring-mvc/combine-spring-validator-and-hibernate-validator/" target="_blank"><strong>mkyong.com:</strong> Combine Spring validator and Hibernate validator</a></li>
+  <li><strong>Exercise:</strong> <a href="https://github.com/JahnelGroup/journey-through-spring/tree/master/src/basic-web-validations" target="_blank"><strong>github.com:</strong> Journey Through Spring: Basic Web Validations</a></li>
 </ul>
 
 <h2 id="the-trasherror-bag-pattern">The Trash/Error Bag Pattern</h2>
 <p>Although not an official <em>design pattern</em> Spring’s validation framework follows a technique called an <strong>error bag</strong>. The idea is named well because you basically create a “trash bag” object that you pass around to interested parties that will put their “trash” or errors into the bag. Afterwards you inspect the trash bag for errors and handle them accordingly.</p>
 
 <ul>
-  <li>The trash bag is an instance of <a href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/validation/Errors.html">Errors</a>.</li>
-  <li>The interested parties your implementations of <a href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/validation/Validator.html">Validators</a>.</li>
+  <li>The trash bag is an instance of <a href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/validation/Errors.html" target="_blank">Errors</a>.</li>
+  <li>The interested parties your implementations of <a href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/validation/Validator.html" target="_blank">Validators</a>.</li>
 </ul>
 
 <h2 id="the-validator-interface">The Validator Interface</h2>
@@ -385,12 +384,12 @@
 </code></pre></div></div>
 
 <blockquote>
-  <p>I used a library here called <a href="https://projectlombok.org/">Lombok</a> that helps generate boiler plate code like getters, setters, hashcode, equals and toString.</p>
+  <p>I used a library here called <a href="https://projectlombok.org/" target="_blank">Lombok</a> that helps generate boiler plate code like getters, setters, hashcode, equals and toString.</p>
 </blockquote>
 
-<p>We can create a Validator to validate a Person given whatever business requirements we have. For the purpose of brevity I’m only going to show one validation here. You can view the entire <a href="https://github.com/JahnelGroup/journey-through-spring/blob/master/basic-web-validations/src/main/java/com/example/basicwebvalidations/with_interface/PersonValidator.java">PersonValidator.java</a> in the Journey Through Spring exercise.</p>
+<p>We can create a Validator to validate a Person given whatever business requirements we have. For the purpose of brevity I’m only going to show one validation here. You can view the entire <a href="https://github.com/JahnelGroup/journey-through-spring/blob/master/src/basic-web-validations/src/main/java/com/example/basicwebvalidations/by_interface/UserValidator.java" target="_blank">UserValidator.java</a> in the Journey Through Spring exercise.</p>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">PersonValidator</span> <span class="kd">implements</span> <span class="n">Validator</span> <span class="o">{</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">UserValidator</span> <span class="kd">implements</span> <span class="n">Validator</span> <span class="o">{</span>
 
     <span class="nd">@Override</span>
     <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">supports</span><span class="o">(</span><span class="n">Class</span><span class="o">&lt;?&gt;</span> <span class="n">clazz</span><span class="o">)</span> <span class="o">{</span>
@@ -422,15 +421,15 @@
 </code></pre></div></div>
 
 <blockquote>
-  <p>Error codes are discussed below and they are typically used to lookup the human-readable message text from a <a href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/context/MessageSource.html">MessageSource</a>.</p>
+  <p>Error codes are discussed below and they are typically used to lookup the human-readable message text from a <a href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/context/MessageSource.html" target="_blank">MessageSource</a>.</p>
 </blockquote>
 
 <h2 id="running-the-validator">Running the Validator</h2>
 
-<p>To run the validator you need an implemention of <a href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/validation/Errors.html">Errors</a>. There are a few implementations and we’ll use <a href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/validation/BeanPropertyBindingResult.html">BeanPropertyBindingResult</a> because thats what Spring MVC would normally provide you.</p>
+<p>To run the validator you need an implemention of <a href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/validation/Errors.html" target="_blank">Errors</a>. There are a few implementations and we’ll use <a href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/validation/BeanPropertyBindingResult.html" target="_blank">BeanPropertyBindingResult</a> because thats what Spring MVC would normally provide you.</p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Errors</span> <span class="n">result</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BeanPropertyBindingResult</span><span class="o">(</span><span class="n">person</span><span class="o">,</span> <span class="s">"person"</span><span class="o">);</span>
-<span class="n">personValidator</span><span class="o">.</span><span class="na">validate</span><span class="o">(</span><span class="n">person</span><span class="o">,</span> <span class="n">result</span><span class="o">);</span>
+<span class="n">userValidator</span><span class="o">.</span><span class="na">validate</span><span class="o">(</span><span class="n">person</span><span class="o">,</span> <span class="n">result</span><span class="o">);</span>
 <span class="k">if</span><span class="o">(</span> <span class="n">result</span><span class="o">.</span><span class="na">hasErrors</span><span class="o">()</span> <span class="o">){</span>
     <span class="n">result</span><span class="o">.</span><span class="na">getAllErrors</span><span class="o">().</span><span class="na">stream</span><span class="o">().</span><span class="na">forEach</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">::</span><span class="n">println</span><span class="o">);</span>
 <span class="o">}</span>
@@ -481,7 +480,7 @@
 <span class="o">}</span>
 </code></pre></div></div>
 
-<p>Now you just need to apply the <a href="https://docs.oracle.com/javaee/7/api/javax/validation/Valid.html">@Valid</a> annotation on your payload in a Spring Controller to have Spring run the JSR-303 annotation validations.</p>
+<p>Now you just need to apply the <a href="https://docs.oracle.com/javaee/7/api/javax/validation/Valid.html" target="_blank">@Valid</a> annotation on your payload in a Spring Controller to have Spring run the JSR-303 annotation validations.</p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@PostMapping</span><span class="o">(</span><span class="s">"/pets"</span><span class="o">)</span>
 <span class="kd">public</span> <span class="n">Pet</span> <span class="nf">addPet</span><span class="o">(</span><span class="nd">@RequestBody</span> <span class="nd">@Valid</span> <span class="n">Pet</span> <span class="n">pet</span><span class="o">){</span>
@@ -523,7 +522,7 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<p>If you want to do something with the Errors then have Spring inject a <a href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/validation/BindingResult.html">BindingResult</a> object for you (it extends Errors). Spring will handle the binding in the same way you did it before manually.</p>
+<p>If you want to do something with the Errors then have Spring inject a <a href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/validation/BindingResult.html" target="_blank">BindingResult</a> object for you (it extends Errors). Spring will handle the binding in the same way you did it before manually.</p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@PostMapping</span><span class="o">(</span><span class="s">"/pets"</span><span class="o">)</span>
 <span class="kd">public</span> <span class="n">Pet</span> <span class="nf">addPet</span><span class="o">(</span><span class="nd">@RequestBody</span> <span class="nd">@Valid</span> <span class="n">Pet</span> <span class="n">pet</span><span class="o">,</span> <span class="n">BindingResult</span> <span class="n">result</span><span class="o">){</span>
@@ -535,14 +534,14 @@
 </code></pre></div></div>
 
 <ul>
-  <li><strong>Read:</strong> <a href="https://jcp.org/en/jsr/detail?id=303"><strong>jcp.org:</strong> JSR 303: Bean Validation</a></li>
-  <li><strong>Read:</strong> <a href="https://en.wikipedia.org/wiki/Bean_Validation"><strong>wikipedia.org:</strong> Bean Validation</a></li>
-  <li><strong>Read:</strong> <a href="https://developer.ucsd.edu/develop/data-layer/jpa/java-validation-api.html"><strong>developer.ucsd.edu:</strong> Java Validation API (JSR-303)</a></li>
+  <li><strong>Read:</strong> <a href="https://jcp.org/en/jsr/detail?id=303" target="_blank"><strong>jcp.org:</strong> JSR 303: Bean Validation</a></li>
+  <li><strong>Read:</strong> <a href="https://en.wikipedia.org/wiki/Bean_Validation" target="_blank"><strong>wikipedia.org:</strong> Bean Validation</a></li>
+  <li><strong>Read:</strong> <a href="https://developer.ucsd.edu/develop/data-layer/jpa/java-validation-api.html" target="_blank"><strong>developer.ucsd.edu:</strong> Java Validation API (JSR-303)</a></li>
 </ul>
 
 <h3 id="custom-jsr-303-annotation-validator">Custom JSR-303 Annotation Validator</h3>
 
-<p>To make a custom JSR-303 validation you need two things - an annotation and a corresponding <a href="https://docs.oracle.com/javaee/7/api/javax/validation/ConstraintValidator.html">ConstraintValidator</a>.</p>
+<p>To make a custom JSR-303 validation you need two things - an annotation and a corresponding <a href="https://docs.oracle.com/javaee/7/api/javax/validation/ConstraintValidator.html" target="_blank">ConstraintValidator</a>.</p>
 
 <p>Here is an example of a custom annotation called <strong>@PetId</strong> that we’ll use to validate that a Pet ID takes the format of 5 digits followed by a dash then two letters (i.e., 12345-AZ).</p>
 
@@ -556,7 +555,7 @@
 <span class="o">}</span>
 </code></pre></div></div>
 
-<p>Here is the corresponding <a href="https://docs.oracle.com/javaee/7/api/javax/validation/ConstraintValidator.html">ConstraintValidator</a>.</p>
+<p>Here is the corresponding <a href="https://docs.oracle.com/javaee/7/api/javax/validation/ConstraintValidator.html" target="_blank">ConstraintValidator</a>.</p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">javax.validation.ConstraintValidator</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">javax.validation.ConstraintValidatorContext</span><span class="o">;</span>
@@ -582,8 +581,8 @@
 </blockquote>
 
 <ul>
-  <li><strong>Read:</strong> <a href="http://www.baeldung.com/spring-mvc-custom-validator"><strong>baeldung.com:</strong> Spring MVC Custom Validation</a></li>
-  <li><strong>Read:</strong> <a href="http://dolszewski.com/spring/custom-validation-annotation-in-spring/"><strong>dolszewski.com:</strong> Custom validation annotation in Spring</a></li>
+  <li><strong>Read:</strong> <a href="http://www.baeldung.com/spring-mvc-custom-validator" target="_blank"><strong>baeldung.com:</strong> Spring MVC Custom Validation</a></li>
+  <li><strong>Read:</strong> <a href="http://dolszewski.com/spring/custom-validation-annotation-in-spring/" target="_blank"><strong>dolszewski.com:</strong> Custom validation annotation in Spring</a></li>
 </ul>
 
 <h2 id="errorcode-messagesource-and-resourcebundle">ErrorCode, MessageSource and ResourceBundle</h2>
@@ -592,12 +591,12 @@
 <p>The entire process of mapping codes to message text is called message interpolation.</p>
 
 <ul>
-  <li><strong>Read:</strong> <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#context-functionality-messagesource"><strong>spring.io:</strong> Internationalization using MessageSource</a></li>
-  <li><strong>Read:</strong> <a href="http://www.baeldung.com/spring-boot-internationalization"><strong>baeldung.com:</strong> Spring Boot Internationalization</a></li>
-  <li><strong>Read:</strong> <a href="https://en.wikipedia.org/wiki/Java_resource_bundle"><strong>wikipedia.org:</strong> Java Resource Bundle</a></li>
-  <li><strong>Read:</strong> <a href="https://docs.oracle.com/javase/7/docs/api/java/util/ResourceBundle.html"><strong>oracle.com:</strong> ResourceBundle</a></li>
-  <li><strong>Read:</strong> <a href="https://docs.oracle.com/javase/tutorial/i18n/resbundle/concept.html"><strong>oracle.com:</strong> ResourceBundle Concept</a></li>
-  <li><strong>Read:</strong> <a href="http://docs.jboss.org/hibernate/validator/5.4/reference/en-US/html_single/#chapter-message-interpolation"><strong>jboss.org:</strong> Message Interpolation</a></li>
+  <li><strong>Read:</strong> <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#context-functionality-messagesource" target="_blank"><strong>spring.io:</strong> Internationalization using MessageSource</a></li>
+  <li><strong>Read:</strong> <a href="http://www.baeldung.com/spring-boot-internationalization" target="_blank"><strong>baeldung.com:</strong> Spring Boot Internationalization</a></li>
+  <li><strong>Read:</strong> <a href="https://en.wikipedia.org/wiki/Java_resource_bundle" target="_blank"><strong>wikipedia.org:</strong> Java Resource Bundle</a></li>
+  <li><strong>Read:</strong> <a href="https://docs.oracle.com/javase/7/docs/api/java/util/ResourceBundle.html" target="_blank"><strong>oracle.com:</strong> ResourceBundle</a></li>
+  <li><strong>Read:</strong> <a href="https://docs.oracle.com/javase/tutorial/i18n/resbundle/concept.html" target="_blank"><strong>oracle.com:</strong> ResourceBundle Concept</a></li>
+  <li><strong>Read:</strong> <a href="http://docs.jboss.org/hibernate/validator/5.4/reference/en-US/html_single/#chapter-message-interpolation" target="_blank"><strong>jboss.org:</strong> Message Interpolation</a></li>
 </ul>
 
 <h3 id="hibernate-validationproperties">Hibernate Validation.properties</h3>
@@ -626,7 +625,7 @@
 <p>If you’re building a more sophisticated API then you would want more control over how the error responses are generated. This means mapping every type of exception into your own <em>ApiError</em> facade.</p>
 
 <ul>
-  <li><strong>Read:</strong> <a href="http://www.baeldung.com/global-error-handler-in-a-spring-rest-api"><strong>baeldung.com:</strong> Global Error Handler in Spring REST API</a></li>
+  <li><strong>Read:</strong> <a href="http://www.baeldung.com/global-error-handler-in-a-spring-rest-api" target="_blank"><strong>baeldung.com:</strong> Global Error Handler in Spring REST API</a></li>
 </ul>
 
         
@@ -666,7 +665,7 @@
     
     
     
-      <li><a href="https://github.com/https://github.com/szgaljic"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+      <li><a href="https://github.com/szgaljic"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
     
     
     

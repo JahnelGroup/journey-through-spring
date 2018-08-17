@@ -347,16 +347,14 @@
 
       <section class="page__content" itemprop="text">
         
-        <h1 id="properties-profiles-and-resources">Properties, Profiles and Resources</h1>
-
-<h2 id="properties">Properties</h2>
+        <h2 id="properties">Properties</h2>
 <p>You’ll likely need to change the behavior of your application based on a number of things. Spring has a lot features around this called Externalized Configuration - the practice of placing configuration in property files as opposed to hard-coded in your program. Spring will respect a very specific hierarchical order of properties such that you can override properties when required.</p>
 
 <ul>
-  <li><strong>Read:</strong> <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-external-config.html"><strong>spring.io:</strong> Externalized Configuration</a></li>
-  <li><strong>Read:</strong> <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/howto-properties-and-configuration.html"><strong>spring.io:</strong> Properties and Configuration</a></li>
-  <li><strong>Read:</strong> <a href="http://www.baeldung.com/properties-with-spring"><strong>baeldung.com:</strong> Properties with Spring and Spring Boot</a></li>
-  <li><strong>Read:</strong> <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html"><strong>spring.io:</strong> Appendix A. Common application properties</a></li>
+  <li><strong>Read:</strong> <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-external-config.html" target="_blank"><strong>spring.io:</strong> Externalized Configuration</a></li>
+  <li><strong>Read:</strong> <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/howto-properties-and-configuration.html" target="_blank"><strong>spring.io:</strong> Properties and Configuration</a></li>
+  <li><strong>Read:</strong> <a href="http://www.baeldung.com/properties-with-spring" target="_blank"><strong>baeldung.com:</strong> Properties with Spring and Spring Boot</a></li>
+  <li><strong>Read:</strong> <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html" target="_blank"><strong>spring.io:</strong> Appendix A. Common application properties</a></li>
 </ul>
 
 <p>Property files are typically placed in <strong>src/main/resources</strong> as either <em>.properties</em> or <em>.yml</em> files. <strong>application.properties</strong> and <strong>application.yml</strong> are specially named properties that Spring will look for to load automatically when your application starts. There are profile-specific variants of these property files as well and are described below.</p>
@@ -365,8 +363,8 @@
 <p>Spring has the concept of a Profile which is basically a special type of property that you can use to <em>tag</em> your components to a specific environment. Let’s say you have a service that should send an EMail out when certain events happen in your system. This may only be relevant in an environment like UAT and PROD but not in DEV. You could define two types of MailService, one to actually send the EMail out and the other to just print it to the console.</p>
 
 <ul>
-  <li><strong>Read:</strong> <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-profiles.html"><strong>spring.io:</strong> Profiles</a></li>
-  <li><strong>Read:</strong> <a href="http://www.baeldung.com/spring-profiles"><strong>baeldung.com:</strong> Spring Profiles</a></li>
+  <li><strong>Read:</strong> <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-profiles.html" target="_blank"><strong>spring.io:</strong> Profiles</a></li>
+  <li><strong>Read:</strong> <a href="http://www.baeldung.com/spring-profiles" target="_blank"><strong>baeldung.com:</strong> Spring Profiles</a></li>
 </ul>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/** 
@@ -435,19 +433,19 @@
     </tr>
     <tr>
       <td>schema.sql</td>
-      <td><a href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#howto-initialize-a-database-using-spring-jdbc">Initialize a Database</a> with simple DDL script.</td>
+      <td><a href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#howto-initialize-a-database-using-spring-jdbc" target="_blank">Initialize a Database</a> with simple DDL script.</td>
     </tr>
     <tr>
       <td>data.sql</td>
-      <td><a href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#howto-initialize-a-database-using-spring-jdbc">Initialize a Database</a> with simple seed script.</td>
+      <td><a href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#howto-initialize-a-database-using-spring-jdbc" target="_blank">Initialize a Database</a> with simple seed script.</td>
     </tr>
     <tr>
       <td>db/migrations/V*.sql</td>
-      <td><a href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#howto-execute-flyway-database-migrations-on-startup">Execute Flyway Database Migrations on Startup</a></td>
+      <td><a href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#howto-execute-flyway-database-migrations-on-startup" target="_blank">Execute Flyway Database Migrations on Startup</a></td>
     </tr>
     <tr>
       <td>banner.txt</td>
-      <td><a href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-banner">Customize the Banner</a> that displays when Spring starts up.</td>
+      <td><a href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-banner" target="_blank">Customize the Banner</a> that displays when Spring starts up.</td>
     </tr>
   </tbody>
 </table>
@@ -527,7 +525,7 @@ etc...
     
     
     
-      <li><a href="https://github.com/https://github.com/szgaljic"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+      <li><a href="https://github.com/szgaljic"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
     
     
     

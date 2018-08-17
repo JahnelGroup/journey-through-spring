@@ -3,24 +3,21 @@ title:  "Properties, Profiles and Resources"
 permalink: /core/core-props
 ---
 
-Properties, Profiles and Resources
-======
-
 ## Properties
 You’ll likely need to change the behavior of your application based on a number of things. Spring has a lot features around this called Externalized Configuration - the practice of placing configuration in property files as opposed to hard-coded in your program. Spring will respect a very specific hierarchical order of properties such that you can override properties when required.  
 
-* **Read:** [**spring.io:** Externalized Configuration](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-external-config.html)
-* **Read:** [**spring.io:** Properties and Configuration](https://docs.spring.io/spring-boot/docs/current/reference/html/howto-properties-and-configuration.html)
-* **Read:** [**baeldung.com:** Properties with Spring and Spring Boot](http://www.baeldung.com/properties-with-spring)
-* **Read:** [**spring.io:** Appendix A. Common application properties](https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html)
+* **Read:** [**spring.io:** Externalized Configuration](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-external-config.html){:target="_blank"}
+* **Read:** [**spring.io:** Properties and Configuration](https://docs.spring.io/spring-boot/docs/current/reference/html/howto-properties-and-configuration.html){:target="_blank"}
+* **Read:** [**baeldung.com:** Properties with Spring and Spring Boot](http://www.baeldung.com/properties-with-spring){:target="_blank"}
+* **Read:** [**spring.io:** Appendix A. Common application properties](https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html){:target="_blank"}
 
 Property files are typically placed in **src/main/resources** as either *.properties* or *.yml* files. **application.properties** and **application.yml** are specially named properties that Spring will look for to load automatically when your application starts. There are profile-specific variants of these property files as well and are described below. 
 
 ## Profiles
 Spring has the concept of a Profile which is basically a special type of property that you can use to *tag* your components to a specific environment. Let’s say you have a service that should send an EMail out when certain events happen in your system. This may only be relevant in an environment like UAT and PROD but not in DEV. You could define two types of MailService, one to actually send the EMail out and the other to just print it to the console.
 
-* **Read:** [**spring.io:** Profiles](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-profiles.html)
-* **Read:** [**baeldung.com:** Spring Profiles](http://www.baeldung.com/spring-profiles)
+* **Read:** [**spring.io:** Profiles](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-profiles.html){:target="_blank"}
+* **Read:** [**baeldung.com:** Spring Profiles](http://www.baeldung.com/spring-profiles){:target="_blank"}
 
 ```kotlin
 /** 
@@ -68,10 +65,10 @@ All of these are located in src/main/resources.
 | File                          | Description          |
 | ----------------------------- | -------------------- |
 | application.\[properties\|yml] | Described in the above Properties section. |
-| schema.sql                    | [Initialize a Database](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#howto-initialize-a-database-using-spring-jdbc) with simple DDL script. |
-| data.sql                      | [Initialize a Database](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#howto-initialize-a-database-using-spring-jdbc) with simple seed script. |
-| db/migrations/V*.sql          | [Execute Flyway Database Migrations on Startup](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#howto-execute-flyway-database-migrations-on-startup) |
-| banner.txt                    | [Customize the Banner](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-banner) that displays when Spring starts up. | 
+| schema.sql                    | [Initialize a Database](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#howto-initialize-a-database-using-spring-jdbc){:target="_blank"} with simple DDL script. |
+| data.sql                      | [Initialize a Database](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#howto-initialize-a-database-using-spring-jdbc){:target="_blank"} with simple seed script. |
+| db/migrations/V*.sql          | [Execute Flyway Database Migrations on Startup](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#howto-execute-flyway-database-migrations-on-startup){:target="_blank"} |
+| banner.txt                    | [Customize the Banner](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-banner){:target="_blank"} that displays when Spring starts up. | 
 
 ### Access Resources in your Code
 Spring can inject Resources for you quite easily. Here is an example of printing a text file line-by-line.

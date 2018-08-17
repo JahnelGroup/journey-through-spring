@@ -7,8 +7,8 @@ Spring Expression Language (SpEL)
 ======
 The Spring Expression Language is a very powerful feature that can be a lifesaver when used correctly and a nightmare when not. It is Spring-specific syntax that adds a level dynamic behavior at runtime. You would typically interact with it in two primary ways - the SpelExpressionParser or through an annotation. 
 
-* **Read:** [Spring Expression Language](https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#expressions)
-* **Read:** [Spring Expression Language Guide](http://www.baeldung.com/spring-expression-language)
+* **Read:** [Spring Expression Language](https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#expressions){:target="_blank"}
+* **Read:** [Spring Expression Language Guide](http://www.baeldung.com/spring-expression-language){:target="_blank"}
 
 ## SpelExpressionParser
 Here is an example using SpelExpressionParser from the Spring documentation:

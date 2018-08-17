@@ -3,16 +3,14 @@ title:  "Beans"
 permalink: /core/core-beans
 ---
 
-Beans
-======
-Objects are the key element in Java programming and the Spring Framework handles them in a very special way. Unlike a regular Java Object that is created with the **new** operator and then used, a Spring Object must be registered with the ApplicationContext first. When an Object is registered with the ApplicationContext it is referred to as a [Bean](https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#beans-definition) (or “Managed Bean” or “Component”). When Spring manages an Object as a Bean it is creating a Proxy around your object and can do very interesting things with it.
+Objects are the key element in Java programming and the Spring Framework handles them in a very special way. Unlike a regular Java Object that is created with the **new** operator and then used, a Spring Object must be registered with the ApplicationContext first. When an Object is registered with the ApplicationContext it is referred to as a [Bean](https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#beans-definition){:target="_blank"} (or “Managed Bean” or “Component”). When Spring manages an Object as a Bean it is creating a Proxy around your object and can do very interesting things with it.
 
 # Bean Configuration
 Beans can be configured in three primary ways: XML, Java, or Annotations. We focus primarily on Annotation based configuration.
 
-* **Read:** [**spring.io:** Annotation-based container configuration](https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#beans-annotation-config)
+* **Read:** [**spring.io:** Annotation-based container configuration](https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#beans-annotation-config){:target="_blank"}
 
-Spring provides a few different annotations to drive the creation of beans. Ultimately Spring will use **@Bean** or **@Component** to create a Bean.
+Spring provides a few different annotations to drive the creation of beans. Ultimately Spring will use **@Bean** or **@Component** to create a Bean. Here are the most common ways to define Beans.
 
 | Annotation      | Location | Description                                            |
 | --------------- | -------- | ------------------------------------------------------ |
@@ -24,11 +22,11 @@ Spring provides a few different annotations to drive the creation of beans. Ulti
 | @Controller     | class    | Is a @Component but Stereotyped as a Controller        |
 | @RestController | class    | Same as @Controller but meant REST end-points          |
 
-* **Read:** [**stackoverflow.com:** Advantages of using spring stereotypes?](https://stackoverflow.com/questions/16051656/advantages-of-using-spring-stereotypes)
-* **Read:** [**stackoverflow.com:** What's the difference between @Component, @Repository & @Service annotations in Spring?](https://stackoverflow.com/questions/6827752/whats-the-difference-between-component-repository-service-annotations-in)
+* **Read:** [**stackoverflow.com:** Advantages of using spring stereotypes?](https://stackoverflow.com/questions/16051656/advantages-of-using-spring-stereotypes){:target="_blank"}
+* **Read:** [**stackoverflow.com:** What's the difference between @Component, @Repository & @Service annotations in Spring?](https://stackoverflow.com/questions/6827752/whats-the-difference-between-component-repository-service-annotations-in){:target="_blank"}
 * **Read:** [**stackoverflow.com:** Difference between spring @Controller and @RestController annotation
-](https://stackoverflow.com/questions/25242321/difference-between-spring-controller-and-restcontroller-annotation)
-* **Read:** [**genuitec.com:** @RestController vs @Controller](https://www.genuitec.com/spring-frameworkrestcontroller-vs-controller/)
+](https://stackoverflow.com/questions/25242321/difference-between-spring-controller-and-restcontroller-annotation){:target="_blank"}
+* **Read:** [**genuitec.com:** @RestController vs @Controller](https://www.genuitec.com/spring-frameworkrestcontroller-vs-controller/){:target="_blank"}
 
 ```kotlin
 // Declare a Singleton Bean - one instance for the entire application
@@ -68,7 +66,7 @@ class HelloController {
 ```
 
 ## Bean Scope
-The concept of [Scope](https://en.wikipedia.org/wiki/Scope_(computer_science)) is fundamental to computer programming and it’s no surprise that its found in Spring as well. As you delegate the control over the creation of your Objects to Spring you have the ability to advise Spring on scope with @Scope.
+The concept of [Scope](https://en.wikipedia.org/wiki/Scope_(computer_science)){:target="_blank"} is fundamental to computer programming and it’s no surprise that its found in Spring as well. As you delegate the control over the creation of your Objects to Spring you have the ability to advise Spring on scope with @Scope.
 
 | Scope                   | Alias             | Description                                                     |
 | ----------------------- | ----------------- | --------------------------------------------------------------- |
@@ -91,11 +89,11 @@ class UserSessionContext { }
 class UserSessionContext { }
 ```
 
-* **Read:** [**spring.io:** Bean Scopes](https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#beans-factory-scopes)
-* **Read:** [**baeldung.com:** Spring Bean Scopes](http://www.baeldung.com/spring-bean-scopes)
+* **Read:** [**spring.io:** Bean Scopes](https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#beans-factory-scopes){:target="_blank"}
+* **Read:** [**baeldung.com:** Spring Bean Scopes](http://www.baeldung.com/spring-bean-scopes){:target="_blank"}
 
 ## Bean Proxy Mode
-There are two fundamental types of proxies **JDK** (by interface) and **CGLIB** (by class). It's best practice that you inject by interface as opposed to class because it's easier for Spring. If you inject by the target class then Spring needs to some extra work to accomplish it and is arguably a performance impact although there is great debate about that.
+There are two fundamental types of proxies **JDK** (by interface) and **CGLIB** (by class). It's best practice that you inject by interface as opposed to class because it's easier for Spring. If you inject by the target class then Spring needs to do some extra work to accomplish it and is arguably a performance impact although there is debate about that.
 
 | ScopedProxyMode     | Description                                                     |
 | ------------------- | --------------------------------------------------------------- |
@@ -104,12 +102,12 @@ There are two fundamental types of proxies **JDK** (by interface) and **CGLIB** 
 | INTERFACES          | JDK Based Proxy                                                 |
 | TARGET_CLASS        | CGLIB Based Proxy                                               |
 
-* **Read:** [**spring.io:** Scoped beans as dependencies](https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-factory-scopes-other-injection)
+* **Read:** [**spring.io:** Scoped beans as dependencies](https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-factory-scopes-other-injection){:target="_blank"}
 
 ## Bean Lifecycle
 As Spring Beans are created they follow a Lifecycle where you can hook-in callback listeners to do interesting things when the Beans are first created and destroyed. 
 
-* **Read:** [**thejavaprogrammer.com:** Spring Bean Life Cycle](https://www.thejavaprogrammer.com/spring-bean-life-cycle/)
+* **Read:** [**thejavaprogrammer.com:** Spring Bean Life Cycle](https://www.thejavaprogrammer.com/spring-bean-life-cycle/){:target="_blank"}
 
 A common use-case is to validate that certain properties are set on your Bean after it is created.
 
@@ -134,7 +132,7 @@ Once your Beans are registered with the ApplicationContext you need a way to ret
 ## 1. Injection via Constructor
 The best way to wire you dependencies together are by defining them in your constructor. The reason this is favored is because it's very obvious what your dependencies are. Additionally it makes it easy to Unit Test your code because you have the ability to inject Mocks into the constructor. 
 
-* **Read:** [**stackoverflow.com:** Explain why constructor inject is better than other options](https://stackoverflow.com/questions/21218868/explain-why-constructor-inject-is-better-than-other-options)
+* **Read:** [**stackoverflow.com:** Explain why constructor inject is better than other options](https://stackoverflow.com/questions/21218868/explain-why-constructor-inject-is-better-than-other-options){:target="_blank"}
 
 ```kotlin
 @Service
@@ -199,7 +197,7 @@ The favored alternative to constructor injection is property level injection. Th
 
 This approach is very convenient in our class but things change dramatically when you want to test it.   
 
-* **Read:** [**vojtechruzicka.com:** Dangers of Field Injection](http://vojtechruzicka.com/field-dependency-injection-considered-harmful/)
+* **Read:** [**vojtechruzicka.com:** Dangers of Field Injection](http://vojtechruzicka.com/field-dependency-injection-considered-harmful/){:target="_blank"}
 
 ```kotlin
 @Service
@@ -225,12 +223,12 @@ class UserController{
 }
 ```
 
-> [lateinit](https://kotlinlang.org/docs/reference/properties.html#late-initialized-properties-and-variables) is a Kotlin construct and is confusing for those new using the language with Spring. This is required because Kotlin is very strict with null safety checking. There is a short period of time where the userService property will actually be null, refer back to the Spring Bean Lifecycle section to learn more. Spring will first create your Object and then use reflection immediately after to inject these properties, lateinit essentially tells Kotin to ignore the null safety checks for this reference. 
+> [lateinit](https://kotlinlang.org/docs/reference/properties.html#late-initialized-properties-and-variables){:target="_blank"} is a Kotlin construct and is confusing for those new using the language with Spring. This is required because Kotlin is very strict with null safety checking. There is a short period of time where the userService property will actually be null, refer back to the Spring Bean Lifecycle section to learn more. Spring will first create your Object and then use reflection immediately after to inject these properties, lateinit essentially tells Kotin to ignore the null safety checks for this reference. 
 
 Testing code written this way is much harder because you really don't have a good clean way to override the value with a Mock. There are two general approaches to this - define another bean as the @Primary and override it in the ApplicationContext, or using Mockito and the @InjectMocks annotation.
 
 ### Mocking @Autowired Properties with @Primary
-The [@Primary](https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/context/annotation/Primary.html) annotation allows you to define multiple beans of the same and give Spring a hint at deciding which one to choice by default if no [@Qualifier](https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/beans/factory/annotation/Qualifier.html) is used. 
+The [@Primary](https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/context/annotation/Primary.html){:target="_blank"} annotation allows you to define multiple beans of the same and give Spring a hint at deciding which one to choice by default if no [@Qualifier](https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/beans/factory/annotation/Qualifier.html){:target="_blank"} is used. 
 
 This allows you to shadow a Bean in your application with a Mock. In order to do this you need to define a test configuration and load up another Bean of the exact same type and name. 
 
@@ -282,9 +280,9 @@ Mockito can eliminate that nasty bit of TestConfig code using @Mock and @InjectM
 
 Although powerful this approach can be a little dangerous. 
 
-* **Read:** [**baeldung.com:** Getting Started with Mockito @Mock, @Spy, @Captor and @InjectMocks](http://www.baeldung.com/mockito-annotations)
-* **Read:** [**stackoverflow.com:** @Mock and @InjectMocks](https://stackoverflow.com/questions/16467685/difference-between-mock-and-injectmocks)
-* **Read:** [**tedvinke.wordpress.com:** Why You Should Not Use InjectMocks Annotation to Autowire Fields](https://tedvinke.wordpress.com/2014/02/13/mockito-why-you-should-not-use-injectmocks-annotation-to-autowire-fields/)
+* **Read:** [**baeldung.com:** Getting Started with Mockito @Mock, @Spy, @Captor and @InjectMocks](http://www.baeldung.com/mockito-annotations){:target="_blank"}
+* **Read:** [**stackoverflow.com:** @Mock and @InjectMocks](https://stackoverflow.com/questions/16467685/difference-between-mock-and-injectmocks){:target="_blank"}
+* **Read:** [**tedvinke.wordpress.com:** Why You Should Not Use InjectMocks Annotation to Autowire Fields](https://tedvinke.wordpress.com/2014/02/13/mockito-why-you-should-not-use-injectmocks-annotation-to-autowire-fields/){:target="_blank"}
 
 ```kotlin
 @RunWith(SpringRunner::class)
@@ -369,7 +367,7 @@ class EchoController(var appContext: AbstractApplicationContext) {
 Testing code written this way can only be done by shadowing the original bean with @Primary in a TestConfig. 
 
 ## 4. Injection via ObjectFactory 
-Spring provides a class called [ObjectFactory](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/ObjectFactory.html) that can be used to dispense beans, this is perfect @scope("prototype") beans where you want a new instance each time. You simply inject a generic typed reference of ObjectFactory.
+Spring provides a class called [ObjectFactory](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/ObjectFactory.html){:target="_blank"} that can be used to dispense beans, this is perfect @scope("prototype") beans where you want a new instance each time. You simply inject a generic typed reference of ObjectFactory.
 
 ```kotlin
 import org.springframework.beans.factory.ObjectFactory
@@ -399,9 +397,9 @@ class XLSProcessor(
 }
 ```
 
-**Read:** [**stackoverflow.com:** How to Produce prototype objects](https://stackoverflow.com/questions/6136261/how-to-produce-prototype-objects-from-singleton-design-help-needed)
+**Read:** [**stackoverflow.com:** How to Produce prototype objects](https://stackoverflow.com/questions/6136261/how-to-produce-prototype-objects-from-singleton-design-help-needed){:target="_blank"}
 
 # Exercises
 Try out this exercise to get a feel for the Application Context and declaring Beans.
 
-* **Exercise:** [**github.com:** Journey Through Spring: basic-beans](https://github.com/JahnelGroup/journey-through-spring/tree/master/basic-beans)
+* **Exercise:** [**github.com:** Journey Through Spring: basic-beans](https://github.com/JahnelGroup/journey-through-spring/tree/master/src/basic-beans){:target="_blank"}
