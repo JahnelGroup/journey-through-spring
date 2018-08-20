@@ -1,6 +1,10 @@
 ---
 title:  "Debugging"
-permalink: /core/gettingstarted-debugging
+permalink: /intro/gettingstarted-debugging
+nav: "intro"
+
+sidebar:
+  nav: intro
 ---
 
 You just wrote an awesome program, fired it up and ugh-o...it doesn't work like you expect! Writing code is *easy* figuring out what's wrong with broken code is *really hard*. You have a couple of options.

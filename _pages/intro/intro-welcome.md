@@ -1,8 +1,10 @@
 ---
 title:  "Your Journey"
-permalink: /core/intro-welcome
+permalink: /intro/intro-welcome
 toc: false
-#author_profile: true
+
+sidebar:
+  nav: intro
 ---
 
 As much as I want to tell you Spring is easy and that taking this Journey will make you a master at the end, it simply isn't true. It's not the hardest thing to learn but it does have quite a few nuisances and pitfalls that everyone eventually falls into. Just look at [Stackoverflow](https://stackoverflow.com/questions/tagged/spring){:target="_blank"} and you'll see the pain and headaches people are going through.

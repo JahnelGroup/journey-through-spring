@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Spring Boot Starters - Journey Through Spring</title>
+<!-- begin _includes/seo.html --><title>What is Spring? - Journey Through Spring</title>
 <meta name="description" content="A pragmatic approach to learning the Spring Framework.">
 
 
@@ -17,8 +17,8 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Journey Through Spring">
-<meta property="og:title" content="Spring Boot Starters">
-<meta property="og:url" content="http://localhost:4000/core/gettingstarted-spring-starters">
+<meta property="og:title" content="What is Spring?">
+<meta property="og:url" content="http://localhost:4000/intro/intro-spring">
 
 
 
@@ -36,7 +36,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/core/gettingstarted-spring-starters">
+<link rel="canonical" href="http://localhost:4000/intro/intro-spring">
 
 
 
@@ -113,7 +113,9 @@
       <nav id="site-nav" class="greedy-nav">
         <a class="site-title" href="/">Journey Through Spring</a>
         <ul class="visible-links"><li class="masthead__menu-item">
-              <a href="/core/intro-welcome" >Core</a>
+              <a href="/intro/intro-welcome" >Intro</a>
+            </li><li class="masthead__menu-item">
+              <a href="/core/core-ioc-di" >Core</a>
             </li></ul>
         
         <button class="greedy-nav__toggle hidden" type="button">
@@ -165,7 +167,7 @@
             
             
 
-            <li><a href="/core/intro-welcome" class="">Your Journey</a></li>
+            <li><a href="/intro/intro-welcome" class="">Your Journey</a></li>
           
             
             
@@ -173,7 +175,7 @@
             
             
 
-            <li><a href="/core/intro-spring" class="">What is Spring?</a></li>
+            <li><a href="/intro/intro-spring" class="active">What is Spring?</a></li>
           
             
             
@@ -181,7 +183,7 @@
             
             
 
-            <li><a href="/core/intro-kotlin" class="">Spring and Kotlin</a></li>
+            <li><a href="/intro/intro-kotlin" class="">Spring and Kotlin</a></li>
           
             
             
@@ -189,7 +191,7 @@
             
             
 
-            <li><a href="/core/intro-references" class="">References</a></li>
+            <li><a href="/intro/intro-references" class="">References</a></li>
           
         </ul>
         
@@ -209,7 +211,7 @@
             
             
 
-            <li><a href="/core/gettingstarted-tools" class="">Tooling Up</a></li>
+            <li><a href="/intro/gettingstarted-tools" class="">Tooling Up</a></li>
           
             
             
@@ -217,7 +219,7 @@
             
             
 
-            <li><a href="/core/gettingstarted-magic" class="">Understaing the "Magic" of Spring</a></li>
+            <li><a href="/intro/gettingstarted-magic" class="">Understaing the "Magic" of Spring</a></li>
           
             
             
@@ -225,7 +227,7 @@
             
             
 
-            <li><a href="/core/gettingstarted-spring-starters" class="active">Spring Boot Starters</a></li>
+            <li><a href="/intro/gettingstarted-spring-starters" class="">Spring Boot Starters</a></li>
           
             
             
@@ -233,7 +235,7 @@
             
             
 
-            <li><a href="/core/gettingstarted-debugging" class="">Debugging a Spring Application</a></li>
+            <li><a href="/intro/gettingstarted-debugging" class="">Debugging a Spring Application</a></li>
           
         </ul>
         
@@ -241,7 +243,7 @@
     
       <li>
         
-          <span class="nav__sub-title">Spring Core</span>
+          <span class="nav__sub-title">Learning Tracks</span>
         
 
         
@@ -253,71 +255,7 @@
             
             
 
-            <li><a href="/core/core-ioc-di" class="">IoC and DI</a></li>
-          
-            
-            
-
-            
-            
-
-            <li><a href="/core/core-beans" class="">Beans</a></li>
-          
-            
-            
-
-            
-            
-
-            <li><a href="/core/core-props" class="">Properties, Profiles and Resources</a></li>
-          
-            
-            
-
-            
-            
-
-            <li><a href="/core/core-events" class="">Events</a></li>
-          
-            
-            
-
-            
-            
-
-            <li><a href="/core/core-validation" class="">Validation</a></li>
-          
-            
-            
-
-            
-            
-
-            <li><a href="/core/core-data-binding" class="">Data Binding</a></li>
-          
-            
-            
-
-            
-            
-
-            <li><a href="/core/core-type-conversion" class="">Type Conversion</a></li>
-          
-            
-            
-
-            
-            
-
-            <li><a href="/core/core-spel" class="">Spring Expression Language (SpEL)</a></li>
-          
-            
-            
-
-            
-            
-
-            <li><a href="/core/core-aop" class="">Aspect Oriented Programming (AOP)</a></li>
+            <li><a href="/intro/courses" class="">Courses</a></li>
           
         </ul>
         
@@ -331,7 +269,7 @@
 
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Spring Boot Starters">
+    <meta itemprop="headline" content="What is Spring?">
     
     
     
@@ -339,7 +277,7 @@
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Spring Boot Starters
+          <h1 id="page-title" class="page__title" itemprop="headline">What is Spring?
 </h1>
           
         </header>
@@ -347,23 +285,29 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>We cannot deny that Spring has a learning curve but once you’re over the hump it is all about making the developer more efficient. It is designed to give a developer the ability to deliver software rapidly.</p>
+        <p>Think of Spring as an intelligent black box that is organized in a special way. It has compartments for you to place things in that it can detect and utilize. You are essentially breaking down your application into fundamental components that are plugged in at the right times and places for you by Spring. It is the orchestrator of your components that together make up your application.</p>
 
-<h2 id="spring-boot-starters">Spring Boot Starters</h2>
+<blockquote>
+  <p>The Spring Framework provides a comprehensive programming and configuration model for modern Java-based enterprise applications - on any kind of deployment platform. A key element of Spring is infrastructural support at the application level: Spring focuses on the “plumbing” of enterprise applications so that teams can focus on application-level business logic, without unnecessary ties to specific deployment environments.</p>
 
-<p>Spring Boot developers have created “starters” that are a slightly different concept from “seed projects”. A seed-project consists of a codebase that has been either generated or hand-coded to be the base of your application. They usually come in the form a github repository that you fork and start from. Spring Starters however are just like regular dependencies that you’d pull into your application and are kind of hidden from the rest of your program. These starters are built upon the auto-configuration feature discussed above in the Understanding the “Magic” of Spring section. Their code is ran when the application starts up and they will create Beans, start Web Servlets, establish connection pooling to a database, and do many more things.</p>
+  <p>— <cite><a href="http://spring.io/projects/spring-framework" target="_blank">spring-framework</a></cite></p>
+</blockquote>
 
-<p><i class="fas fa-bookmark"></i> Read: <a href="https://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#using-boot-starter" target="_blank">Spring Starters (spring.io)</a><br />
-<i class="fas fa-bookmark"></i> Read: <a href="http://www.baeldung.com/spring-boot-starters" target="_blank">Intro to Spring Boot Starters (baeldung.com)</a></p>
+<p><i class="fas fa-bookmark"></i> Read: <a href="https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/overview.html#overview" target="_blank">Spring Framework Overview (spring.io)</a></p>
 
-<h2 id="spring-boot-executable-fat-jar">Spring Boot Executable “fat Jar”</h2>
+<h2 id="spring-boot">Spring Boot</h2>
 
-<p>A “fat Jar” or “Uber Jar” is a single Jar file that contains everything needed to run an application. The most powerful thing to realize here is that you can actually run a Spring Boot jar file and it will start up a Web Container from within the Jar file. You would normally have to deploy your application into a separate Webserver but with Spring Boot the Webserver is actually running within the Jar file!</p>
+<p>Spring Boot unleashes the power of Spring. It takes the concept of convention over configuration to the next level. Most applications tend to have the same technical requirements and only differ in business logic. Spring Boot greatly reduces the configuration of common things that we all need such as Servlets, Data Sources, Transactions, Validation, etc, and lets you get running quickly with sensible defaults. Spring Boot enables developers to rapidly deliver working software faster than ever before.</p>
 
-<p>This concept extends to other components like H2, Elasticsearch, Redis, etc. This is great for rapid development but eventually when a product matures we will change the architecture to be more production-like with external services. It’s all about getting up and running as fast as possible in the beginning.</p>
+<blockquote>
+  <p>Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that you can “just run”. We take an opinionated view of the Spring platform and third-party libraries so you can get started with minimum fuss. Most Spring Boot applications need very little Spring configuration.</p>
 
-<p><i class="fas fa-bookmark"></i> Read: <a href="https://stackoverflow.com/questions/19150811/what-is-a-fat-jar" target="_blank">What is a fat Jar? (stackoverflow.com)</a><br />
-<i class="fas fa-bookmark"></i> Read: <a href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#getting-started-first-application-executable-jar" target="_blank">Creating an Executable Jar (spring.io)</a></p>
+  <p>— <cite><a href="http://spring.io/projects/spring-boot" target="_blank">spring-framework</a></cite></p>
+</blockquote>
+
+<p><i class="fas fa-play"></i> Watch: <a href="https://www.youtube.com/watch?v=47xNBNd-LLI" target="_blank">Build a Hello World REST Service</a></p>
+
+<p><i class="fas fa-bookmark"></i> Read: <a href="https://spring.io/blog/2018/03/01/spring-boot-2-0-goes-ga" target="_blank">Spring Boot 2.0 goes GA (spring.io)</a></p>
 
         
       </section>

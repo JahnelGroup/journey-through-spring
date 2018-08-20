@@ -1,31 +1,39 @@
 main:
+  - title: "Intro"
+    url: /intro/intro-welcome
+
   - title: "Core"
-    url: /core/intro-welcome
+    url: /core/core-ioc-di   
 
-core:
-
+intro:
   - title: Introduction
     children: 
       - title: Your Journey
-        url: /core/intro-welcome
+        url: /intro/intro-welcome
       - title: What is Spring?
-        url: /core/intro-spring
+        url: /intro/intro-spring
       - title: Spring and Kotlin
-        url: /core/intro-kotlin
+        url: /intro/intro-kotlin
       - title: References
-        url: /core/intro-references
+        url: /intro/intro-references
 
   - title: Getting Started
     children:
       - title: Tooling Up
-        url: /core/gettingstarted-tools
+        url: /intro/gettingstarted-tools
       - title: Understaing the "Magic" of Spring
-        url: /core/gettingstarted-magic
+        url: /intro/gettingstarted-magic
       - title: Spring Boot Starters
-        url: /core/gettingstarted-spring-starters
+        url: /intro/gettingstarted-spring-starters
       - title: Debugging a Spring Application
-        url: /core/gettingstarted-debugging
+        url: /intro/gettingstarted-debugging      
+        
+  - title: Learning Tracks
+    children:
+      - title: Courses
+        url: /intro/courses
 
+core: 
   - title: Spring Core
     children:
       - title: IoC and DI
@@ -46,4 +54,3 @@ core:
         url: /core/core-spel
       - title: Aspect Oriented Programming (AOP)
         url: /core/core-aop
-

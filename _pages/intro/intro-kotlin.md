@@ -1,6 +1,9 @@
 ---
 title:  "Spring and Kotlin"
-permalink: /core/intro-kotlin
+permalink: /intro/intro-kotlin
+
+sidebar:
+  nav: intro
 ---
 
 [Kotlin](https://kotlinlang.org/){:target="_blank"} was created by [JetBrains](https://www.jetbrains.com/){:target="_blank"} and quickly adopted by the Android community. It's attractive for many reasons and is frequently compared against [Scala](https://www.scala-lang.org/){:target="_blank"}, [Clojure](https://clojure.org/){:target="_blank"} and [Groovy](http://groovy-lang.org/){:target="_blank"}. All of these languages are excellent alternatives and complementary to Java, each with their strengths and weaknesses. Understanding the differences between these languages are out-of-scope for this course and I encourage you to [read more](https://www.google.com/search?ei=Wd5AW6fADM7IsAW5_YzoAQ&q=scala+vs+groovy+vs+kotlin&oq=scala+vs+groovy+vs+kotlin&gs_l=psy-ab.3..0i67k1j0i22i30k1.2591.11747.0.12308.20.13.7.0.0.0.119.871.12j1.13.0....0...1c.1.64.psy-ab..0.20.895...33i160k1j33i22i29i30k1.0._ufRtvCb30U){:target="_blank"} on your own.

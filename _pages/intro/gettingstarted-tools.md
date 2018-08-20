@@ -1,6 +1,9 @@
 ---
 title:  "Tooling Up"
-permalink: /core/gettingstarted-tools
+permalink: /intro/gettingstarted-tools
+
+sidebar:
+  nav: intro
 ---
 
 It all begins with the right tools. Take the time to set yourself up for success from the start and it will make all the difference down the road. 
@@ -8,9 +11,9 @@ It all begins with the right tools. Take the time to set yourself up for success
 ## Linux v.s. Mac v.s. Windows
 Professional software developers need to align themselves with the best tools available to get their job done. If you're a .NET developer or work a lot with Microsoft products then Windows is an obvious choice. Everyone else should be on some kind of Linux distrubution or a Mac. The best software tools are just typically harder to access and work with on Windows. If you're following this journey I recommend you use Linux or Mac. I personally use [Fedora](https://getfedora.org/){:target="_blank"} but there are plenty other great options available, [Ubuntu](https://www.ubuntu.com/){:target="_blank"} is a great alternative.
 
-* **Read:** [**Lifewire:** How To Choose The Best Linux Distro For Your Needs](https://www.lifewire.com/choose-best-linux-distro-for-needs-2201172){:target="_blank"}
-* **Read:** [**Digital Ocean:** Linux Basics](https://www.digitalocean.com/community/tags/linux-basics?type=tutorials){:target="_blank"}
-* **Read:** [**Digital Ocean:** An Introduction to Linux Basics](https://www.digitalocean.com/community/tutorials/an-introduction-to-linux-basics){:target="_blank"}
+<i class='fas fa-bookmark'></i> Read: [**Lifewire:** How To Choose The Best Linux Distro For Your Needs](https://www.lifewire.com/choose-best-linux-distro-for-needs-2201172){:target="_blank"}<br/>
+<i class='fas fa-bookmark'></i> Read: [**Digital Ocean:** Linux Basics](https://www.digitalocean.com/community/tags/linux-basics?type=tutorials){:target="_blank"}<br/>
+<i class='fas fa-bookmark'></i> Read: [**Digital Ocean:** An Introduction to Linux Basics](https://www.digitalocean.com/community/tutorials/an-introduction-to-linux-basics){:target="_blank"}
 
 ## Installing Tools and Knowing their Versions
 As a software developer it’s important to know your tools. You should know exactly what tools are being used, where they are installed and what versions they are. It’s important that we install these tools in a uniform and systematic way. 
