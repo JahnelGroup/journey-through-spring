@@ -1,9 +1,6 @@
 ---
 title:  "Tooling Up"
 permalink: /intro/gettingstarted-tools
-
-sidebar:
-  nav: intro
 ---
 
 It all begins with the right tools. Take the time to set yourself up for success from the start and it will make all the difference down the road. 

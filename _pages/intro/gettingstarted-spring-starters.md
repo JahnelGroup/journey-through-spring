@@ -1,9 +1,6 @@
 ---
 title:  "Spring Boot Starters"
 permalink: /intro/gettingstarted-spring-starters
-
-sidebar:
-  nav: intro
 ---
 
 We cannot deny that Spring has a learning curve but once you’re over the hump it is all about making the developer more efficient. It is designed to give a developer the ability to deliver software rapidly.

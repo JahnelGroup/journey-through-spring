@@ -263,12 +263,20 @@ compress_html:
 defaults:
   # _pages
   - scope:
-      path: ""
+      path: "_pages/intro"
       type: pages
     values:
       layout: single
-      #toc: true
-      #toc_label: "Contents"
       classes: wide
       sidebar:
-        nav: "core"
+        nav: "intro"
+
+  # _pages
+  - scope:
+      path: "_pages/core"
+      type: pages
+    values:
+      layout: single
+      classes: wide
+      sidebar:
+        nav: "core"        
