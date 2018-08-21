@@ -3,7 +3,9 @@ title:  "Beans"
 permalink: /core/core-beans
 ---
 
-Objects are the key element in Java programming and the Spring Framework handles them in a very special way. Unlike a regular Java Object that is created with the **new** operator and then used, a Spring Object must be registered with the ApplicationContext first. When an Object is registered with the ApplicationContext it is referred to as a [Bean](https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#beans-definition){:target="_blank"} (or “Managed Bean” or “Component”). When Spring manages an Object as a Bean it is creating a Proxy around your object and can do very interesting things with it.
+<i class="fas fa-book-reader"></i> Spring Framework: [Bean overview](https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-definition){:target="_blank"}
+
+Objects are the key element in Java programming and the Spring Framework handles them in a very special way. Unlike a regular Java Object that is created with the **new** operator and then used, a Spring Object must be registered with the ApplicationContext first. When an Object is registered with the ApplicationContext it is referred to as a [Bean](https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#beans-definition){:target="_blank"} (or “Managed Bean” or “Component”). When Spring manages an Object as a Bean it is creating a Proxy around your object and can do very interesting things with it.{:target="_blank"}
 
 # Bean Configuration
 Beans can be configured in three primary ways: XML, Java, or Annotations. We focus primarily on Annotation based configuration.

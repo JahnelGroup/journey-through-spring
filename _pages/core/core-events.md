@@ -3,6 +3,8 @@ title:  "Events"
 permalink: /core/core-events
 ---
 
+<i class="fas fa-book-reader"></i> Spring Framework: [Standard and custom events](https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#context-functionality-events){:target="_blank"}
+
 The concept of [Events](https://en.wikipedia.org/wiki/Event_(computing)){:target="_blank"} is fundamental to computer programming and allows us to design components with loose coupling and high cohesion. Spring’s context is highly event driven and exposes this feature for you to listen and react to events as well as fire your own. 
 
 * **Read:** [**wikipedia.org:** Event-driven programming](https://en.wikipedia.org/wiki/Event-driven_programming){:target="_blank"}

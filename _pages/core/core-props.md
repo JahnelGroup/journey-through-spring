@@ -3,7 +3,8 @@ title:  "Properties, Profiles and Resources"
 permalink: /core/core-props
 ---
 
-## Properties
+<i class="fas fa-book-reader"></i> Spring Framework: [Environment Abstraction](https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-environment){:target="_blank"} and [Resources](https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#resources){:target="_blank"}
+
 You’ll likely need to change the behavior of your application based on a number of things. Spring has a lot features around this called Externalized Configuration - the practice of placing configuration in property files as opposed to hard-coded in your program. Spring will respect a very specific hierarchical order of properties such that you can override properties when required.  
 
 * **Read:** [**spring.io:** Externalized Configuration](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-external-config.html){:target="_blank"}
