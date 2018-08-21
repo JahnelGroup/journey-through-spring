@@ -281,14 +281,14 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>Objects are the key element in Java programming and the Spring Framework handles them in a very special way. Unlike a regular Java Object that is created with the <strong>new</strong> operator and then used, a Spring Object must be registered with the ApplicationContext first. When an Object is registered with the ApplicationContext it is referred to as a <a href="https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#beans-definition" target="_blank">Bean</a> (or “Managed Bean” or “Component”). When Spring manages an Object as a Bean it is creating a Proxy around your object and can do very interesting things with it.</p>
+        <p><i class="fas fa-book-reader"></i> Spring Framework: <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-definition" target="_blank">Bean overview</a></p>
+
+<p>Objects are the key element in Java programming and the Spring Framework handles them in a very special way. Unlike a regular Java Object that is created with the <strong>new</strong> operator and then used, a Spring Object must be registered with the ApplicationContext first. When an Object is registered with the ApplicationContext it is referred to as a <a href="https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#beans-definition" target="_blank">Bean</a> (or “Managed Bean” or “Component”). When Spring manages an Object as a Bean it is creating a Proxy around your object and can do very interesting things with it.{:target=”_blank”}</p>
 
 <h1 id="bean-configuration">Bean Configuration</h1>
 <p>Beans can be configured in three primary ways: XML, Java, or Annotations. We focus primarily on Annotation based configuration.</p>
 
-<ul>
-  <li><strong>Read:</strong> <a href="https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#beans-annotation-config" target="_blank"><strong>spring.io:</strong> Annotation-based container configuration</a></li>
-</ul>
+<p><i class="far fa-bookmark"></i> Read: <a href="https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#beans-annotation-config" target="_blank"><strong>spring.io:</strong> Annotation-based container configuration</a></p>
 
 <p>Spring provides a few different annotations to drive the creation of beans. Ultimately Spring will use <strong>@Bean</strong> or <strong>@Component</strong> to create a Bean. Here are the most common ways to define Beans.</p>
 
@@ -339,13 +339,11 @@
   </tbody>
 </table>
 
-<ul>
-  <li><strong>Read:</strong> <a href="https://stackoverflow.com/questions/16051656/advantages-of-using-spring-stereotypes" target="_blank"><strong>stackoverflow.com:</strong> Advantages of using spring stereotypes?</a></li>
-  <li><strong>Read:</strong> <a href="https://stackoverflow.com/questions/6827752/whats-the-difference-between-component-repository-service-annotations-in" target="_blank"><strong>stackoverflow.com:</strong> What’s the difference between @Component, @Repository &amp; @Service annotations in Spring?</a></li>
-  <li><strong>Read:</strong> <a href="https://stackoverflow.com/questions/25242321/difference-between-spring-controller-and-restcontroller-annotation" target="_blank"><strong>stackoverflow.com:</strong> Difference between spring @Controller and @RestController annotation
-</a></li>
-  <li><strong>Read:</strong> <a href="https://www.genuitec.com/spring-frameworkrestcontroller-vs-controller/" target="_blank"><strong>genuitec.com:</strong> @RestController vs @Controller</a></li>
-</ul>
+<p><i class="far fa-bookmark"></i> Read: <a href="https://stackoverflow.com/questions/16051656/advantages-of-using-spring-stereotypes" target="_blank"><strong>stackoverflow.com:</strong> Advantages of using spring stereotypes?</a>
+<i class="far fa-bookmark"></i> Read: <a href="https://stackoverflow.com/questions/6827752/whats-the-difference-between-component-repository-service-annotations-in" target="_blank"><strong>stackoverflow.com:</strong> What’s the difference between @Component, @Repository &amp; @Service annotations in Spring?</a>
+<i class="far fa-bookmark"></i> Read: <a href="https://stackoverflow.com/questions/25242321/difference-between-spring-controller-and-restcontroller-annotation" target="_blank"><strong>stackoverflow.com:</strong> Difference between spring @Controller and @RestController annotation
+</a>
+<i class="far fa-bookmark"></i> Read: <a href="https://www.genuitec.com/spring-frameworkrestcontroller-vs-controller/" target="_blank"><strong>genuitec.com:</strong> @RestController vs @Controller</a></p>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Declare a Singleton Bean - one instance for the entire application
 </span><span class="n">@Component</span>
@@ -443,10 +441,8 @@
 <span class="kd">class</span> <span class="nc">UserSessionContext</span> <span class="p">{</span> <span class="p">}</span>
 </code></pre></div></div>
 
-<ul>
-  <li><strong>Read:</strong> <a href="https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#beans-factory-scopes" target="_blank"><strong>spring.io:</strong> Bean Scopes</a></li>
-  <li><strong>Read:</strong> <a href="http://www.baeldung.com/spring-bean-scopes" target="_blank"><strong>baeldung.com:</strong> Spring Bean Scopes</a></li>
-</ul>
+<p><i class="far fa-bookmark"></i> Read: <a href="https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#beans-factory-scopes" target="_blank"><strong>spring.io:</strong> Bean Scopes</a>
+<i class="far fa-bookmark"></i> Read: <a href="http://www.baeldung.com/spring-bean-scopes" target="_blank"><strong>baeldung.com:</strong> Spring Bean Scopes</a></p>
 
 <h2 id="bean-proxy-mode">Bean Proxy Mode</h2>
 <p>There are two fundamental types of proxies <strong>JDK</strong> (by interface) and <strong>CGLIB</strong> (by class). It’s best practice that you inject by interface as opposed to class because it’s easier for Spring. If you inject by the target class then Spring needs to do some extra work to accomplish it and is arguably a performance impact although there is debate about that.</p>
@@ -478,16 +474,12 @@
   </tbody>
 </table>
 
-<ul>
-  <li><strong>Read:</strong> <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-factory-scopes-other-injection" target="_blank"><strong>spring.io:</strong> Scoped beans as dependencies</a></li>
-</ul>
+<p><i class="far fa-bookmark"></i> Read: <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-factory-scopes-other-injection" target="_blank"><strong>spring.io:</strong> Scoped beans as dependencies</a></p>
 
 <h2 id="bean-lifecycle">Bean Lifecycle</h2>
 <p>As Spring Beans are created they follow a Lifecycle where you can hook-in callback listeners to do interesting things when the Beans are first created and destroyed.</p>
 
-<ul>
-  <li><strong>Read:</strong> <a href="https://www.thejavaprogrammer.com/spring-bean-life-cycle/" target="_blank"><strong>thejavaprogrammer.com:</strong> Spring Bean Life Cycle</a></li>
-</ul>
+<p><i class="far fa-bookmark"></i> Read: <a href="https://www.thejavaprogrammer.com/spring-bean-life-cycle/" target="_blank"><strong>thejavaprogrammer.com:</strong> Spring Bean Life Cycle</a></p>
 
 <p>A common use-case is to validate that certain properties are set on your Bean after it is created.</p>
 
@@ -513,9 +505,7 @@
 <h2 id="1-injection-via-constructor">1. Injection via Constructor</h2>
 <p>The best way to wire you dependencies together are by defining them in your constructor. The reason this is favored is because it’s very obvious what your dependencies are. Additionally it makes it easy to Unit Test your code because you have the ability to inject Mocks into the constructor.</p>
 
-<ul>
-  <li><strong>Read:</strong> <a href="https://stackoverflow.com/questions/21218868/explain-why-constructor-inject-is-better-than-other-options" target="_blank"><strong>stackoverflow.com:</strong> Explain why constructor inject is better than other options</a></li>
-</ul>
+<p><i class="far fa-bookmark"></i> Read: <a href="https://stackoverflow.com/questions/21218868/explain-why-constructor-inject-is-better-than-other-options" target="_blank"><strong>stackoverflow.com:</strong> Explain why constructor inject is better than other options</a></p>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">@Service</span>
 <span class="kd">class</span> <span class="nc">UserService</span> <span class="p">{</span> <span class="cm">/* some code */</span> <span class="p">}</span>
@@ -578,9 +568,7 @@
 
 <p>This approach is very convenient in our class but things change dramatically when you want to test it.</p>
 
-<ul>
-  <li><strong>Read:</strong> <a href="http://vojtechruzicka.com/field-dependency-injection-considered-harmful/" target="_blank"><strong>vojtechruzicka.com:</strong> Dangers of Field Injection</a></li>
-</ul>
+<p><i class="far fa-bookmark"></i> Read: <a href="http://vojtechruzicka.com/field-dependency-injection-considered-harmful/" target="_blank"><strong>vojtechruzicka.com:</strong> Dangers of Field Injection</a></p>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">@Service</span>
 <span class="kd">class</span> <span class="nc">UserService</span> <span class="p">{</span> <span class="cm">/* some code */</span> <span class="p">}</span>
@@ -665,11 +653,9 @@
 
 <p>Although powerful this approach can be a little dangerous.</p>
 
-<ul>
-  <li><strong>Read:</strong> <a href="http://www.baeldung.com/mockito-annotations" target="_blank"><strong>baeldung.com:</strong> Getting Started with Mockito @Mock, @Spy, @Captor and @InjectMocks</a></li>
-  <li><strong>Read:</strong> <a href="https://stackoverflow.com/questions/16467685/difference-between-mock-and-injectmocks" target="_blank"><strong>stackoverflow.com:</strong> @Mock and @InjectMocks</a></li>
-  <li><strong>Read:</strong> <a href="https://tedvinke.wordpress.com/2014/02/13/mockito-why-you-should-not-use-injectmocks-annotation-to-autowire-fields/" target="_blank"><strong>tedvinke.wordpress.com:</strong> Why You Should Not Use InjectMocks Annotation to Autowire Fields</a></li>
-</ul>
+<p><i class="far fa-bookmark"></i> Read: <a href="http://www.baeldung.com/mockito-annotations" target="_blank"><strong>baeldung.com:</strong> Getting Started with Mockito @Mock, @Spy, @Captor and @InjectMocks</a>
+<i class="far fa-bookmark"></i> Read: <a href="https://stackoverflow.com/questions/16467685/difference-between-mock-and-injectmocks" target="_blank"><strong>stackoverflow.com:</strong> @Mock and @InjectMocks</a>
+<i class="far fa-bookmark"></i> Read: <a href="https://tedvinke.wordpress.com/2014/02/13/mockito-why-you-should-not-use-injectmocks-annotation-to-autowire-fields/" target="_blank"><strong>tedvinke.wordpress.com:</strong> Why You Should Not Use InjectMocks Annotation to Autowire Fields</a></p>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">@RunWith</span><span class="p">(</span><span class="n">SpringRunner</span><span class="o">::</span><span class="k">class</span><span class="p">)</span>
 <span class="n">@SpringBootTest</span>

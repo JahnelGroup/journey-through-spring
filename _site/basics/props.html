@@ -281,25 +281,22 @@
 
       <section class="page__content" itemprop="text">
         
-        <h2 id="properties">Properties</h2>
+        <p><i class="fas fa-book-reader"></i> Spring Framework: <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-environment" target="_blank">Environment Abstraction</a> and <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#resources" target="_blank">Resources</a></p>
+
 <p>You’ll likely need to change the behavior of your application based on a number of things. Spring has a lot features around this called Externalized Configuration - the practice of placing configuration in property files as opposed to hard-coded in your program. Spring will respect a very specific hierarchical order of properties such that you can override properties when required.</p>
 
-<ul>
-  <li><strong>Read:</strong> <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-external-config.html" target="_blank"><strong>spring.io:</strong> Externalized Configuration</a></li>
-  <li><strong>Read:</strong> <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/howto-properties-and-configuration.html" target="_blank"><strong>spring.io:</strong> Properties and Configuration</a></li>
-  <li><strong>Read:</strong> <a href="http://www.baeldung.com/properties-with-spring" target="_blank"><strong>baeldung.com:</strong> Properties with Spring and Spring Boot</a></li>
-  <li><strong>Read:</strong> <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html" target="_blank"><strong>spring.io:</strong> Appendix A. Common application properties</a></li>
-</ul>
+<p><i class="far fa-bookmark"></i> Read: <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-external-config.html" target="_blank"><strong>spring.io:</strong> Externalized Configuration</a>
+<i class="far fa-bookmark"></i> Read: <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/howto-properties-and-configuration.html" target="_blank"><strong>spring.io:</strong> Properties and Configuration</a>
+<i class="far fa-bookmark"></i> Read: <a href="http://www.baeldung.com/properties-with-spring" target="_blank"><strong>baeldung.com:</strong> Properties with Spring and Spring Boot</a>
+<i class="far fa-bookmark"></i> Read: <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html" target="_blank"><strong>spring.io:</strong> Appendix A. Common application properties</a></p>
 
 <p>Property files are typically placed in <strong>src/main/resources</strong> as either <em>.properties</em> or <em>.yml</em> files. <strong>application.properties</strong> and <strong>application.yml</strong> are specially named properties that Spring will look for to load automatically when your application starts. There are profile-specific variants of these property files as well and are described below.</p>
 
 <h2 id="profiles">Profiles</h2>
 <p>Spring has the concept of a Profile which is basically a special type of property that you can use to <em>tag</em> your components to a specific environment. Let’s say you have a service that should send an EMail out when certain events happen in your system. This may only be relevant in an environment like UAT and PROD but not in DEV. You could define two types of MailService, one to actually send the EMail out and the other to just print it to the console.</p>
 
-<ul>
-  <li><strong>Read:</strong> <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-profiles.html" target="_blank"><strong>spring.io:</strong> Profiles</a></li>
-  <li><strong>Read:</strong> <a href="http://www.baeldung.com/spring-profiles" target="_blank"><strong>baeldung.com:</strong> Spring Profiles</a></li>
-</ul>
+<p><i class="far fa-bookmark"></i> Read: <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-profiles.html" target="_blank"><strong>spring.io:</strong> Profiles</a>
+<i class="far fa-bookmark"></i> Read: <a href="http://www.baeldung.com/spring-profiles" target="_blank"><strong>baeldung.com:</strong> Spring Profiles</a></p>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/** 
   * Only one of the two Beans defined in this class will be loaded in any given environment. 

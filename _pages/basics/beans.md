@@ -3,12 +3,14 @@ title:  "Beans"
 permalink: /basics/beans
 ---
 
-Objects are the key element in Java programming and the Spring Framework handles them in a very special way. Unlike a regular Java Object that is created with the **new** operator and then used, a Spring Object must be registered with the ApplicationContext first. When an Object is registered with the ApplicationContext it is referred to as a [Bean](https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#beans-definition){:target="_blank"} (or “Managed Bean” or “Component”). When Spring manages an Object as a Bean it is creating a Proxy around your object and can do very interesting things with it.
+<i class="fas fa-book-reader"></i> Spring Framework: [Bean overview](https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-definition){:target="_blank"}
+
+Objects are the key element in Java programming and the Spring Framework handles them in a very special way. Unlike a regular Java Object that is created with the **new** operator and then used, a Spring Object must be registered with the ApplicationContext first. When an Object is registered with the ApplicationContext it is referred to as a [Bean](https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#beans-definition){:target="_blank"} (or “Managed Bean” or “Component”). When Spring manages an Object as a Bean it is creating a Proxy around your object and can do very interesting things with it.{:target="_blank"}
 
 # Bean Configuration
 Beans can be configured in three primary ways: XML, Java, or Annotations. We focus primarily on Annotation based configuration.
 
-* **Read:** [**spring.io:** Annotation-based container configuration](https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#beans-annotation-config){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**spring.io:** Annotation-based container configuration](https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#beans-annotation-config){:target="_blank"}
 
 Spring provides a few different annotations to drive the creation of beans. Ultimately Spring will use **@Bean** or **@Component** to create a Bean. Here are the most common ways to define Beans.
 
@@ -22,11 +24,11 @@ Spring provides a few different annotations to drive the creation of beans. Ulti
 | @Controller     | class    | Is a @Component but Stereotyped as a Controller        |
 | @RestController | class    | Same as @Controller but meant REST end-points          |
 
-* **Read:** [**stackoverflow.com:** Advantages of using spring stereotypes?](https://stackoverflow.com/questions/16051656/advantages-of-using-spring-stereotypes){:target="_blank"}
-* **Read:** [**stackoverflow.com:** What's the difference between @Component, @Repository & @Service annotations in Spring?](https://stackoverflow.com/questions/6827752/whats-the-difference-between-component-repository-service-annotations-in){:target="_blank"}
-* **Read:** [**stackoverflow.com:** Difference between spring @Controller and @RestController annotation
+<i class='far fa-bookmark'></i> Read: [**stackoverflow.com:** Advantages of using spring stereotypes?](https://stackoverflow.com/questions/16051656/advantages-of-using-spring-stereotypes){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**stackoverflow.com:** What's the difference between @Component, @Repository & @Service annotations in Spring?](https://stackoverflow.com/questions/6827752/whats-the-difference-between-component-repository-service-annotations-in){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**stackoverflow.com:** Difference between spring @Controller and @RestController annotation
 ](https://stackoverflow.com/questions/25242321/difference-between-spring-controller-and-restcontroller-annotation){:target="_blank"}
-* **Read:** [**genuitec.com:** @RestController vs @Controller](https://www.genuitec.com/spring-frameworkrestcontroller-vs-controller/){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**genuitec.com:** @RestController vs @Controller](https://www.genuitec.com/spring-frameworkrestcontroller-vs-controller/){:target="_blank"}
 
 ```kotlin
 // Declare a Singleton Bean - one instance for the entire application
@@ -89,8 +91,8 @@ class UserSessionContext { }
 class UserSessionContext { }
 ```
 
-* **Read:** [**spring.io:** Bean Scopes](https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#beans-factory-scopes){:target="_blank"}
-* **Read:** [**baeldung.com:** Spring Bean Scopes](http://www.baeldung.com/spring-bean-scopes){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**spring.io:** Bean Scopes](https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#beans-factory-scopes){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**baeldung.com:** Spring Bean Scopes](http://www.baeldung.com/spring-bean-scopes){:target="_blank"}
 
 ## Bean Proxy Mode
 There are two fundamental types of proxies **JDK** (by interface) and **CGLIB** (by class). It's best practice that you inject by interface as opposed to class because it's easier for Spring. If you inject by the target class then Spring needs to do some extra work to accomplish it and is arguably a performance impact although there is debate about that.
@@ -102,12 +104,12 @@ There are two fundamental types of proxies **JDK** (by interface) and **CGLIB** 
 | INTERFACES          | JDK Based Proxy                                                 |
 | TARGET_CLASS        | CGLIB Based Proxy                                               |
 
-* **Read:** [**spring.io:** Scoped beans as dependencies](https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-factory-scopes-other-injection){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**spring.io:** Scoped beans as dependencies](https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-factory-scopes-other-injection){:target="_blank"}
 
 ## Bean Lifecycle
 As Spring Beans are created they follow a Lifecycle where you can hook-in callback listeners to do interesting things when the Beans are first created and destroyed. 
 
-* **Read:** [**thejavaprogrammer.com:** Spring Bean Life Cycle](https://www.thejavaprogrammer.com/spring-bean-life-cycle/){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**thejavaprogrammer.com:** Spring Bean Life Cycle](https://www.thejavaprogrammer.com/spring-bean-life-cycle/){:target="_blank"}
 
 A common use-case is to validate that certain properties are set on your Bean after it is created.
 
@@ -132,7 +134,7 @@ Once your Beans are registered with the ApplicationContext you need a way to ret
 ## 1. Injection via Constructor
 The best way to wire you dependencies together are by defining them in your constructor. The reason this is favored is because it's very obvious what your dependencies are. Additionally it makes it easy to Unit Test your code because you have the ability to inject Mocks into the constructor. 
 
-* **Read:** [**stackoverflow.com:** Explain why constructor inject is better than other options](https://stackoverflow.com/questions/21218868/explain-why-constructor-inject-is-better-than-other-options){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**stackoverflow.com:** Explain why constructor inject is better than other options](https://stackoverflow.com/questions/21218868/explain-why-constructor-inject-is-better-than-other-options){:target="_blank"}
 
 ```kotlin
 @Service
@@ -197,7 +199,7 @@ The favored alternative to constructor injection is property level injection. Th
 
 This approach is very convenient in our class but things change dramatically when you want to test it.   
 
-* **Read:** [**vojtechruzicka.com:** Dangers of Field Injection](http://vojtechruzicka.com/field-dependency-injection-considered-harmful/){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**vojtechruzicka.com:** Dangers of Field Injection](http://vojtechruzicka.com/field-dependency-injection-considered-harmful/){:target="_blank"}
 
 ```kotlin
 @Service
@@ -280,9 +282,9 @@ Mockito can eliminate that nasty bit of TestConfig code using @Mock and @InjectM
 
 Although powerful this approach can be a little dangerous. 
 
-* **Read:** [**baeldung.com:** Getting Started with Mockito @Mock, @Spy, @Captor and @InjectMocks](http://www.baeldung.com/mockito-annotations){:target="_blank"}
-* **Read:** [**stackoverflow.com:** @Mock and @InjectMocks](https://stackoverflow.com/questions/16467685/difference-between-mock-and-injectmocks){:target="_blank"}
-* **Read:** [**tedvinke.wordpress.com:** Why You Should Not Use InjectMocks Annotation to Autowire Fields](https://tedvinke.wordpress.com/2014/02/13/mockito-why-you-should-not-use-injectmocks-annotation-to-autowire-fields/){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**baeldung.com:** Getting Started with Mockito @Mock, @Spy, @Captor and @InjectMocks](http://www.baeldung.com/mockito-annotations){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**stackoverflow.com:** @Mock and @InjectMocks](https://stackoverflow.com/questions/16467685/difference-between-mock-and-injectmocks){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**tedvinke.wordpress.com:** Why You Should Not Use InjectMocks Annotation to Autowire Fields](https://tedvinke.wordpress.com/2014/02/13/mockito-why-you-should-not-use-injectmocks-annotation-to-autowire-fields/){:target="_blank"}
 
 ```kotlin
 @RunWith(SpringRunner::class)

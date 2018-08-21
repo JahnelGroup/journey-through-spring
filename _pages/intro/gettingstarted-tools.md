@@ -8,9 +8,9 @@ It all begins with the right tools. Take the time to set yourself up for success
 ## Linux v.s. Mac v.s. Windows
 Professional software developers need to align themselves with the best tools available to get their job done. If you're a .NET developer or work a lot with Microsoft products then Windows is an obvious choice. Everyone else should be on some kind of Linux distrubution or a Mac. The best software tools are just typically harder to access and work with on Windows. If you're following this journey I recommend you use Linux or Mac. I personally use [Fedora](https://getfedora.org/){:target="_blank"} but there are plenty other great options available, [Ubuntu](https://www.ubuntu.com/){:target="_blank"} is a great alternative.
 
-<i class='fas fa-bookmark'></i> Read: [**Lifewire:** How To Choose The Best Linux Distro For Your Needs](https://www.lifewire.com/choose-best-linux-distro-for-needs-2201172){:target="_blank"}<br/>
-<i class='fas fa-bookmark'></i> Read: [**Digital Ocean:** Linux Basics](https://www.digitalocean.com/community/tags/linux-basics?type=tutorials){:target="_blank"}<br/>
-<i class='fas fa-bookmark'></i> Read: [**Digital Ocean:** An Introduction to Linux Basics](https://www.digitalocean.com/community/tutorials/an-introduction-to-linux-basics){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**Lifewire:** How To Choose The Best Linux Distro For Your Needs](https://www.lifewire.com/choose-best-linux-distro-for-needs-2201172){:target="_blank"}<br/>
+<i class='far fa-bookmark'></i> Read: [**Digital Ocean:** Linux Basics](https://www.digitalocean.com/community/tags/linux-basics?type=tutorials){:target="_blank"}<br/>
+<i class='far fa-bookmark'></i> Read: [**Digital Ocean:** An Introduction to Linux Basics](https://www.digitalocean.com/community/tutorials/an-introduction-to-linux-basics){:target="_blank"}
 
 ## Installing Tools and Knowing their Versions
 As a software developer it’s important to know your tools. You should know exactly what tools are being used, where they are installed and what versions they are. It’s important that we install these tools in a uniform and systematic way. 
@@ -18,8 +18,8 @@ As a software developer it’s important to know your tools. You should know exa
 ### Install SDKMAN!
 SDKMAN is a great tool for installing the software needed for developing our Spring applications. It allows you to install multiple versions (called candidates) of software at the same time and allows you to easily switch between them. SDKMAN will persist data in your home directory ~/.sdkman. 
 
-* **Install:** [SDKMAN](https://sdkman.io/install){:target="_blank"}
-* **Read:** [SDKMAN usage](https://sdkman.io/usage){:target="_blank"}
+<i class="fas fa-download"></i> Install: [SDKMAN](https://sdkman.io/install){:target="_blank"}<br/>
+<i class='far fa-bookmark'></i> Read: [SDKMAN usage](https://sdkman.io/usage){:target="_blank"}
 
 ### Install Java and Kotlin
 
@@ -33,7 +33,7 @@ $ sdk install kotlin
 ### Install Maven and Gradle
 Spring developers depend on a number of different tools to deliver software. As a professional developer one of the first you'll need is a build and dependency management tool. The two biggest names in the community now are [Maven](https://maven.apache.org/){:target="_blank"} and [Gradle](https://gradle.org/){:target="_blank"}. Maven has been around longer with more example code and is really stable. Gradle is relatively new, adopted strongly by the Android community and is showing a lot more power than Maven as of late. Both will get the job done but the community is favoring Gradle. 
 
-* **Read:** [**zeroturnaround:** Java Build Tools: How Dependency Management Works](https://zeroturnaround.com/rebellabs/java-build-tools-how-dependency-management-works-with-maven-gradle-and-ant-ivy/){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**zeroturnaround:** Java Build Tools: How Dependency Management Works](https://zeroturnaround.com/rebellabs/java-build-tools-how-dependency-management-works-with-maven-gradle-and-ant-ivy/){:target="_blank"}
 
 Install Maven and Gradle with SDKMAN.
 
@@ -63,4 +63,4 @@ Follow this quick example to start a groovy web-app instantly from the command-l
 ### Install IntelliJ
 [**jetbrains:** IntelliJ](https://www.jetbrains.com/idea/){:target="_blank"} has become the standard IDE used by most Java developers, [Eclipse](https://www.eclipse.org/){:target="_blank"} being the other.
 
-* **Install:** [**jetbrains:** Install and set up IntelliJ IDEA](https://www.jetbrains.com/help/idea/install-and-set-up-intellij-idea.html){:target="_blank"}
+<i class="fas fa-download"></i> Install: [**jetbrains:** Install and set up IntelliJ IDEA](https://www.jetbrains.com/help/idea/install-and-set-up-intellij-idea.html){:target="_blank"}

@@ -11,9 +11,8 @@ As of 2017 the Spring community officially declared [support for Kotlin in Sprin
 >
 > &mdash; <cite>[infoworld.com](https://www.infoworld.com/article/3224868/java/what-is-kotlin-the-java-alternative-explained.html){:target="_blank"}</cite>
 
-<i class='fas fa-bookmark'></i> Read: [Comparison to Java Programming Language (kotlinlang.org)](https://kotlinlang.org/docs/reference/comparison-to-java.html){:target="_blank"}
-
-<i class='fas fa-bookmark'></i> Read: [Using Kotlin for Server-side Development (kotlinlang.org)](https://kotlinlang.org/docs/reference/server-overview.html){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [Comparison to Java Programming Language (kotlinlang.org)](https://kotlinlang.org/docs/reference/comparison-to-java.html){:target="_blank"}<br/>
+<i class='far fa-bookmark'></i> Read: [Using Kotlin for Server-side Development (kotlinlang.org)](https://kotlinlang.org/docs/reference/server-overview.html){:target="_blank"}
 
 Here are a few key differences from Java that will help you follow along in this Journey.
 

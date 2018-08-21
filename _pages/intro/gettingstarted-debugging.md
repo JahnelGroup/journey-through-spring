@@ -37,9 +37,9 @@ The logger world is full of *specifications* and *implementations* There are sev
 * [Log4j](https://logging.apache.org/log4j/2.x/){:target="_blank"} - Apache Log4j
 * [SLF4J](https://www.slf4j.org){:target="_blank"} - Abstract Layer over many loggers, you use this with an implementation like Log4j or Logback.
 
-<i class='fas fa-bookmark'></i> Read: [**loggly.com:** Java Logging Basics](https://www.loggly.com/ultimate-guide/java-logging-basics/){:target="_blank"}<br/>
-<i class='fas fa-bookmark'></i> Read: [**spring.io:** Spring Boot Doc: How to Logging](https://docs.spring.io/spring-boot/docs/current/reference/html/howto-logging.html){:target="_blank"}<br/>
-<i class='fas fa-bookmark'></i> Read: [**spring.io:** Spring Boot Doc: Boot Logging Features](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-logging.html){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**loggly.com:** Java Logging Basics](https://www.loggly.com/ultimate-guide/java-logging-basics/){:target="_blank"}<br/>
+<i class='far fa-bookmark'></i> Read: [**spring.io:** Spring Boot Doc: How to Logging](https://docs.spring.io/spring-boot/docs/current/reference/html/howto-logging.html){:target="_blank"}<br/>
+<i class='far fa-bookmark'></i> Read: [**spring.io:** Spring Boot Doc: Boot Logging Features](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-logging.html){:target="_blank"}
 
 ### Logging Level
 
@@ -102,8 +102,8 @@ If bug a is too difficult to resolve with just logging statements then you'll ne
 
 Debugging in an IDE is very simple, instead of selecting to **Run** your application you choose **Debug**. Set some break-points and you're done. 
 
-<i class='fas fa-bookmark'></i> Read: [**jetbrains.com:** IntelliJ: Debugging Your First Java Application](https://www.jetbrains.com/help/idea/debugging-your-first-java-application.html){:target="_blank"}<br/>
-<i class='fas fa-bookmark'></i> Read: [**vogella.com:** Eclipse: Java Debugging](http://www.vogella.com/tutorials/EclipseDebugging/article.html){:target="_blank"}<br/>
+<i class='far fa-bookmark'></i> Read: [**jetbrains.com:** IntelliJ: Debugging Your First Java Application](https://www.jetbrains.com/help/idea/debugging-your-first-java-application.html){:target="_blank"}<br/>
+<i class='far fa-bookmark'></i> Read: [**vogella.com:** Eclipse: Java Debugging](http://www.vogella.com/tutorials/EclipseDebugging/article.html){:target="_blank"}<br/>
 <i class='fas fa-play'></i> Watch: [**youtube.com:** Debugging in IntelliJ IDEA 2016.1](https://www.youtube.com/watch?v=VdBsUv4lnm4){:target="_blank"}
 
 ### Remote Attaching to a JVM
@@ -119,8 +119,8 @@ $ java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar a
 Listening for transport dt_socket at address: 5005
 ```
 
-<i class='fas fa-bookmark'></i> Read: [**jetbrains.com:** IntelliJ: Run/Debug Configuration: Remote Debug](https://www.jetbrains.com/help/idea/run-debug-configuration-remote-debug.html){:target="_blank"}
-<i class='fas fa-bookmark'></i> Read: [**medium.com:** Eclipse: Remote Debugging for a Java](https://medium.com/@metamje/setting-up-remote-debugging-for-a-java-application-in-eclipse-with-heroku-exec-22d0722371c2){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**jetbrains.com:** IntelliJ: Run/Debug Configuration: Remote Debug](https://www.jetbrains.com/help/idea/run-debug-configuration-remote-debug.html){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**medium.com:** Eclipse: Remote Debugging for a Java](https://medium.com/@metamje/setting-up-remote-debugging-for-a-java-application-in-eclipse-with-heroku-exec-22d0722371c2){:target="_blank"}
 
 ## Difficulty with Spring Proxies
 

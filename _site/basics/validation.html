@@ -285,11 +285,11 @@
 
 <p>Spring provides a light specification around validating Beans with a lot of the implementation provided by Hibernate.</p>
 
+<p><i class="far fa-bookmark"></i> Read: <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#validation" target="_blank"><strong>spring.io:</strong> Validation</a>
+<i class="far fa-bookmark"></i> Read: <a href="http://hibernate.org/validator/" target="_blank"><strong>hibernate.org:</strong> Hibernate Validators</a>
+<i class="far fa-bookmark"></i> Read: <a href="https://www.tutorialspoint.com/springmvc/springmvc_hibernate_validator.htm" target="_blank"><strong>tutorialspoint.com:</strong> Spring MVC - Hibernate Validator Example</a>
+<i class="far fa-bookmark"></i> Read: <a href="https://www.mkyong.com/spring-mvc/combine-spring-validator-and-hibernate-validator/" target="_blank"><strong>mkyong.com:</strong> Combine Spring validator and Hibernate validator</a></p>
 <ul>
-  <li><strong>Read:</strong> <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#validation" target="_blank"><strong>spring.io:</strong> Validation</a></li>
-  <li><strong>Read:</strong> <a href="http://hibernate.org/validator/" target="_blank"><strong>hibernate.org:</strong> Hibernate Validators</a></li>
-  <li><strong>Read:</strong> <a href="https://www.tutorialspoint.com/springmvc/springmvc_hibernate_validator.htm" target="_blank"><strong>tutorialspoint.com:</strong> Spring MVC - Hibernate Validator Example</a></li>
-  <li><strong>Read:</strong> <a href="https://www.mkyong.com/spring-mvc/combine-spring-validator-and-hibernate-validator/" target="_blank"><strong>mkyong.com:</strong> Combine Spring validator and Hibernate validator</a></li>
   <li><strong>Exercise:</strong> <a href="https://github.com/JahnelGroup/journey-through-spring/tree/master/src/basic-web-validations" target="_blank"><strong>github.com:</strong> Journey Through Spring: Basic Web Validations</a></li>
 </ul>
 
@@ -467,11 +467,9 @@
 <span class="o">}</span>
 </code></pre></div></div>
 
-<ul>
-  <li><strong>Read:</strong> <a href="https://jcp.org/en/jsr/detail?id=303" target="_blank"><strong>jcp.org:</strong> JSR 303: Bean Validation</a></li>
-  <li><strong>Read:</strong> <a href="https://en.wikipedia.org/wiki/Bean_Validation" target="_blank"><strong>wikipedia.org:</strong> Bean Validation</a></li>
-  <li><strong>Read:</strong> <a href="https://developer.ucsd.edu/develop/data-layer/jpa/java-validation-api.html" target="_blank"><strong>developer.ucsd.edu:</strong> Java Validation API (JSR-303)</a></li>
-</ul>
+<p><i class="far fa-bookmark"></i> Read: <a href="https://jcp.org/en/jsr/detail?id=303" target="_blank"><strong>jcp.org:</strong> JSR 303: Bean Validation</a>
+<i class="far fa-bookmark"></i> Read: <a href="https://en.wikipedia.org/wiki/Bean_Validation" target="_blank"><strong>wikipedia.org:</strong> Bean Validation</a>
+<i class="far fa-bookmark"></i> Read: <a href="https://developer.ucsd.edu/develop/data-layer/jpa/java-validation-api.html" target="_blank"><strong>developer.ucsd.edu:</strong> Java Validation API (JSR-303)</a></p>
 
 <h3 id="custom-jsr-303-annotation-validator">Custom JSR-303 Annotation Validator</h3>
 
@@ -514,24 +512,20 @@
   <p><strong>Important</strong>: Spring will initialize ConstraintValidator’s as a <strong>Singletons</strong> so only one instance will ever be created for each type. <strong>Do not</strong> store state anywhere here.</p>
 </blockquote>
 
-<ul>
-  <li><strong>Read:</strong> <a href="http://www.baeldung.com/spring-mvc-custom-validator" target="_blank"><strong>baeldung.com:</strong> Spring MVC Custom Validation</a></li>
-  <li><strong>Read:</strong> <a href="http://dolszewski.com/spring/custom-validation-annotation-in-spring/" target="_blank"><strong>dolszewski.com:</strong> Custom validation annotation in Spring</a></li>
-</ul>
+<p><i class="far fa-bookmark"></i> Read: <a href="http://www.baeldung.com/spring-mvc-custom-validator" target="_blank"><strong>baeldung.com:</strong> Spring MVC Custom Validation</a>
+<i class="far fa-bookmark"></i> Read: <a href="http://dolszewski.com/spring/custom-validation-annotation-in-spring/" target="_blank"><strong>dolszewski.com:</strong> Custom validation annotation in Spring</a></p>
 
 <h2 id="errorcode-messagesource-and-resourcebundle">ErrorCode, MessageSource and ResourceBundle</h2>
 <p>Externalization of error messages is just as important as application properties. The process by which you do this is slightly different, instead of <em>properties</em> you have <em>messages</em> and instead of calling them <em>property files</em> they are <em>resource bundles</em>. This is an important step to making your system maintainable and support localization. To accomplish this you need a file somewhere in your classpath that is formatted as a key/value pair and loaded into the system as a ResourceBundle.</p>
 
 <p>The entire process of mapping codes to message text is called message interpolation.</p>
 
-<ul>
-  <li><strong>Read:</strong> <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#context-functionality-messagesource" target="_blank"><strong>spring.io:</strong> Internationalization using MessageSource</a></li>
-  <li><strong>Read:</strong> <a href="http://www.baeldung.com/spring-boot-internationalization" target="_blank"><strong>baeldung.com:</strong> Spring Boot Internationalization</a></li>
-  <li><strong>Read:</strong> <a href="https://en.wikipedia.org/wiki/Java_resource_bundle" target="_blank"><strong>wikipedia.org:</strong> Java Resource Bundle</a></li>
-  <li><strong>Read:</strong> <a href="https://docs.oracle.com/javase/7/docs/api/java/util/ResourceBundle.html" target="_blank"><strong>oracle.com:</strong> ResourceBundle</a></li>
-  <li><strong>Read:</strong> <a href="https://docs.oracle.com/javase/tutorial/i18n/resbundle/concept.html" target="_blank"><strong>oracle.com:</strong> ResourceBundle Concept</a></li>
-  <li><strong>Read:</strong> <a href="http://docs.jboss.org/hibernate/validator/5.4/reference/en-US/html_single/#chapter-message-interpolation" target="_blank"><strong>jboss.org:</strong> Message Interpolation</a></li>
-</ul>
+<p><i class="far fa-bookmark"></i> Read: <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#context-functionality-messagesource" target="_blank"><strong>spring.io:</strong> Internationalization using MessageSource</a>
+<i class="far fa-bookmark"></i> Read: <a href="http://www.baeldung.com/spring-boot-internationalization" target="_blank"><strong>baeldung.com:</strong> Spring Boot Internationalization</a>
+<i class="far fa-bookmark"></i> Read: <a href="https://en.wikipedia.org/wiki/Java_resource_bundle" target="_blank"><strong>wikipedia.org:</strong> Java Resource Bundle</a>
+<i class="far fa-bookmark"></i> Read: <a href="https://docs.oracle.com/javase/7/docs/api/java/util/ResourceBundle.html" target="_blank"><strong>oracle.com:</strong> ResourceBundle</a>
+<i class="far fa-bookmark"></i> Read: <a href="https://docs.oracle.com/javase/tutorial/i18n/resbundle/concept.html" target="_blank"><strong>oracle.com:</strong> ResourceBundle Concept</a>
+<i class="far fa-bookmark"></i> Read: <a href="http://docs.jboss.org/hibernate/validator/5.4/reference/en-US/html_single/#chapter-message-interpolation" target="_blank"><strong>jboss.org:</strong> Message Interpolation</a></p>
 
 <h3 id="hibernate-validationproperties">Hibernate Validation.properties</h3>
 <p>Hibernate validations will by default source their <em>defaultMessage</em> from a file on the classpath provided by Hibernate Validator called <strong>Validation.properties</strong>.</p>
@@ -558,9 +552,7 @@
 <h2 id="api-error-framework">API Error Framework</h2>
 <p>If you’re building a more sophisticated API then you would want more control over how the error responses are generated. This means mapping every type of exception into your own <em>ApiError</em> facade.</p>
 
-<ul>
-  <li><strong>Read:</strong> <a href="http://www.baeldung.com/global-error-handler-in-a-spring-rest-api" target="_blank"><strong>baeldung.com:</strong> Global Error Handler in Spring REST API</a></li>
-</ul>
+<p><i class="far fa-bookmark"></i> Read: <a href="http://www.baeldung.com/global-error-handler-in-a-spring-rest-api" target="_blank"><strong>baeldung.com:</strong> Global Error Handler in Spring REST API</a></p>
 
         
       </section>

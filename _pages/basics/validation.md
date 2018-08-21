@@ -7,10 +7,10 @@ Before using a piece of a data you typically want to [validate](https://en.wikip
 
 Spring provides a light specification around validating Beans with a lot of the implementation provided by Hibernate.
 
-* **Read:** [**spring.io:** Validation](https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#validation){:target="_blank"}
-* **Read:** [**hibernate.org:** Hibernate Validators](http://hibernate.org/validator/){:target="_blank"}
-* **Read:** [**tutorialspoint.com:** Spring MVC - Hibernate Validator Example](https://www.tutorialspoint.com/springmvc/springmvc_hibernate_validator.htm){:target="_blank"}
-* **Read:** [**mkyong.com:** Combine Spring validator and Hibernate validator](https://www.mkyong.com/spring-mvc/combine-spring-validator-and-hibernate-validator/){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**spring.io:** Validation](https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#validation){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**hibernate.org:** Hibernate Validators](http://hibernate.org/validator/){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**tutorialspoint.com:** Spring MVC - Hibernate Validator Example](https://www.tutorialspoint.com/springmvc/springmvc_hibernate_validator.htm){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**mkyong.com:** Combine Spring validator and Hibernate validator](https://www.mkyong.com/spring-mvc/combine-spring-validator-and-hibernate-validator/){:target="_blank"}
 * **Exercise:** [**github.com:** Journey Through Spring: Basic Web Validations](https://github.com/JahnelGroup/journey-through-spring/tree/master/src/basic-web-validations){:target="_blank"}
 
 ## The Trash/Error Bag Pattern
@@ -189,9 +189,9 @@ public Pet addPet(@RequestBody @Valid Pet pet, BindingResult result){
 }
 ```
 
-* **Read:** [**jcp.org:** JSR 303: Bean Validation](https://jcp.org/en/jsr/detail?id=303){:target="_blank"}
-* **Read:** [**wikipedia.org:** Bean Validation](https://en.wikipedia.org/wiki/Bean_Validation){:target="_blank"}
-* **Read:** [**developer.ucsd.edu:** Java Validation API (JSR-303)](https://developer.ucsd.edu/develop/data-layer/jpa/java-validation-api.html){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**jcp.org:** JSR 303: Bean Validation](https://jcp.org/en/jsr/detail?id=303){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**wikipedia.org:** Bean Validation](https://en.wikipedia.org/wiki/Bean_Validation){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**developer.ucsd.edu:** Java Validation API (JSR-303)](https://developer.ucsd.edu/develop/data-layer/jpa/java-validation-api.html){:target="_blank"}
 
 ### Custom JSR-303 Annotation Validator
 
@@ -234,20 +234,20 @@ public class PetIdNumberValidator implements
 
 > **Important**: Spring will initialize ConstraintValidator's as a **Singletons** so only one instance will ever be created for each type. **Do not** store state anywhere here.
 
-* **Read:** [**baeldung.com:** Spring MVC Custom Validation](http://www.baeldung.com/spring-mvc-custom-validator){:target="_blank"}
-* **Read:** [**dolszewski.com:** Custom validation annotation in Spring](http://dolszewski.com/spring/custom-validation-annotation-in-spring/){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**baeldung.com:** Spring MVC Custom Validation](http://www.baeldung.com/spring-mvc-custom-validator){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**dolszewski.com:** Custom validation annotation in Spring](http://dolszewski.com/spring/custom-validation-annotation-in-spring/){:target="_blank"}
 
 ## ErrorCode, MessageSource and ResourceBundle
 Externalization of error messages is just as important as application properties. The process by which you do this is slightly different, instead of *properties* you have *messages* and instead of calling them *property files* they are *resource bundles*. This is an important step to making your system maintainable and support localization. To accomplish this you need a file somewhere in your classpath that is formatted as a key/value pair and loaded into the system as a ResourceBundle.
 
 The entire process of mapping codes to message text is called message interpolation.
 
-* **Read:** [**spring.io:** Internationalization using MessageSource](https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#context-functionality-messagesource){:target="_blank"}
-* **Read:** [**baeldung.com:** Spring Boot Internationalization](http://www.baeldung.com/spring-boot-internationalization){:target="_blank"}
-* **Read:** [**wikipedia.org:** Java Resource Bundle](https://en.wikipedia.org/wiki/Java_resource_bundle){:target="_blank"}
-* **Read:** [**oracle.com:** ResourceBundle](https://docs.oracle.com/javase/7/docs/api/java/util/ResourceBundle.html){:target="_blank"}
-* **Read:** [**oracle.com:** ResourceBundle Concept](https://docs.oracle.com/javase/tutorial/i18n/resbundle/concept.html){:target="_blank"}
-* **Read:** [**jboss.org:** Message Interpolation](http://docs.jboss.org/hibernate/validator/5.4/reference/en-US/html_single/#chapter-message-interpolation){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**spring.io:** Internationalization using MessageSource](https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#context-functionality-messagesource){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**baeldung.com:** Spring Boot Internationalization](http://www.baeldung.com/spring-boot-internationalization){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**wikipedia.org:** Java Resource Bundle](https://en.wikipedia.org/wiki/Java_resource_bundle){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**oracle.com:** ResourceBundle](https://docs.oracle.com/javase/7/docs/api/java/util/ResourceBundle.html){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**oracle.com:** ResourceBundle Concept](https://docs.oracle.com/javase/tutorial/i18n/resbundle/concept.html){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**jboss.org:** Message Interpolation](http://docs.jboss.org/hibernate/validator/5.4/reference/en-US/html_single/#chapter-message-interpolation){:target="_blank"}
 
 ### Hibernate Validation.properties
 Hibernate validations will by default source their *defaultMessage* from a file on the classpath provided by Hibernate Validator called **Validation.properties**.
@@ -273,4 +273,4 @@ underage=You are only {0}, you must be at least 21!
 ## API Error Framework
 If you're building a more sophisticated API then you would want more control over how the error responses are generated. This means mapping every type of exception into your own *ApiError* facade. 
 
-* **Read:** [**baeldung.com:** Global Error Handler in Spring REST API](http://www.baeldung.com/global-error-handler-in-a-spring-rest-api){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**baeldung.com:** Global Error Handler in Spring REST API](http://www.baeldung.com/global-error-handler-in-a-spring-rest-api){:target="_blank"}

@@ -9,7 +9,7 @@ Think of Spring as an intelligent black box that is organized in a special way. 
 >
 > &mdash; <cite>[spring-framework](http://spring.io/projects/spring-framework){:target="_blank"}</cite>
 
-<i class='fas fa-bookmark'></i> Read: [Spring Framework Overview (spring.io)](https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/overview.html#overview){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [Spring Framework Overview (spring.io)](https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/overview.html#overview){:target="_blank"}
 
 ## Spring Boot
 
@@ -19,6 +19,6 @@ Spring Boot unleashes the power of Spring. It takes the concept of convention ov
 >
 > &mdash; <cite>[spring-framework](http://spring.io/projects/spring-boot){:target="_blank"}</cite>
 
-<i class='fas fa-play'></i> Watch: [Build a Hello World REST Service](https://www.youtube.com/watch?v=47xNBNd-LLI){:target="_blank"}
+<i class='fab fa-youtube'></i> Watch: [Build a Hello World REST Service](https://www.youtube.com/watch?v=47xNBNd-LLI){:target="_blank"}
 
-<i class='fas fa-bookmark'></i> Read: [Spring Boot 2.0 goes GA (spring.io)](https://spring.io/blog/2018/03/01/spring-boot-2-0-goes-ga){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [Spring Boot 2.0 goes GA (spring.io)](https://spring.io/blog/2018/03/01/spring-boot-2-0-goes-ga){:target="_blank"}

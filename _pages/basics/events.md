@@ -3,13 +3,15 @@ title:  "Events"
 permalink: /basics/events
 ---
 
+<i class="fas fa-book-reader"></i> Spring Framework: [Standard and custom events](https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#context-functionality-events){:target="_blank"}
+
 The concept of [Events](https://en.wikipedia.org/wiki/Event_(computing)){:target="_blank"} is fundamental to computer programming and allows us to design components with loose coupling and high cohesion. Spring’s context is highly event driven and exposes this feature for you to listen and react to events as well as fire your own. 
 
-* **Read:** [**wikipedia.org:** Event-driven programming](https://en.wikipedia.org/wiki/Event-driven_programming){:target="_blank"}
-* **Read:** [**stackoverflow.com:** What does 'low in coupling and high in cohesion' mean](https://stackoverflow.com/questions/14000762/what-does-low-in-coupling-and-high-in-cohesion-mean){:target="_blank"}
-* **Read:** [**spring.io:** Application Events and Listeners](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-application-events-and-listeners){:target="_blank"}
-* **Read:** [**baeldung.com:** Spring Events](http://www.baeldung.com/spring-events){:target="_blank"}
-* **Read:** [**spring.io:** Standard and Custom Events](https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#context-functionality-events){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**wikipedia.org:** Event-driven programming](https://en.wikipedia.org/wiki/Event-driven_programming){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**stackoverflow.com:** What does 'low in coupling and high in cohesion' mean](https://stackoverflow.com/questions/14000762/what-does-low-in-coupling-and-high-in-cohesion-mean){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**spring.io:** Application Events and Listeners](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-application-events-and-listeners){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**baeldung.com:** Spring Events](http://www.baeldung.com/spring-events){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**spring.io:** Standard and Custom Events](https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#context-functionality-events){:target="_blank"}
 
 ## ApplicationEvent
 Spring provides a class called [ApplicationEvent](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/ApplicationEvent.html){:target="_blank"} to faciliate the processing of events. Your events do not need to extend this class but it is good practice. Its constructor takes a single argument of type Object which is intended to be the *source* of the event. 
@@ -104,32 +106,32 @@ logging.level.org.springframework.context.event.EventListenerMethodProcessor=TRA
 
 You can easily make an EventListener asynchronous by using the [@Async](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/scheduling/annotation/Async.html){:target="_blank"} annotation. Be warned though that there is more to this little annotation and you should understand how it works before using it. 
 
-* **Read:** [**spring.io:** Asynchronous Listeners](https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#context-functionality-events-async){:target="_blank"}
-* **Read:** [**baeldung.com:** Spring Async](http://www.baeldung.com/spring-async){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**spring.io:** Asynchronous Listeners](https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#context-functionality-events-async){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**baeldung.com:** Spring Async](http://www.baeldung.com/spring-async){:target="_blank"}
 
 ## Transactional Events
 Transactions are discussed in another section but it's important to understand that they play a role with EventListeners. You have the abilitiy to advise Spring on when and how to run your listeners with respect to transaction that may be going on. To do this you essentially swap out @EventListener with [@TransactionalEventListener](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/event/TransactionalEventListener.html){:target="_blank"}. 
 
 An example of this is would be a MailService listener that should send a welcome E-Mail out only after a user has successfully been commited to the database.
 
-* **Read:** [**dzone.com:** Understanding @TransactionalEventListener](https://dzone.com/articles/transaction-synchronization-and-spring-application){:target="_blank"}
-* **Read:** [**spring.io:** Better application events in Spring Framework 4.2](https://spring.io/blog/2015/02/11/better-application-events-in-spring-framework-4-2){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**dzone.com:** Understanding @TransactionalEventListener](https://dzone.com/articles/transaction-synchronization-and-spring-application){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**spring.io:** Better application events in Spring Framework 4.2](https://spring.io/blog/2015/02/11/better-application-events-in-spring-framework-4-2){:target="_blank"}
 
 ## Ordering of Event Listeners
 Ordering things is a rather interesting concept with Spring. When you register multiple things of the same type into the (depending on what it is...) Spring will generally store them as a list **in the order that there detected by Spring during component scanning.** You have a number of ways to advise Spring on the Order of components but the most abstract approach is to use an [@Order](https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/core/annotation/Order.html){:target="_blank"} annotation.  
 
-* **Read:** [**spring.io:** Ordering listeners](https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#context-functionality-events-order){:target="_blank"}
-* **Read:** [**stackoverflow.com:** What is the use of @Order annotation in Spring?](https://stackoverflow.com/questions/30328897/what-is-the-use-of-order-annotation-in-spring){:target="_blank"}
-* **Read:** [**javapapers.com:** Spring Order Annotation](https://javapapers.com/spring/spring-order-annotation/){:target="_blank"}
-* **Read:** [**logicbig.com:** Controlling Beans Loading Order](https://www.logicbig.com/tutorials/spring-framework/spring-core/using-depends-on.html){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**spring.io:** Ordering listeners](https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#context-functionality-events-order){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**stackoverflow.com:** What is the use of @Order annotation in Spring?](https://stackoverflow.com/questions/30328897/what-is-the-use-of-order-annotation-in-spring){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**javapapers.com:** Spring Order Annotation](https://javapapers.com/spring/spring-order-annotation/){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**logicbig.com:** Controlling Beans Loading Order](https://www.logicbig.com/tutorials/spring-framework/spring-core/using-depends-on.html){:target="_blank"}
 
 ## Spring Data - Domain Events with @DomainEvents and AbstractAggregateRoot
 [Spring Data](http://projects.spring.io/spring-data/) is one of the foundational projects that many other Spring projects are based on. We'll cover it deeper in another section but there is a really neat feature built-in releated to events.
 
 Spring Data follows the concept of [Domain Driven Design ](https://en.wikipedia.org/wiki/Domain-driven_design){:target="_blank"} and has a concept called Domain Events. Essentially if you have a managed Entity (a special kinda of Bean related to persistence) then Spring Data will look for a field annotated with [@DomainEvents](https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/domain/DomainEvents.html){:target="_blank"} and **automatically publish those events for you when that Entity is acted upon**. Spring Data provides a convenient super class for you to extend with this functionality called [AbstractAggregateRoot](https://github.com/spring-projects/spring-data-commons/blob/master/src/main/java/org/springframework/data/domain/AbstractAggregateRoot.java){:target="_blank"}. 
 
-* **Read:** [**spring.io:** Domain event publication from aggregate roots](https://spring.io/blog/2017/01/30/what-s-new-in-spring-data-release-ingalls#domain-event-publication-from-aggregate-roots){:target="_blank"}
-* **Read:** [**zoltanaltfatter.com:** Publishing domain events from aggregate roots](http://zoltanaltfatter.com/2017/06/09/publishing-domain-events-from-aggregate-roots/){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**spring.io:** Domain event publication from aggregate roots](https://spring.io/blog/2017/01/30/what-s-new-in-spring-data-release-ingalls#domain-event-publication-from-aggregate-roots){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**zoltanaltfatter.com:** Publishing domain events from aggregate roots](http://zoltanaltfatter.com/2017/06/09/publishing-domain-events-from-aggregate-roots/){:target="_blank"}
 
 Take an example where you've modeled a bidding system where people can **Bid** on an **Auction**. I'm going to omit all the JPA annotations for simplicity and showcase the DomainEvents only.
 
@@ -215,7 +217,7 @@ class BidNotificationService {
 ## Spring Integration - ApplicationEventListeningMessageProducer
 We cover Spring Integration in another section but it's important to know that it has support for listening to Spring ApplicationEvents with a component called [ApplicationEventListeningMessageProducer](https://docs.spring.io/spring-integration/api/org/springframework/integration/event/inbound/ApplicationEventListeningMessageProducer.html){:target="_blank"}.
 
-* **Read:** [**spring.io:** Spring ApplicationEvent Support](https://docs.spring.io/spring-integration/reference/html/applicationevent.html){:target="_blank"}
+<i class='far fa-bookmark'></i> Read: [**spring.io:** Spring ApplicationEvent Support](https://docs.spring.io/spring-integration/reference/html/applicationevent.html){:target="_blank"}
 
 Here is an example of defining the event producer.
 
