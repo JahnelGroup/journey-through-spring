@@ -195,7 +195,23 @@
             
             
 
-            <li><a href="/basics/beans" class="">Beans</a></li>
+            <li><a href="/basics/bean-configuration" class="">Bean Configuration</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/basics/bean-injection" class="">Bean Injection</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/basics/bean-scopes-proxies" class="">Bean Scopes and Proxies</a></li>
           
             
             
@@ -289,12 +305,12 @@
   <p><em>IoC is also known as dependency injection (DI). It is a process whereby objects define their dependencies, that is, the other objects they work with, only through constructor arguments, arguments to a factory method, or properties that are set on the object instance after it is constructed or returned from a factory method. The container then injects those dependencies when it creates the bean. This process is fundamentally the inverse, hence the name Inversion of Control (IoC), of the bean itself controlling the instantiation or location of its dependencies by using direct construction of classes, or a mechanism such as the Service Locator pattern. - <a href="https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#beans-introduction" target="_blank">Spring Docs</a></em></p>
 </blockquote>
 
-<p><i class="far fa-bookmark"></i> Read: <a href="http://www.baeldung.com/inversion-control-and-dependency-injection-in-spring" target="_blank"><strong>baeldung.com:</strong> Intro to Inversion of Control and Dependency Injection with Spring</a></p>
+<p><i class="far fa-bookmark"></i> Read: <a href="http://www.baeldung.com/inversion-control-and-dependency-injection-in-spring" target="_blank">Intro to Inversion of Control and Dependency Injection with Spring (baeldung.com)</a></p>
 
 <h2 id="inversion-of-control-ioc-container--application-context">Inversion of Control (IoC) Container / Application Context</h2>
 <p>At the center of a Spring application is the <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans" target="_blank">IoC Container</a> which is represented by the <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/ApplicationContext.html" target="_blank">ApplicationContext</a> Class. It is the orchestrator of your code and manager of your Objects. It is essentially the glue to your entire application and knows everything. You start the Application Context in your main function.</p>
 
-<p><i class="far fa-bookmark"></i> Read: <a href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#getting-started-first-application-main-method" target="_blank"><strong>spring.io:</strong> The “main” Method</a></p>
+<p><i class="far fa-bookmark"></i> Read: <a href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#getting-started-first-application-main-method" target="_blank">The “main” Method (spring.io)</a></p>
 
 <div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="nn">com.example.demo</span>
 
@@ -311,17 +327,20 @@
 
 <p>When you start the IoC Container it will scan your application from the current package down (i.e, com.example.demo*.*) to create beans, provide advice, establish database connection pools, any many more things. Your main function should do nothing other than start the Spring ApplicationContext - everything from this point is now driven by Spring constructs.</p>
 
-<p><i class="far fa-bookmark"></i> Read: <a href="https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#context-introduction" target="_blank"><strong>spring.io:</strong> Additional Capabilities of the ApplicationContext</a></p>
+<p><i class="far fa-bookmark"></i> Read: <a href="https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#context-introduction" target="_blank">Additional Capabilities of the ApplicationContext (spring.io)</a></p>
 
 <h2 id="dependency-injection">Dependency Injection</h2>
 <p>Dependency Injection is a technique used to achieve Inversion of Control and sounds more sophisticated than it really is. If <em>Object A</em> depends on <em>Object B</em> then a reference will be provided (“injected”) from an external source (i.e., the ApplicationContext). If <em>Object A</em> creates <em>Object B</em> on it’s own then it is not Dependency Injection.</p>
 
 <p>In Spring we achieve this by creating <a href="./core-beans">Beans</a> and establishing their relationship in a few different ways. The two most common are through <strong>Constructor Injection</strong> or <strong>Property Injection</strong> both discussed in the next section.</p>
 
-<ul>
-  <li><strong>Watch:</strong> <a href="https://www.youtube.com/watch?v=xlWwMSu5I70" target="_blank"><strong>youtube.com:</strong> Understanding Spring Bean Factory</a></li>
-  <li><strong>Watch:</strong> <a href="https://www.youtube.com/watch?v=GB8k2-Egfv0&amp;t=493s" target="_blank"><strong>youtube.com:</strong> Understanding Dependency Injection</a></li>
-</ul>
+<p><i class="fas fa-play"></i> Watch: <a href="https://www.youtube.com/watch?v=xlWwMSu5I70" target="_blank">Understanding Spring Bean Factory</a><br />
+<i class="fas fa-play"></i> Watch: <a href="https://www.youtube.com/watch?v=GB8k2-Egfv0&amp;t=493s" target="_blank">Understanding Dependency Injection</a></p>
+
+<h2 id="sample-code">Sample Code</h2>
+<p>Follow the link to the sample code that will give you a sneak peak on how to achieve DI with Spring. You’ll review this deeper in the next Beans section.</p>
+
+<p><i class="fas fa-code"></i> Code: <a href="https://github.com/JahnelGroup/journey-through-spring/tree/master/src/basics-di" target="_blank">basics-di</a></p>
 
         
       </section>

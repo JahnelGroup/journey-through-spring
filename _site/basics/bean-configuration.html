@@ -1,0 +1,482 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.12.1 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Bean Configuration - Journey Through Spring</title>
+<meta name="description" content="A pragmatic approach to learning the Spring Framework.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Journey Through Spring">
+<meta property="og:title" content="Bean Configuration">
+<meta property="og:url" content="http://localhost:4000/basics/bean-configuration">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/basics/bean-configuration">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Steven Zgaljic",
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Journey Through Spring Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single wide">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Journey Through Spring</a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/intro/intro-welcome" >Intro</a>
+            </li><li class="masthead__menu-item">
+              <a href="/basics/welcome" >Basics</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Welcome</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/basics/welcome" class="">Outline</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Spring Basics</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/basics/ioc-di" class="">IoC and DI</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/basics/bean-configuration" class="active">Bean Configuration</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/basics/bean-injection" class="">Bean Injection</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/basics/bean-scopes-proxies" class="">Bean Scopes and Proxies</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/basics/props" class="">Properties, Profiles and Resources</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/basics/events" class="">Events</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/basics/validation" class="">Validation</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/basics/data-binding" class="">Data Binding</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/basics/type-conversion" class="">Type Conversion</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/basics/spel" class="">Spring Expression Language (SpEL)</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/basics/aop" class="">Aspect Oriented Programming (AOP)</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Bean Configuration">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Bean Configuration
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>Objects are the key element in Java programming and the Spring Framework handles them in a very special way. Unlike a regular Java Object that is created with the <strong>new</strong> operator and then used, a Spring Object must be registered with the ApplicationContext first. When an Object is registered with the ApplicationContext it is referred to as a <a href="https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#beans-definition" target="_blank">Bean</a> (or “Managed Bean” or “Component”). When Spring manages an Object as a Bean it is creating a Proxy around your object and can do very interesting things with it.</p>
+
+<h2 id="how-to-configure-a-bean">How to configure a Bean</h2>
+<p><i class="fas fa-book-reader"></i> Spring Framework: <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-definition" target="_blank">Bean overview</a></p>
+
+<p>Beans can be configured in three primary ways: XML, Java, or Annotations. We will focus on Annotation based configuration.</p>
+
+<p><i class="far fa-bookmark"></i> Read: <a href="https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#beans-annotation-config" target="_blank"><strong>spring.io:</strong> Annotation-based container configuration</a></p>
+
+<p>Spring provides a few different annotations to drive the creation of beans. Ultimately Spring will use <strong>@Bean</strong> or <strong>@Component</strong> to create a Bean. Here are the most common ways to define Beans.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Annotation</th>
+      <th>Location</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>@Configuration</td>
+      <td>class</td>
+      <td>Indicates that this class defines @Bean’s to be</td>
+    </tr>
+    <tr>
+      <td>@Bean</td>
+      <td>method</td>
+      <td>Creates a Bean from the return value of the method</td>
+    </tr>
+    <tr>
+      <td>@Component</td>
+      <td>class</td>
+      <td>Instruct Spring to create a Bean out of the class</td>
+    </tr>
+    <tr>
+      <td>@Service</td>
+      <td>class</td>
+      <td>Is a @Component but Stereotyped as a Service</td>
+    </tr>
+    <tr>
+      <td>@Repository</td>
+      <td>class</td>
+      <td>Is a @Component but Stereotyped as a Repository</td>
+    </tr>
+    <tr>
+      <td>@Controller</td>
+      <td>class</td>
+      <td>Is a @Component but Stereotyped as a Controller</td>
+    </tr>
+    <tr>
+      <td>@RestController</td>
+      <td>class</td>
+      <td>Same as @Controller but meant REST end-points</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><i class="far fa-bookmark"></i> Read: <a href="https://stackoverflow.com/questions/16051656/advantages-of-using-spring-stereotypes" target="_blank">Advantages of using spring stereotypes (stackoverflow.com)</a><br />
+<i class="far fa-bookmark"></i> Read: <a href="https://stackoverflow.com/questions/6827752/whats-the-difference-between-component-repository-service-annotations-in" target="_blank">Difference between @Component, @Repository, @Service (stackoverflow.com)</a><br />
+<i class="far fa-bookmark"></i> Read: <a href="https://stackoverflow.com/questions/25242321/difference-between-spring-controller-and-restcontroller-annotation" target="_blank">Difference between @Controller and @RestController (stackoverflow.com)</a><br />
+<i class="far fa-bookmark"></i> Read: <a href="https://www.genuitec.com/spring-frameworkrestcontroller-vs-controller/" target="_blank">@RestController vs @Controller (genuitec.com)</a></p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Declare a Singleton Bean - one instance for the entire application
+</span><span class="n">@Component</span>
+<span class="kd">class</span> <span class="nc">UserTransformer</span> <span class="p">{</span> <span class="p">}</span>
+
+<span class="c1">// Declare a Request Scope Bean - one instance per Web Request
+</span><span class="n">@Component</span>
+<span class="n">@Scope</span><span class="p">(</span><span class="s">"request"</span><span class="p">,</span> <span class="n">proxyMode</span> <span class="p">=</span> <span class="n">ScopedProxyMode</span><span class="p">.</span><span class="n">INTERFACES</span><span class="p">)</span>
+<span class="kd">class</span> <span class="nc">UserWebRequestContext</span> <span class="p">:</span> <span class="n">UserRequestContext</span> <span class="p">{</span> <span class="p">}</span>
+
+<span class="c1">// Declare a class that defines definition of Beans
+</span><span class="n">@Configuration</span>
+<span class="kd">class</span> <span class="nc">MyConfig</span> <span class="p">{</span>
+
+  <span class="c1">// Declare a Session Scope Bean - one instance per Web Session
+</span>  <span class="n">@Bean</span> 
+  <span class="n">@Scope</span><span class="p">(</span><span class="s">"session"</span><span class="p">)</span>
+  <span class="k">fun</span> <span class="nf">userSessionContext</span><span class="p">()</span> <span class="p">=</span> <span class="n">UserSessionContext</span><span class="p">()</span>
+
+<span class="p">}</span>
+
+<span class="c1">// Declares a Bean with the Service stereotype
+</span><span class="n">@Service</span>
+<span class="kd">class</span> <span class="nc">UserService</span> <span class="p">{</span> <span class="p">}</span>
+
+<span class="c1">// Declares a Bean with the Repository stereotype
+</span><span class="n">@Repository</span>
+<span class="kd">class</span> <span class="nc">UserRepository</span> <span class="p">{</span> <span class="p">}</span>
+
+<span class="n">@RestController</span>
+<span class="kd">class</span> <span class="nc">HelloController</span> <span class="p">{</span>
+  <span class="n">@RequestMapping</span><span class="p">(</span><span class="s">"/hello"</span><span class="p">)</span>
+  <span class="k">fun</span> <span class="nf">hello</span><span class="p">()</span> <span class="p">=</span> <span class="s">"Hello, World!"</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<h2 id="bean-lifecycle">Bean Lifecycle</h2>
+<p><i class="fas fa-book-reader"></i> Spring Framework: <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-factory-nature" target="_blank">Lifecycle callbacks</a></p>
+
+<p>As Spring Beans are created they follow a Lifecycle where you can hook-in callback listeners to do interesting things when the Beans are first created and destroyed.</p>
+
+<p><i class="far fa-bookmark"></i> Read: <a href="https://www.thejavaprogrammer.com/spring-bean-life-cycle/" target="_blank"><strong>thejavaprogrammer.com:</strong> Spring Bean Life Cycle</a></p>
+
+<p>A common use-case is to validate that certain properties are set on your Bean after it is created.</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">@Component</span>
+<span class="kd">class</span> <span class="nc">ConnectionManager</span><span class="p">(</span>
+    <span class="n">@Value</span><span class="p">(</span><span class="s">"\${connection.url}"</span><span class="p">)</span> <span class="kd">var</span> <span class="py">url</span><span class="p">:</span> <span class="n">String</span> <span class="p">=</span> <span class="s">""</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="n">@PostConstruct</span>
+    <span class="k">fun</span> <span class="nf">init</span><span class="p">(){</span>
+        <span class="n">Assert</span><span class="p">.</span><span class="n">isTrue</span><span class="p">(!</span><span class="n">url</span><span class="p">.</span><span class="n">isNullOrBlank</span><span class="p">(),</span> <span class="s">"url must be set"</span><span class="p">)</span>
+        <span class="n">Assert</span><span class="p">.</span><span class="n">isTrue</span><span class="p">(</span><span class="n">url</span><span class="p">.</span><span class="n">startsWith</span><span class="p">(</span><span class="s">"http://"</span><span class="p">),</span> <span class="s">"http is the only support protocol"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+    
+    
+    
+      <li><a href="https://github.com/szgaljic"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2018 Steven Zgaljic. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+
+
+
+
+
+
+
+
+  </body>
+</html>

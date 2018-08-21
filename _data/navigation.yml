@@ -43,8 +43,14 @@ basics:
     children:
       - title: IoC and DI
         url: /basics/ioc-di
-      - title: Beans
-        url: /basics/beans
+
+      - title: Bean Configuration
+        url: /basics/bean-configuration
+      - title: Bean Injection
+        url: /basics/bean-injection
+      - title: Bean Scopes and Proxies
+        url: /basics/bean-scopes-proxies
+
       - title: Properties, Profiles and Resources
         url: /basics/props
       - title: Events

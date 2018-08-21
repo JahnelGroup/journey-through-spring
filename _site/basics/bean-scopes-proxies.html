@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Spring Basics - Journey Through Spring</title>
+<!-- begin _includes/seo.html --><title>Bean Scopes and Proxies - Journey Through Spring</title>
 <meta name="description" content="A pragmatic approach to learning the Spring Framework.">
 
 
@@ -17,8 +17,8 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Journey Through Spring">
-<meta property="og:title" content="Spring Basics">
-<meta property="og:url" content="http://localhost:4000/basics/welcome">
+<meta property="og:title" content="Bean Scopes and Proxies">
+<meta property="og:url" content="http://localhost:4000/basics/bean-scopes-proxies">
 
 
 
@@ -36,7 +36,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/basics/welcome">
+<link rel="canonical" href="http://localhost:4000/basics/bean-scopes-proxies">
 
 
 
@@ -167,7 +167,7 @@
             
             
 
-            <li><a href="/basics/welcome" class="active">Outline</a></li>
+            <li><a href="/basics/welcome" class="">Outline</a></li>
           
         </ul>
         
@@ -211,7 +211,7 @@
             
             
 
-            <li><a href="/basics/bean-scopes-proxies" class="">Bean Scopes and Proxies</a></li>
+            <li><a href="/basics/bean-scopes-proxies" class="active">Bean Scopes and Proxies</a></li>
           
             
             
@@ -281,7 +281,7 @@
 
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Spring Basics">
+    <meta itemprop="headline" content="Bean Scopes and Proxies">
     
     
     
@@ -289,7 +289,7 @@
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Spring Basics
+          <h1 id="page-title" class="page__title" itemprop="headline">Bean Scopes and Proxies
 </h1>
           
         </header>
@@ -297,7 +297,102 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>Welcome.</p>
+        <p><i class="fas fa-book-reader"></i> Spring Framework: <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-factory-scopes" target="_blank">Bean scopes</a></p>
+
+<h2 id="bean-scope">Bean Scope</h2>
+<p>The concept of <a href="https://en.wikipedia.org/wiki/Scope_(computer_science)" target="_blank">Scope</a> is fundamental to computer programming and it’s no surprise that its found in Spring as well. As you delegate the control over the creation of your Objects to Spring you have the ability to advise Spring on scope with @Scope.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Scope</th>
+      <th>Alias</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>singleton <strong>(default)</strong></td>
+      <td>None, default</td>
+      <td>A single instance is created</td>
+    </tr>
+    <tr>
+      <td>prototype</td>
+      <td>None</td>
+      <td>A new instance is created each time the bean is referenced</td>
+    </tr>
+    <tr>
+      <td>request        </td>
+      <td>@RequestScope</td>
+      <td>A new instance is created once per web request (web-aware)</td>
+    </tr>
+    <tr>
+      <td>session</td>
+      <td>@SessionScope</td>
+      <td>A new instance is created once per user web session (web-aware)</td>
+    </tr>
+    <tr>
+      <td>application</td>
+      <td>@ApplicationScope</td>
+      <td>A new instance is created once per ServletContext (web-aware)</td>
+    </tr>
+    <tr>
+      <td>websocket</td>
+      <td>None</td>
+      <td>A new instance is created once per WebSocket (web-aware)</td>
+    </tr>
+    <tr>
+      <td><em>&lt;custom&gt;</em></td>
+      <td>None</td>
+      <td>It is possible to define your own scope rules</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">@Component</span> 
+<span class="n">@Scope</span><span class="p">(</span><span class="s">"session"</span><span class="p">,</span> <span class="n">proxyMode</span> <span class="p">=</span> <span class="n">ScopedProxyMode</span><span class="p">.</span><span class="n">TARGET_CLASS</span><span class="p">)</span>
+<span class="kd">class</span> <span class="nc">UserSessionContext</span> <span class="p">{</span> <span class="p">}</span>
+
+<span class="c1">// or this is the same
+</span><span class="n">@Component</span> 
+<span class="n">@SessionScope</span>
+<span class="kd">class</span> <span class="nc">UserSessionContext</span> <span class="p">{</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<p><i class="far fa-bookmark"></i> Read: <a href="https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#beans-factory-scopes" target="_blank"><strong>spring.io:</strong> Bean Scopes</a><br />
+<i class="far fa-bookmark"></i> Read: <a href="http://www.baeldung.com/spring-bean-scopes" target="_blank"><strong>baeldung.com:</strong> Spring Bean Scopes</a></p>
+
+<h2 id="bean-proxy-mode">Bean Proxy Mode</h2>
+<p>There are two fundamental types of proxies <strong>JDK</strong> (by interface) and <strong>CGLIB</strong> (by class). It’s best practice that you inject by interface as opposed to class because it’s easier for Spring. If you inject by the target class then Spring needs to do some extra work to accomplish it and is arguably a performance impact although there is debate about that.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>ScopedProxyMode</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>DEFAULT</td>
+      <td>Typical NO unless configured differently elsewhere.</td>
+    </tr>
+    <tr>
+      <td>NO</td>
+      <td>Do not create a scoped proxy.</td>
+    </tr>
+    <tr>
+      <td>INTERFACES    </td>
+      <td>JDK Based Proxy</td>
+    </tr>
+    <tr>
+      <td>TARGET_CLASS</td>
+      <td>CGLIB Based Proxy</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><i class="far fa-bookmark"></i> Read: <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-factory-scopes-other-injection" target="_blank"><strong>spring.io:</strong> Scoped beans as dependencies</a></p>
 
         
       </section>

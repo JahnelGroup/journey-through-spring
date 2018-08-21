@@ -4,7 +4,13 @@
 <loc>http://localhost:4000/basics/aop</loc>
 </url>
 <url>
-<loc>http://localhost:4000/basics/beans</loc>
+<loc>http://localhost:4000/basics/bean-injection</loc>
+</url>
+<url>
+<loc>http://localhost:4000/basics/bean-scopes-proxies</loc>
+</url>
+<url>
+<loc>http://localhost:4000/basics/bean-configuration</loc>
 </url>
 <url>
 <loc>http://localhost:4000/intro/courses</loc>
