@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Spring Expression Language (SpEL) - Journey Through Spring</title>
+<!-- begin _includes/seo.html --><title>Data Binding - Journey Through Spring</title>
 <meta name="description" content="A pragmatic approach to learning the Spring Framework.">
 
 
@@ -17,8 +17,8 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Journey Through Spring">
-<meta property="og:title" content="Spring Expression Language (SpEL)">
-<meta property="og:url" content="http://localhost:4000/core/core-spel">
+<meta property="og:title" content="Data Binding">
+<meta property="og:url" content="http://localhost:4000/basics/data-binding">
 
 
 
@@ -36,7 +36,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/core/core-spel">
+<link rel="canonical" href="http://localhost:4000/basics/data-binding">
 
 
 
@@ -115,7 +115,7 @@
         <ul class="visible-links"><li class="masthead__menu-item">
               <a href="/intro/intro-welcome" >Intro</a>
             </li><li class="masthead__menu-item">
-              <a href="/core/core-ioc-di" >Core</a>
+              <a href="/basics/welcome" >Basics</a>
             </li></ul>
         
         <button class="greedy-nav__toggle hidden" type="button">
@@ -155,7 +155,7 @@
     
       <li>
         
-          <span class="nav__sub-title">Spring Core</span>
+          <span class="nav__sub-title">Welcome</span>
         
 
         
@@ -167,7 +167,19 @@
             
             
 
-            <li><a href="/core/core-ioc-di" class="">IoC and DI</a></li>
+            <li><a href="/basics/welcome" class="">Outline</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Spring Basics</span>
+        
+
+        
+        <ul>
           
             
             
@@ -175,7 +187,7 @@
             
             
 
-            <li><a href="/core/core-beans" class="">Beans</a></li>
+            <li><a href="/basics/ioc-di" class="">IoC and DI</a></li>
           
             
             
@@ -183,7 +195,7 @@
             
             
 
-            <li><a href="/core/core-props" class="">Properties, Profiles and Resources</a></li>
+            <li><a href="/basics/beans" class="">Beans</a></li>
           
             
             
@@ -191,7 +203,7 @@
             
             
 
-            <li><a href="/core/core-events" class="">Events</a></li>
+            <li><a href="/basics/props" class="">Properties, Profiles and Resources</a></li>
           
             
             
@@ -199,7 +211,7 @@
             
             
 
-            <li><a href="/core/core-validation" class="">Validation</a></li>
+            <li><a href="/basics/events" class="">Events</a></li>
           
             
             
@@ -207,7 +219,7 @@
             
             
 
-            <li><a href="/core/core-data-binding" class="">Data Binding</a></li>
+            <li><a href="/basics/validation" class="">Validation</a></li>
           
             
             
@@ -215,7 +227,7 @@
             
             
 
-            <li><a href="/core/core-type-conversion" class="">Type Conversion</a></li>
+            <li><a href="/basics/data-binding" class="active">Data Binding</a></li>
           
             
             
@@ -223,7 +235,7 @@
             
             
 
-            <li><a href="/core/core-spel" class="active">Spring Expression Language (SpEL)</a></li>
+            <li><a href="/basics/type-conversion" class="">Type Conversion</a></li>
           
             
             
@@ -231,7 +243,15 @@
             
             
 
-            <li><a href="/core/core-aop" class="">Aspect Oriented Programming (AOP)</a></li>
+            <li><a href="/basics/spel" class="">Spring Expression Language (SpEL)</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/basics/aop" class="">Aspect Oriented Programming (AOP)</a></li>
           
         </ul>
         
@@ -245,7 +265,7 @@
 
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Spring Expression Language (SpEL)">
+    <meta itemprop="headline" content="Data Binding">
     
     
     
@@ -253,7 +273,7 @@
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Spring Expression Language (SpEL)
+          <h1 id="page-title" class="page__title" itemprop="headline">Data Binding
 </h1>
           
         </header>
@@ -261,36 +281,7 @@
 
       <section class="page__content" itemprop="text">
         
-        <h1 id="spring-expression-language-spel">Spring Expression Language (SpEL)</h1>
-<p>The Spring Expression Language is a very powerful feature that can be a lifesaver when used correctly and a nightmare when not. It is Spring-specific syntax that adds a level dynamic behavior at runtime. You would typically interact with it in two primary ways - the SpelExpressionParser or through an annotation.</p>
-
-<ul>
-  <li><strong>Read:</strong> <a href="https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#expressions" target="_blank">Spring Expression Language</a></li>
-  <li><strong>Read:</strong> <a href="http://www.baeldung.com/spring-expression-language" target="_blank">Spring Expression Language Guide</a></li>
-</ul>
-
-<h2 id="spelexpressionparser">SpelExpressionParser</h2>
-<p>Here is an example using SpelExpressionParser from the Spring documentation:</p>
-
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="py">parser</span><span class="p">:</span> <span class="n">ExpressionParser</span> <span class="p">=</span> <span class="n">SpelExpressionParser</span><span class="p">()</span>
-<span class="kd">var</span> <span class="py">exp</span><span class="p">:</span> <span class="n">Expression</span> <span class="p">=</span> <span class="n">parser</span><span class="p">.</span><span class="n">parseExpression</span><span class="p">(</span><span class="s">"'Hello World'.concat('!')"</span><span class="p">)</span>
-<span class="kd">var</span> <span class="py">message</span><span class="p">:</span> <span class="n">String</span> <span class="p">=</span> <span class="p">(</span><span class="n">String</span><span class="p">)</span> <span class="n">exp</span><span class="p">.</span><span class="n">getValue</span><span class="p">()</span> 
-<span class="n">println</span><span class="p">(</span><span class="n">message</span><span class="p">)</span> <span class="c1">// prints "Hello World!"
-</span></code></pre></div></div>
-
-<h2 id="annotation-with--">Annotation with #{ }</h2>
-<p>Here is an example doing the same thing with an annotation. SpEL is trigger with syntax <strong>#{ }</strong>.</p>
-
-<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">@Component</span>
-<span class="kd">class</span> <span class="nc">MyConfig</span> <span class="p">{</span>
-
-  <span class="n">@Value</span><span class="p">(</span><span class="s">"#{'Hello World'.concat('!')}"</span><span class="p">)</span>
-  <span class="k">lateinit</span> <span class="kd">var</span> <span class="py">hello</span><span class="p">:</span> <span class="n">String</span>
-  
-  <span class="n">@PostConstruct</span> <span class="k">fun</span> <span class="nf">init</span><span class="p">()</span> <span class="p">=</span> <span class="n">println</span><span class="p">(</span><span class="n">message</span><span class="p">)</span> <span class="c1">// prints "Hello World!"
-</span>  
-<span class="p">}</span>
-</code></pre></div></div>
+        <p>TODO.</p>
 
         
       </section>

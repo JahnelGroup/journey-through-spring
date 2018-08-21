@@ -1,6 +1,6 @@
 ---
 title:  "Events"
-permalink: /core/core-events
+permalink: /basics/events
 ---
 
 The concept of [Events](https://en.wikipedia.org/wiki/Event_(computing)){:target="_blank"} is fundamental to computer programming and allows us to design components with loose coupling and high cohesion. Spring’s context is highly event driven and exposes this feature for you to listen and react to events as well as fire your own. 

@@ -1,6 +1,6 @@
 ---
 title:  "Spring Expression Language (SpEL)"
-permalink: /core/core-spel
+permalink: /basics/spel
 ---
 
 Spring Expression Language (SpEL)

@@ -1,6 +1,6 @@
 ---
 title:  "Validation"
-permalink: /core/core-validation
+permalink: /basics/validation
 ---
 
 Before using a piece of a data you typically want to [validate](https://en.wikipedia.org/wiki/Data_validation){:target="_blank"} it first. Validation takes many forms and really depends on where the data is coming from and where the validation check is being done. If you're passing data from one class to another via a function call then maybe some light validations are warranted (i.e., null checks) but if you're receiving data from an external source you typically need to scrutinize it further.

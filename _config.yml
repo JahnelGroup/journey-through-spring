@@ -270,13 +270,12 @@ defaults:
       classes: wide
       sidebar:
         nav: "intro"
-
   # _pages
   - scope:
-      path: "_pages/core"
+      path: "_pages/basics"
       type: pages
     values:
       layout: single
       classes: wide
       sidebar:
-        nav: "core"        
+        nav: "basics"

@@ -1,6 +1,6 @@
 ---
 title:  "Aspect Oriented Programming (AOP)"
-permalink: /core/core-aop
+permalink: /basics/aop
 ---
 
 TODO.

@@ -1,6 +1,6 @@
 ---
 title:  "Type Conversion"
-permalink: /core/core-type-conversion
+permalink: /basics/type-conversion
 ---
 
 TODO.

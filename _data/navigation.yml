@@ -2,8 +2,8 @@ main:
   - title: "Intro"
     url: /intro/intro-welcome
 
-  - title: "Core"
-    url: /core/core-ioc-di   
+  - title: "Basics"
+    url: /basics/welcome
 
 intro:
   - title: Introduction
@@ -33,24 +33,29 @@ intro:
       - title: Courses
         url: /intro/courses
 
-core: 
-  - title: Spring Core
+basics: 
+  - title: Welcome
+    children: 
+      - title: Outline
+        url: /basics/welcome
+          
+  - title: Spring Basics
     children:
       - title: IoC and DI
-        url: /core/core-ioc-di
+        url: /basics/ioc-di
       - title: Beans
-        url: /core/core-beans
+        url: /basics/beans
       - title: Properties, Profiles and Resources
-        url: /core/core-props
+        url: /basics/props
       - title: Events
-        url: /core/core-events
+        url: /basics/events
       - title: Validation
-        url: /core/core-validation
+        url: /basics/validation
       - title: Data Binding
-        url: /core/core-data-binding
+        url: /basics/data-binding
       - title: Type Conversion
-        url: /core/core-type-conversion 
+        url: /basics/type-conversion 
       - title: Spring Expression Language (SpEL)
-        url: /core/core-spel
+        url: /basics/spel
       - title: Aspect Oriented Programming (AOP)
-        url: /core/core-aop
+        url: /basics/aop

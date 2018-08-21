@@ -1,6 +1,6 @@
 ---
 title:  "IoC and DI"
-permalink: /core/core-ioc-di
+permalink: /basics/ioc-di
 ---
 
 The two main concepts fundamental to Spring are [Inversion of Control](https://en.wikipedia.org/wiki/Inversion_of_control){:target="_blank"} and [Dependency Injection](https://en.wikipedia.org/wiki/Dependency_injection){:target="_blank"}. Understanding the value of these concepts is critical to your success. 

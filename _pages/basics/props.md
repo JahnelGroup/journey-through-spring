@@ -1,6 +1,6 @@
 ---
 title:  "Properties, Profiles and Resources"
-permalink: /core/core-props
+permalink: /basics/props
 ---
 
 ## Properties
