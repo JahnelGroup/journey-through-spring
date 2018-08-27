@@ -32,7 +32,7 @@ class BeanHunter(
             ex = e
             println(">> No Such Bean: lonelyClass")
         }
-        Assert.isTrue( ex != null && ex is NoSuchBeanDefinitionException, "LonelyClass should not be a Bean at all!")
+        Assert.isTrue(ex is NoSuchBeanDefinitionException, "LonelyClass should not be a Bean at all!")
     }
 
 }

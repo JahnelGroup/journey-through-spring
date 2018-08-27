@@ -3,6 +3,7 @@ package com.jahnelgroup.basics.di
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 import org.springframework.context.ApplicationListener
+import org.springframework.context.annotation.ComponentScan
 import org.springframework.context.event.ContextRefreshedEvent
 
 @SpringBootApplication
