@@ -27,6 +27,8 @@ intro:
         url: /intro/gettingstarted-spring-starters
       - title: Debugging a Spring Application
         url: /intro/gettingstarted-debugging      
+      - title: Spring Initializr
+        url: /intro/spring-initializr
         
   - title: Learning Tracks
     children:
