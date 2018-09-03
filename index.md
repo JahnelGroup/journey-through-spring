@@ -7,7 +7,7 @@ header:
   cta_label: "<i class='fas fa-angle-double-right'></i> Begin Journey"
   cta_url: "/intro/intro-welcome"
   caption:
-excerpt: 'A pragmatic approach to learning the Spring Framework.<br /> <small><strong>100%</strong> free provided by <a href="https://www.jahnelgroup.com/">Jahnel Group</a>.</small><br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=JahnelGroup&repo=journey-through-spring&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>{:/nomarkdown}'
+excerpt: 'A pragmatic approach to learning the Spring Framework.<br /> <small><strong>100%</strong> free written by <a target="_blank" href="https://www.linkedin.com/in/steven-zgaljic-92340770/">Steven Zgaljic</a> provided by <a target="_blank" href="https://www.jahnelgroup.com/">Jahnel Group</a>.</small><br /><br /> {::nomarkdown}<iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=JahnelGroup&repo=journey-through-spring&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>{:/nomarkdown}'
 feature_row:
   #- image_path: /assets/images/code-feature.jpg
   - alt: "concise"

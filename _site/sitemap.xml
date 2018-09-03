@@ -25,9 +25,6 @@
 <loc>http://localhost:4000/intro/gettingstarted-debugging</loc>
 </url>
 <url>
-<loc>http://localhost:4000/intro/gettingstarted-magic</loc>
-</url>
-<url>
 <loc>http://localhost:4000/intro/gettingstarted-spring-starters</loc>
 </url>
 <url>
@@ -38,6 +35,9 @@
 </url>
 <url>
 <loc>http://localhost:4000/intro/intro-kotlin</loc>
+</url>
+<url>
+<loc>http://localhost:4000/intro/magic</loc>
 </url>
 <url>
 <loc>http://localhost:4000/intro/intro-references</loc>
@@ -56,6 +56,9 @@
 </url>
 <url>
 <loc>http://localhost:4000/basics/spel</loc>
+</url>
+<url>
+<loc>http://localhost:4000/intro/spring-initializr</loc>
 </url>
 <url>
 <loc>http://localhost:4000/basics/type-conversion</loc>

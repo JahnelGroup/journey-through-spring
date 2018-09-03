@@ -12,6 +12,8 @@ intro:
         url: /intro/intro-welcome
       - title: What is Spring?
         url: /intro/intro-spring
+      - title: Understanding Spring "Magic"
+        url: /intro/magic
       - title: Spring and Kotlin
         url: /intro/intro-kotlin
       - title: References
@@ -21,8 +23,6 @@ intro:
     children:
       - title: Tooling Up
         url: /intro/gettingstarted-tools
-      - title: Understaing the "Magic" of Spring
-        url: /intro/gettingstarted-magic
       - title: Spring Boot Starters
         url: /intro/gettingstarted-spring-starters
       - title: Debugging a Spring Application
